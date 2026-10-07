@@ -1,10 +1,10 @@
 {
-  "name": "বাংলাদেশ স্বাদ মানচিত্র v1.3",
+  "name": "বাংলাদেশ স্বাদ মানচিত্র v1.5",
   "short_name": "Food Passport",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#f7f2e8",
   "theme_color": "#0b7a57",
   "lang": "bn",
-  "description": "৬৪ জেলার interactive food map, scrolling food list, wishlist এবং Food Passport"
+  "description": "300+ regional food experiences, dynamic Commons food photos, 64-district map and personal Food Passport"
 }

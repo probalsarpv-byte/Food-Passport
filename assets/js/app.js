@@ -5,7 +5,7 @@ const GEO_URLS=[
  "https://cdn.jsdelivr.net/gh/HedaetShahriar/bangladesh-locations-dataset@main/data/exports/geojson/boundaries/districts.geojson",
  "https://raw.githubusercontent.com/HedaetShahriar/bangladesh-locations-dataset/main/data/exports/geojson/boundaries/districts.geojson"
 ];
-const STORE="taste_bangladesh_food_passport_v1_2", OLDS=["taste_bangladesh_food_passport_v1_1","taste_bangladesh_food_passport_v1"];
+const STORE="taste_bangladesh_food_passport_v1_5", OLDS=["taste_bangladesh_food_passport_v1_4","taste_bangladesh_food_passport_v1_3","taste_bangladesh_food_passport_v1_2","taste_bangladesh_food_passport_v1_1","taste_bangladesh_food_passport_v1"];
 let DISTRICTS=[],CATS={},bySlug={},order=[],selected=new Set(),wishlist=new Set(),geo=null;
 let state={selected:[],wishlist:[],name:"",current:null,category:"all"};
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
@@ -32,6 +32,35 @@ const REP_CREDIT={
  snack:"Representative: Dhaka Bakarkhani · Wikimedia Commons",
  indigenous:"Representative: Bamboo chicken · Wikimedia Commons"
 };
+
+const COMMONS_CACHE_KEY="taste_bangladesh_commons_photo_v15";
+let commonsPhotoCache={};
+try{commonsPhotoCache=JSON.parse(localStorage.getItem(COMMONS_CACHE_KEY)||"{}")||{}}catch(_){}
+let commonsQueue=Promise.resolve();
+
+function savePhotoCache(){try{localStorage.setItem(COMMONS_CACHE_KEY,JSON.stringify(commonsPhotoCache))}catch(_){}}
+async function queryCommonsPhoto(food){
+ if(food.image)return{url:food.image,kind:"exact",source:food.image_source||""};
+ if(commonsPhotoCache[food.id])return commonsPhotoCache[food.id];
+ const q=(food.photo_query||food.en||food.name)+" food";
+ const url="https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch="+encodeURIComponent(q)+"&gsrnamespace=6&gsrlimit=3&prop=imageinfo&iiprop=url&iiurlwidth=600&format=json&origin=*";
+ try{
+   const res=await fetch(url,{cache:"force-cache"});if(!res.ok)throw 0;
+   const j=await res.json(),pages=Object.values(j.query?.pages||{});
+   const hit=pages.find(p=>p.imageinfo?.[0]?.thumburl||p.imageinfo?.[0]?.url);
+   if(!hit)throw 0;
+   const info=hit.imageinfo[0],out={url:info.thumburl||info.url,kind:"commons",source:"https://commons.wikimedia.org/?curid="+hit.pageid};
+   commonsPhotoCache[food.id]=out;savePhotoCache();return out;
+ }catch(_){return null}
+}
+function autoResolvePhoto(food,imgEl,badgeEl){
+ if(!imgEl||food.image)return;
+ commonsQueue=commonsQueue.then(async()=>{
+   const out=await queryCommonsPhoto(food);if(!out)return;
+   imgEl.src=out.url;imgEl.dataset.commons="1";
+   if(badgeEl){badgeEl.textContent="📷 Commons result";badgeEl.className="tb-auto-photo-badge"}
+ }).catch(()=>{});
+}
 const alias={"barisal":"barishal","bogra":"bogura","comilla":"cumilla","chittagong":"chattogram","coxs bazar":"coxs-bazar","cox s bazar":"coxs-bazar","jessore":"jashore","chapai nawabganj":"chapainawabganj","nawabganj":"chapainawabganj","jhalokati":"jhalokathi","khagrachari":"khagrachhari","maulvibazar":"moulvibazar","netrakona":"netrokona","coxsbazar":"coxs-bazar","jhalakathi":"jhalokathi"};
 
 function norm(s){return String(s||"").toLowerCase().normalize("NFKD").replace(/[’'().,_-]/g," ").replace(/\s+/g," ").trim()}
@@ -48,9 +77,47 @@ function allDistProgress(d){const hit=d.foods.filter(x=>selected.has(x.id)).leng
 function color(r){if(r>=1)return"#075e45";if(r>=.66)return"#26906a";if(r>=.33)return"#72bd99";if(r>0)return"#b8dfcd";return"#e5e1d8"}
 function toast(t){const el=$("#tbToast");el.textContent=t;el.classList.add("show");clearTimeout(toast.t);toast.t=setTimeout(()=>el.classList.remove("show"),1800)}
 function stats(){const tasted=DISTRICTS.filter(d=>d.foods.some(x=>selected.has(x.id)));const divisions=new Set(tasted.map(d=>d.division));return{tasted,divisions,pct:Math.round(tasted.length/64*100)}}
-function renderStats(){const s=stats();$("#tbDistrictCount").textContent=s.tasted.length;$("#tbFoodCount").textContent=selected.size;$("#tbDivisionCount").textContent=s.divisions.size;$("#tbPct").textContent=s.pct+"%";$("#tbWishCount").textContent=wishlist.size;$("#tbVerifiedCount").textContent=DISTRICTS.flatMap(d=>d.foods).filter(f=>f.verified).length;paintMap();if(state.current)renderDistrict(state.current)}
+function tasteTier(){
+ const s=stats(),n=selected.size;
+ if(s.tasted.length>=50||n>=180)return"Legend · Level 6";
+ if(s.tasted.length>=35||n>=120)return"Connoisseur · Level 5";
+ if(s.tasted.length>=24||n>=80)return"Food Hunter · Level 4";
+ if(s.tasted.length>=14||n>=45)return"Trailblazer · Level 3";
+ if(s.tasted.length>=6||n>=20)return"Taster · Level 2";
+ return"Explorer · Level 1";
+}
+function renderStats(){
+ const s=stats(),verified=DISTRICTS.flatMap(d=>d.foods).filter(f=>f.verified).length,total=DISTRICTS.flatMap(d=>d.foods).length;
+ $("#tbDistrictCount").textContent=s.tasted.length;$("#tbFoodCount").textContent=selected.size;$("#tbDivisionCount").textContent=s.divisions.size;$("#tbPct").textContent=s.pct+"%";
+ $("#tbWishCount").textContent=wishlist.size;$("#tbVerifiedCount").textContent=verified;
+ if($("#tbHeroPct"))$("#tbHeroPct").textContent=s.pct+"%";
+ if($("#tbHeroDistricts"))$("#tbHeroDistricts").textContent=s.tasted.length;
+ if($("#tbHeroFoods"))$("#tbHeroFoods").textContent=selected.size;
+ if($("#tbHeroWish"))$("#tbHeroWish").textContent=wishlist.size;
+ if($("#tbDbCount"))$("#tbDbCount").textContent=total;
+ if($("#tbSourceCount"))$("#tbSourceCount").textContent=verified;if($("#tbTasteTier"))$("#tbTasteTier").textContent=tasteTier();
+ renderDivisionNav();paintMap();if(state.current)renderDistrict(state.current)
+}
 function slugFromGeo(name){const n=norm(name);if(alias[n])return alias[n];const direct=DISTRICTS.find(d=>norm(d.en)===n);if(direct)return direct.slug;const fuzzy=DISTRICTS.find(d=>norm(d.en).includes(n)||n.includes(norm(d.en)));return fuzzy?fuzzy.slug:null}
 
+function renderDivisionNav(){
+ const box=$("#tbDivisionNav");if(!box)return;
+ const divisions=[...new Set(DISTRICTS.map(d=>d.division))];
+ box.innerHTML="";
+ divisions.forEach(div=>{
+   const ds=DISTRICTS.filter(d=>d.division===div);
+   const tasted=ds.filter(d=>d.foods.some(f=>selected.has(f.id))).length;
+   const current=state.current&&bySlug[state.current]?.division===div;
+   const b=document.createElement("button");
+   b.className="tb-division-btn"+(current?" active":"");
+   b.innerHTML="<span>"+div+"</span><small>"+tasted+"/"+ds.length+" জেলা</small>";
+   b.onclick=()=>{
+     const next=ds.find(d=>!d.foods.some(f=>selected.has(f.id)))||ds[0];
+     selectDistrict(next.slug);
+   };
+   box.appendChild(b);
+ });
+}
 function renderCats(){const el=$("#tbCats");el.innerHTML="";Object.entries(CATS).forEach(([k,v])=>{const b=document.createElement("button");b.className="tb-chip"+(state.category===k?" active":"");b.textContent=v[1]+" "+v[0];b.onclick=()=>{state.category=k;save();renderCats();paintMap();if(state.current)renderDistrict(state.current)};el.appendChild(b)})}
 function paintMap(){$$(".tb-district").forEach(p=>{const d=bySlug[p.dataset.slug];if(!d)return;const pr=distProgress(d);p.setAttribute("fill",color(pr.ratio));p.style.opacity=(state.category!=="all"&&pr.total===0)?".25":"1";p.classList.toggle("selected",p.dataset.slug===state.current)})}
 function renderFallback(){const f=$("#tbFallback");f.innerHTML="";DISTRICTS.forEach(d=>{const b=document.createElement("button");b.innerHTML="<b>"+d.name+"</b><br><small>"+d.en+"</small>";b.onclick=()=>selectDistrict(d.slug);f.appendChild(b)})}
@@ -179,14 +246,15 @@ async function loadMap(){
 function showTip(e,slug){if(!bySlug[slug])return;const d=bySlug[slug],pr=allDistProgress(d),t=$("#tbTip");t.innerHTML="<b>"+d.name+"</b> · "+pr.hit+"/"+pr.total+" খাবার";t.style.left=(e.clientX+13)+"px";t.style.top=(e.clientY+13)+"px";t.style.display="block"}function hideTip(){$("#tbTip").style.display="none"}
 
 function selectDistrict(slug,{scroll=true}={}){
- if(!bySlug[slug])return;state.current=slug;save();history.replaceState(null,"","#district="+encodeURIComponent(slug));renderDistrict(slug);paintMap();$("#tbEmpty").hidden=true;$("#tbDistrictView").hidden=false;if(scroll&&innerWidth<981)$("#tbPanel").scrollIntoView({behavior:"smooth",block:"start"})
+ if(!bySlug[slug])return;state.current=slug;save();history.replaceState(null,"","#district="+encodeURIComponent(slug));renderDistrict(slug);paintMap();$("#tbEmpty").hidden=true;$("#tbDistrictView").hidden=false;renderDivisionNav();if(scroll&&innerWidth<981)$("#tbPanel").scrollIntoView({behavior:"smooth",block:"start"})
 }
 function visualInfo(food){
- const exact=!!food.image;
+ const cached=commonsPhotoCache[food.id];
+ const exact=!!food.image,auto=!exact&&!!cached?.url;
  return{
-   url:food.image||REP_IMAGES[food.category]||REP_IMAGES.default,
-   exact,
-   label:exact?"📷 নির্দিষ্ট ছবি":"📷 প্রতিনিধিত্বমূলক ছবি"
+   url:food.image||(auto?cached.url:(REP_IMAGES[food.category]||REP_IMAGES.default)),
+   exact,auto,
+   label:exact?"📷 নির্দিষ্ট ছবি":auto?"📷 Commons result":"📷 প্রতিনিধিত্বমূলক ছবি"
  };
 }
 function visual(food){
@@ -201,23 +269,30 @@ function renderDistrict(slug){
    (state.category!=="all"?" · ফিল্টার: "+catLabel(state.category):"")+
    (list.length>2?'<div class="tb-scroll-hint">↓ সব '+list.length+'টি খাবার দেখতে এই তালিকায় স্ক্রল করুন</div>':"");
  $("#tbDistrictBar").style.width=(all.ratio*100)+"%";
+ renderDistrictCovers(d);
  const box=$("#tbFoods");box.innerHTML="";
- if(!list.length){
-   box.innerHTML='<div class="tb-empty" style="min-height:240px"><div>এই ক্যাটাগরিতে খাবার নেই।<br><small>উপরে “সব” নির্বাচন করুন।</small></div></div>';
-   return;
- }
+ if(!list.length){box.innerHTML='<div class="tb-empty" style="min-height:240px"><div>এই ক্যাটাগরিতে খাবার নেই।<br><small>উপরে “সব” নির্বাচন করুন।</small></div></div>';return}
  list.forEach(food=>{
    const on=selected.has(food.id),wish=wishlist.has(food.id),v=visualInfo(food),el=document.createElement("article");
    el.className="tb-food"+(on?" on":"")+(wish?" wished":"");
-   const badges=(food.verified?'<span class="tb-source-chip ok">✓ Source checked</span>':'')+
-     '<span class="tb-photo-kind '+(v.exact?'exact':'')+'">'+v.label+'</span>';
-   el.innerHTML='<div class="tb-food-visual">'+visual(food)+'</div><div><h3>'+food.name+'</h3><p>'+(food.note||food.en)+'</p><span class="tb-tag">'+catLabel(food.category)+'</span>'+badges+'</div><div class="tb-food-actions"><button class="tb-check" title="খেয়েছি" aria-label="'+food.name+' খেয়েছি">'+(on?"✓":"＋")+'</button><button class="tb-wish" title="খেতে চাই" aria-label="'+food.name+' খেতে চাই">'+(wish?"★":"☆")+'</button></div>';
+   const prov=food.verified?'<span class="tb-provenance source">✓ Source checked</span>':'<span class="tb-provenance community">Community curated</span>';
+   el.innerHTML='<div class="tb-food-visual"><span class="tb-photo-loading">'+food.emoji+'</span>'+visual(food)+'</div><div><h3>'+food.name+'</h3><p>'+(food.note||food.en)+'</p><span class="tb-tag">'+catLabel(food.category)+'</span>'+prov+'<span class="'+(v.auto?'tb-auto-photo-badge':'tb-photo-kind '+(v.exact?'exact':''))+'">'+v.label+'</span></div><div class="tb-food-actions"><button class="tb-check" title="খেয়েছি" aria-label="'+food.name+' খেয়েছি">'+(on?"✓":"＋")+'</button><button class="tb-wish" title="খেতে চাই" aria-label="'+food.name+' খেতে চাই">'+(wish?"★":"☆")+'</button></div>';
    el.querySelector(".tb-check").onclick=e=>{e.stopPropagation();toggleFood(food.id)};
    el.querySelector(".tb-wish").onclick=e=>{e.stopPropagation();toggleWish(food.id)};
-   el.onclick=()=>openFood(d,food);
-   box.appendChild(el);
+   el.onclick=()=>openFood(d,food);box.appendChild(el);
+   const img=el.querySelector("img"),badge=el.querySelector(".tb-photo-kind,.tb-auto-photo-badge");
+   autoResolvePhoto(food,img,badge);
  });
  box.scrollTop=0;
+}
+function renderDistrictCovers(d){
+ const box=$("#tbDistrictCoverStrip");if(!box)return;box.innerHTML="";
+ const picks=[...d.foods].sort((a,b)=>Number(!!b.image)-Number(!!a.image)).slice(0,3);
+ picks.forEach(f=>{
+   const v=visualInfo(f),c=document.createElement("div");c.className="cover";
+   c.innerHTML='<img src="'+v.url+'" alt="'+f.name+'" referrerpolicy="no-referrer"><span>'+f.name+'</span>';
+   box.appendChild(c);autoResolvePhoto(f,c.querySelector("img"),null);
+ });
 }
 function toggleFood(id){if(selected.has(id)){selected.delete(id)}else{selected.add(id);wishlist.delete(id)}save();renderStats();renderFeatured();toast(selected.has(id)?"খেয়েছি হিসেবে যোগ হয়েছে ✓":"খাওয়া তালিকা থেকে বাদ হয়েছে")}
 function toggleWish(id){if(selected.has(id)){toast("এটা ইতিমধ্যে খেয়েছেন ✓");return}wishlist.has(id)?wishlist.delete(id):wishlist.add(id);save();renderStats();renderFeatured();toast(wishlist.has(id)?"খেতে চাই তালিকায় যোগ হয়েছে ★":"Wishlist থেকে বাদ হয়েছে")}
@@ -251,16 +326,17 @@ function openFood(d,f){
  $("#tbFoodModalTitle").textContent=d.name+" · "+f.name;
  const img='<img src="'+v.url+'" alt="'+f.name+'" referrerpolicy="no-referrer" onerror="this.style.display=\'none\';this.parentElement.textContent=\''+f.emoji+'\'">';
  const source=f.source?'<a class="tb-detail-link" href="'+f.source+'" target="_blank" rel="noopener">↗ উৎস দেখুন'+(f.source_label?" · "+f.source_label:"")+'</a>':'';
+ const prov=f.verified?'<span class="tb-provenance source">✓ Source checked</span>':'<span class="tb-provenance community">Community curated</span>';
  let credit="";
- if(v.exact&&f.image_source){
-   credit='<div class="tb-credit">ছবি: '+(f.image_credit||"Wikimedia Commons")+(f.image_license?" · "+f.image_license:"")+' · <a href="'+f.image_source+'" target="_blank" rel="noopener">মূল ফাইল/লাইসেন্স</a></div>';
- }else if(!v.exact){
-   credit='<div class="tb-representative-note">ছবিটি এই নির্দিষ্ট খাবারের verified photo নয়; একই ক্যাটাগরির একটি প্রতিনিধিত্বমূলক food photograph। ভুল ছবি দেখানোর চেয়ে এটি স্পষ্টভাবে আলাদা করে দেখানো হয়েছে।</div>';
- }
- detail.innerHTML='<div class="tb-detail-hero">'+img+'</div><div class="tb-detail-copy"><h2>'+f.name+'</h2><div class="en">'+f.en+' · '+d.name+', '+d.division+'</div><p>'+f.note+'</p><div class="tb-detail-meta"><span class="tb-tag">'+catLabel(f.category)+'</span>'+(f.verified?'<span class="tb-source-chip ok">✓ Source checked</span>':'<span class="tb-source-chip photo">Community-curated</span>')+'<span class="tb-photo-kind '+(v.exact?'exact':'')+'">'+v.label+'</span></div>'+source+'<div class="tb-detail-actions"><button class="tb-btn primary" data-do="tried">'+(selected.has(f.id)?"✓ খেয়েছি — Undo":"✓ আমি এটা খেয়েছি")+'</button><button class="tb-btn" data-do="wish">'+(wishlist.has(f.id)?"★ Wishlist থেকে বাদ":"☆ খেতে চাই")+'</button></div>'+credit+'</div>';
+ if(v.exact&&f.image_source){credit='<div class="tb-credit">ছবি: '+(f.image_credit||"Wikimedia Commons")+(f.image_license?" · "+f.image_license:"")+' · <a href="'+f.image_source+'" target="_blank" rel="noopener">মূল ফাইল/লাইসেন্স</a></div>'}
+ else if(v.auto){credit='<div class="tb-credit">ছবি Wikimedia Commons search result থেকে স্বয়ংক্রিয়ভাবে নেওয়া। <a href="'+(commonsPhotoCache[f.id]?.source||"#")+'" target="_blank" rel="noopener">Commons source</a></div>'}
+ else{credit='<div class="tb-representative-note">ছবিটি এই নির্দিষ্ট খাবারের verified photo নয়; একই ক্যাটাগরির একটি প্রতিনিধিত্বমূলক food photograph।</div>'}
+ detail.innerHTML='<div class="tb-detail-hero">'+img+'</div><div class="tb-detail-copy"><h2>'+f.name+'</h2><div class="en">'+f.en+' · '+d.name+', '+d.division+'</div><p>'+f.note+'</p><div class="tb-detail-meta"><span class="tb-tag">'+catLabel(f.category)+'</span>'+prov+'<span class="'+(v.auto?'tb-auto-photo-badge':'tb-photo-kind '+(v.exact?'exact':''))+'">'+v.label+'</span></div>'+source+'<div class="tb-detail-actions"><button class="tb-btn primary" data-do="tried">'+(selected.has(f.id)?"✓ খেয়েছি — Undo":"✓ আমি এটা খেয়েছি")+'</button><button class="tb-btn" data-do="wish">'+(wishlist.has(f.id)?"★ Wishlist থেকে বাদ":"☆ খেতে চাই")+'</button></div>'+credit+'</div>';
  detail.querySelector('[data-do="tried"]').onclick=()=>{toggleFood(f.id);openFood(d,f)};
  detail.querySelector('[data-do="wish"]').onclick=()=>{toggleWish(f.id);openFood(d,f)};
  modal.classList.add("open");
+ const im=detail.querySelector(".tb-detail-hero img");
+ if(!f.image&&!v.auto)autoResolvePhoto(f,im,detail.querySelector(".tb-photo-kind"));
 }
 function closeFood(){$("#tbFoodModal").classList.remove("open")}
 
@@ -280,7 +356,7 @@ function openJourney(){
 }
 
 function renderReport(){
- const s=stats();$("#tbRdistrict").textContent=s.tasted.length;$("#tbRfood").textContent=selected.size;$("#tbRpct").textContent=s.pct+"%";$("#tbBadge").textContent=badge();$("#tbReportName").textContent=state.name?state.name+"-এর স্বাদযাত্রা":"আমার ব্যক্তিগত স্বাদযাত্রা";
+ const s=stats();$("#tbRdistrict").textContent=s.tasted.length;$("#tbRfood").textContent=selected.size;$("#tbRpct").textContent=s.pct+"%";$("#tbBadge").textContent=tasteTier()+" · "+badge();$("#tbReportName").textContent=state.name?state.name+"-এর স্বাদযাত্রা":"আমার ব্যক্তিগত স্বাদযাত্রা";
  const names=[];DISTRICTS.forEach(d=>d.foods.forEach(x=>{if(selected.has(x.id))names.push(x.name)}));$("#tbRfoods").innerHTML=names.slice(-7).reverse().map(x=>"<div>✓ "+x+"</div>").join("")||"<div>এখনও কোনো খাবার মার্ক করা হয়নি</div>";
  const target=$("#tbReportMap");target.innerHTML="";const src=$("#tbMap");if(src&&src.children.length&&src.style.display!=="none"){const c=src.cloneNode(true);c.removeAttribute("id");c.querySelectorAll("path").forEach(p=>{p.removeAttribute("tabindex");p.removeAttribute("role");p.classList.remove("selected")});target.appendChild(c)}else target.innerHTML='<div style="text-align:center;font-size:90px">🇧🇩</div>'
 }
@@ -288,12 +364,12 @@ function openReport(){renderReport();$("#tbReportModal").classList.add("open")}f
 async function cardCanvas(){renderReport();if(typeof html2canvas==="undefined")throw new Error("export");return await html2canvas($("#tbReportCard"),{scale:1.35,backgroundColor:null,useCORS:true,logging:false})}
 async function download(){try{const c=await cardCanvas(),a=document.createElement("a");a.download="bangladesh-food-passport-1080x1350.png";a.href=c.toDataURL("image/png");a.click();toast("PNG তৈরি হয়েছে")}catch(e){toast("PNG তৈরি করা যায়নি")}}
 async function share(){try{const c=await cardCanvas();const blob=await new Promise(r=>c.toBlob(r,"image/png"));const file=new File([blob],"bangladesh-food-passport.png",{type:"image/png"});if(navigator.canShare&&navigator.canShare({files:[file]})){await navigator.share({title:"আমার Bangladesh Food Passport",text:"বাংলাদেশের কতটুকু আমি খেয়ে দেখেছি",files:[file]})}else download()}catch(e){if(e.name!=="AbortError")toast("শেয়ার সম্ভব হয়নি—PNG ডাউনলোড করুন")}}
-function backup(){const blob=new Blob([JSON.stringify({version:"1.3",exportedAt:new Date().toISOString(),selected:[...selected],wishlist:[...wishlist],name:state.name},null,2)],{type:"application/json"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="taste-bangladesh-v1.2-backup.json";a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
+function backup(){const blob=new Blob([JSON.stringify({version:"1.5",exportedAt:new Date().toISOString(),selected:[...selected],wishlist:[...wishlist],name:state.name},null,2)],{type:"application/json"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="taste-bangladesh-v1.5-backup.json";a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
 function importData(file){const r=new FileReader();r.onload=()=>{try{const x=JSON.parse(r.result);if(!Array.isArray(x.selected))throw 0;const valid=new Set(DISTRICTS.flatMap(d=>d.foods.map(f=>f.id)));selected=new Set(x.selected.filter(id=>valid.has(id)));wishlist=new Set((x.wishlist||[]).filter(id=>valid.has(id)&&!selected.has(id)));state.name=String(x.name||"").slice(0,40);save();renderStats();renderFeatured();toast("ব্যাকআপ ইমপোর্ট হয়েছে")}catch(e){toast("সঠিক backup JSON নয়")}};r.readAsText(file)}
 
 function wire(){
  $("#tbSearch").addEventListener("input",renderSearch);document.addEventListener("click",e=>{if(!e.target.closest(".tb-map-top"))$("#tbSearchResults").classList.remove("open")});
- $("#tbRandom").onclick=()=>selectDistrict(order[Math.floor(Math.random()*order.length)]);$("#tbRetryMap").onclick=()=>loadMap();$("#tbPrev").onclick=()=>go(-1);$("#tbNext").onclick=()=>go(1);
+ $("#tbRandom").onclick=()=>selectDistrict(order[Math.floor(Math.random()*order.length)]);$("#tbRetryMap").onclick=()=>loadMap();$("#tbStartExplore").onclick=()=>$("#tbAtlas").scrollIntoView({behavior:"smooth",block:"start"});$("#tbHeroTrail").onclick=openJourney;$("#tbPrev").onclick=()=>go(-1);$("#tbNext").onclick=()=>go(1);
  $("#tbOpenReport").onclick=openReport;$("#tbFab").onclick=openReport;$("#tbCloseReport").onclick=closeReport;$("#tbReportModal").addEventListener("click",e=>{if(e.target.id==="tbReportModal")closeReport()});
  $("#tbCloseFood").onclick=closeFood;$("#tbFoodModal").addEventListener("click",e=>{if(e.target.id==="tbFoodModal")closeFood()});
  $("#tbJourney").onclick=openJourney;$("#tbCloseJourney").onclick=()=>$("#tbJourneyModal").classList.remove("open");$("#tbJourneyModal").addEventListener("click",e=>{if(e.target.id==="tbJourneyModal")e.currentTarget.classList.remove("open")});

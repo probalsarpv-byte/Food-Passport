@@ -9,25 +9,49 @@
   <meta property="og:title" content="বাংলাদেশ স্বাদ মানচিত্র">
   <meta property="og:description" content="বাংলাদেশের কতটুকু আপনি খেয়ে দেখেছেন?">
   <meta property="og:type" content="website">
-  <title>বাংলাদেশ স্বাদ মানচিত্র — Food Passport v1.3</title>
+  <title>বাংলাদেশ স্বাদ মানচিত্র — Food Passport v1.5</title>
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="stylesheet" href="./assets/css/app.css">
 </head>
 <body>
 <div id="tbApp">
   <div class="tb-shell">
-    <header class="tb-hero">
-      <div>
-        <div class="tb-kicker">🇧🇩 বাংলাদেশ স্বাদ মানচিত্র <span class="tb-ver">v1.3</span></div>
-        <h1 class="tb-title">কতটুকু বাংলাদেশ<br>খেয়ে দেখেছেন?</h1>
-        <p class="tb-sub">জেলা বেছে নিন, খাওয়া আঞ্চলিক খাবারগুলো মার্ক করুন। আপনার ব্যক্তিগত Food Passport, progress map এবং share-card নিজে থেকেই তৈরি হবে।</p>
-      </div>
+    <div class="tb-brandbar">
+      <div class="tb-brandmark"><span>🇧🇩</span><div><b>বাংলাদেশ স্বাদ মানচিত্র</b><small>Interactive Regional Food Atlas</small></div></div>
+      <div class="tb-brandfacts"><span><b>64</b> জেলা</span><span><b id="tbDbCount">0</b> খাবার</span><span><b id="tbSourceCount">0</b> source checked</span></div>
       <div class="tb-actions">
         <button class="tb-btn" id="tbBackup">ব্যাকআপ</button>
         <button class="tb-btn" id="tbImportBtn">ইমপোর্ট</button>
         <input type="file" id="tbImport" accept="application/json" hidden>
         <button class="tb-btn danger" id="tbReset">রিসেট</button>
         <button class="tb-btn primary" id="tbOpenReport">আমার রিপোর্ট</button>
+      </div>
+    </div>
+
+    <header class="tb-hero tb-hero-premium">
+      <div class="tb-hero-copy">
+        <div class="tb-kicker">FOOD PASSPORT · BANGLADESH <span class="tb-ver">v1.5</span></div>
+        <h1 class="tb-title">মানচিত্রে খুঁজুন<br><em>বাংলাদেশের স্বাদ</em></h1>
+        <p class="tb-sub">জেলা ধরে আঞ্চলিক খাবার আবিষ্কার করুন। যা খেয়েছেন মার্ক করুন, যা খেতে চান Wishlist-এ রাখুন—আর নিজের বাংলাদেশের Food Passport তৈরি করুন।</p>
+        <div class="tb-hero-ctas">
+          <button class="tb-btn primary tb-btn-big" id="tbStartExplore">ম্যাপ থেকে শুরু করুন →</button>
+          <button class="tb-btn tb-btn-big" id="tbHeroTrail">আমার Food Trail</button>
+        </div>
+        <div class="tb-hero-trust">
+          <span>✓ 64 জেলা</span><span>✓ Source-backed expansion</span><span>✓ Browser-saved passport</span>
+        </div>
+      </div>
+      <div class="tb-passport-preview">
+        <div class="tb-passport-glow"></div>
+        <div class="tb-passport-top"><span>PEOPLE'S FOOD PASSPORT</span><b>🇧🇩</b></div>
+        <div class="tb-passport-mapmark">বাংলাদেশ</div>
+        <div class="tb-passport-score"><strong id="tbHeroPct">0%</strong><span>দেশের জেলা tasted</span></div><div class="tb-taste-tier" id="tbTasteTier">Explorer · Level 1</div>
+        <div class="tb-passport-mini">
+          <div><b id="tbHeroDistricts">0</b><span>জেলা</span></div>
+          <div><b id="tbHeroFoods">0</b><span>খাবার</span></div>
+          <div><b id="tbHeroWish">0</b><span>Wishlist</span></div>
+        </div>
+        <div class="tb-passport-stamp">TASTE<br>BANGLADESH</div>
       </div>
     </header>
 
@@ -45,8 +69,14 @@
       <button id="tbJourney" class="tb-mini-action">🧭 আমার Food Trail</button>
     </section>
 
-    <main class="tb-grid">
+    <section class="tb-division-wrap">
+      <div class="tb-section-eyebrow">EXPLORE BY DIVISION</div>
+      <div class="tb-division-nav" id="tbDivisionNav"></div>
+    </section>
+
+    <main class="tb-grid" id="tbAtlas">
       <section class="tb-map-card">
+        <div class="tb-card-titlebar"><div><span>INTERACTIVE ATLAS</span><b>জেলা ছুঁয়ে স্বাদ খুঁজুন</b></div><div class="tb-live-dot">LIVE MAP</div></div>
         <div class="tb-map-top">
           <input class="tb-search" id="tbSearch" autocomplete="off" placeholder="জেলা বা খাবার খুঁজুন — বগুড়া, রসমালাই, মেজবান…">
           <button class="tb-btn" id="tbRandom">🎲 Surprise me</button><button class="tb-btn tb-map-retry" id="tbRetryMap" title="মানচিত্র আবার লোড করুন">↻ Map</button>
@@ -78,7 +108,7 @@
           <div class="tb-panel-head">
             <h2 id="tbDistrictName"></h2>
             <p id="tbDistrictMeta"></p>
-            <div class="tb-progress"><i id="tbDistrictBar"></i></div>
+            <div class="tb-progress"><i id="tbDistrictBar"></i></div><div class="tb-district-cover-strip" id="tbDistrictCoverStrip"></div>
           </div>
           <div class="tb-panel-body" id="tbFoods"></div>
           <div class="tb-bottom">
@@ -90,7 +120,7 @@
     </main>
 
     <section class="tb-featured" id="tbFeaturedWrap">
-      <div class="tb-section-title"><div><b>আজকের Food Trail</b><span>ছবি/উৎস-সমৃদ্ধ কিছু iconic food দ্রুত খুলুন</span></div></div>
+      <div class="tb-section-title"><div><b>Discover More</b><span>source-backed, iconic এবং নতুন regional food experience</span></div></div>
       <div class="tb-featured-grid" id="tbFeatured"></div>
     </section>
 

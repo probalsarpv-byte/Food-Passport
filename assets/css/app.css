@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700;800;900&display=swap");
 
 :root{--bg:#f7f2e8;--card:#fffdf8;--ink:#17221d;--muted:#6d756f;--green:#0b7a57;--green2:#075e45;--line:#e8dfd2;--red:#ef3f5b;--shadow:0 18px 60px rgba(24,46,36,.12);--radius:26px}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans Bengali","Hind Siliguri",system-ui,-apple-system,"Segoe UI",sans-serif}button,input{font:inherit}button{cursor:pointer}
@@ -122,3 +123,102 @@
     padding-bottom:14px
   }
 }
+
+/* =========================================================
+   v1.4 PREMIUM FOOD ATLAS
+   ========================================================= */
+:root{
+ --bg:#f4efe6;--card:#fffdf8;--ink:#10251c;--muted:#70786f;
+ --green:#0b6c4b;--green2:#064832;--green3:#123e30;
+ --gold:#dca457;--saffron:#efb34f;--coral:#dc6b56;
+ --line:#e5dccf;--shadow:0 26px 80px rgba(26,48,38,.13);
+ --radius:30px
+}
+body{
+ font-family:"Noto Sans Bengali","DM Sans",system-ui,sans-serif;
+ background:
+   radial-gradient(circle at 8% 0%,rgba(239,179,79,.16),transparent 26rem),
+   radial-gradient(circle at 96% 22%,rgba(11,108,75,.12),transparent 28rem),
+   #f4efe6;
+}
+#tbApp{background:transparent}
+.tb-shell{max-width:1460px;padding:18px 26px 36px}
+.tb-brandbar{
+ position:sticky;top:10px;z-index:40;display:grid;grid-template-columns:1fr auto auto;
+ align-items:center;gap:18px;padding:10px 12px 10px 16px;margin:0 0 16px;
+ border:1px solid rgba(255,255,255,.55);border-radius:20px;
+ background:rgba(255,253,248,.83);backdrop-filter:blur(18px);
+ box-shadow:0 10px 35px rgba(30,47,38,.08)
+}
+.tb-brandmark{display:flex;gap:10px;align-items:center}.tb-brandmark>span{width:40px;height:40px;border-radius:13px;background:#0e3d30;display:grid;place-items:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.1)}
+.tb-brandmark b{display:block;font-size:15px}.tb-brandmark small{display:block;color:var(--muted);font-family:"DM Sans";font-size:10px;letter-spacing:.04em}
+.tb-brandfacts{display:flex;gap:8px}.tb-brandfacts span{padding:7px 10px;border:1px solid var(--line);border-radius:999px;font-size:10px;color:var(--muted);background:#fff}.tb-brandfacts b{color:var(--ink);font-size:12px}
+.tb-brandbar .tb-actions{flex-wrap:nowrap}.tb-brandbar .tb-btn{padding:9px 11px;font-size:11px;border-radius:12px}
+
+.tb-hero-premium{
+ position:relative;overflow:hidden;display:grid;grid-template-columns:1.15fr .85fr;
+ min-height:470px;align-items:center;gap:44px;padding:54px 56px;margin:0 0 18px;border-radius:38px;
+ color:#fff;background:
+   radial-gradient(circle at 72% 25%,rgba(239,179,79,.22),transparent 25%),
+   radial-gradient(circle at 20% 100%,rgba(76,181,139,.26),transparent 34%),
+   linear-gradient(135deg,#0a4935 0%,#123c30 48%,#132d27 100%);
+ box-shadow:0 35px 100px rgba(14,55,42,.24)
+}
+.tb-hero-premium:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:34px 34px;mask-image:linear-gradient(to right,#000,transparent 80%)}
+.tb-hero-copy,.tb-passport-preview{position:relative;z-index:1}
+.tb-hero-premium .tb-kicker{color:#f6d89d;font-family:"DM Sans";font-size:12px;letter-spacing:.16em}
+.tb-hero-premium .tb-ver{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.18);color:#fff}
+.tb-hero-premium .tb-title{font-size:clamp(48px,6vw,86px);letter-spacing:-.055em;margin:12px 0 14px;color:#fff}
+.tb-hero-premium .tb-title em{font-style:normal;color:#f0c471}
+.tb-hero-premium .tb-sub{color:#dce7e1;max-width:720px;font-size:clamp(15px,1.5vw,20px)}
+.tb-hero-ctas{display:flex;gap:10px;margin-top:24px;flex-wrap:wrap}.tb-btn-big{padding:14px 18px!important;font-size:14px!important}.tb-hero-premium .tb-btn:not(.primary){background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.16);color:#fff}.tb-hero-premium .tb-btn.primary{background:#f3c36e;color:#173326}
+.tb-hero-trust{display:flex;gap:16px;flex-wrap:wrap;margin-top:22px;font-family:"DM Sans";font-size:11px;color:#bcd3c8}
+.tb-passport-preview{min-height:345px;padding:27px;border-radius:30px;background:linear-gradient(145deg,#fbf2dd,#ead7b4);color:#18362a;box-shadow:0 30px 70px rgba(0,0,0,.22),inset 0 0 0 1px rgba(255,255,255,.7);transform:rotate(2.2deg)}
+.tb-passport-preview:after{content:"";position:absolute;inset:12px;border:1px solid rgba(47,80,65,.12);border-radius:23px;pointer-events:none}
+.tb-passport-glow{position:absolute;width:210px;height:210px;right:-45px;top:-55px;background:radial-gradient(circle,rgba(11,108,75,.19),transparent 66%)}
+.tb-passport-top{display:flex;justify-content:space-between;align-items:center;font-family:"DM Sans";font-size:11px;letter-spacing:.14em;color:#617267}.tb-passport-top b{font-size:31px}
+.tb-passport-mapmark{font-size:24px;font-weight:900;margin-top:12px}
+.tb-passport-score{margin:28px 0 20px}.tb-passport-score strong{display:block;font-family:"DM Sans";font-size:78px;line-height:.9;letter-spacing:-.08em;color:#0a6848}.tb-passport-score span{font-size:12px;color:#627067;font-weight:800}
+.tb-passport-mini{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.tb-passport-mini div{padding:12px;border-radius:14px;background:rgba(255,255,255,.55);border:1px solid rgba(40,70,56,.1)}.tb-passport-mini b{display:block;font-family:"DM Sans";font-size:22px}.tb-passport-mini span{font-size:10px;color:#6b776f}
+.tb-passport-stamp{position:absolute;right:22px;bottom:20px;border:2px solid rgba(152,67,49,.38);border-radius:50%;width:84px;height:84px;display:grid;place-items:center;text-align:center;font-family:"DM Sans";font-size:10px;font-weight:900;letter-spacing:.08em;color:rgba(145,67,49,.52);transform:rotate(-12deg)}
+
+.tb-stats{grid-template-columns:repeat(4,1fr);gap:12px;margin:14px 0}.tb-stat{position:relative;overflow:hidden;padding:18px 20px;border-radius:22px;background:rgba(255,253,248,.9);box-shadow:0 12px 34px rgba(38,56,47,.065)}.tb-stat:after{content:"";position:absolute;width:70px;height:70px;border-radius:50%;right:-18px;bottom:-28px;background:rgba(11,108,75,.06)}.tb-stat strong{font-family:"DM Sans";font-size:38px;letter-spacing:-.04em}.tb-stat span{font-size:11px;text-transform:none}
+.tb-mini-strip{grid-template-columns:160px 200px 1fr 1fr;gap:10px}.tb-mini-strip>div,.tb-mini-action{background:#173a2d;color:#fff;border-color:#173a2d;min-height:58px;border-radius:17px}.tb-mini-strip small{color:#bcd1c7}.tb-mini-action{background:#fffdf8;color:var(--ink);border-color:var(--line)}
+
+.tb-division-wrap{padding:14px 0 8px}.tb-section-eyebrow{font-family:"DM Sans";font-size:10px;font-weight:900;letter-spacing:.16em;color:#7b807b;margin:0 0 9px 3px}.tb-division-nav{display:flex;gap:8px;overflow:auto;padding-bottom:6px;scrollbar-width:none}.tb-division-btn{white-space:nowrap;border:1px solid var(--line);background:rgba(255,253,248,.84);border-radius:999px;padding:9px 13px;display:flex;gap:8px;align-items:center;font-weight:850;color:#32473d}.tb-division-btn small{font-family:"DM Sans";font-size:9px;color:#7a837e}.tb-division-btn.active{background:#133c30;color:#fff;border-color:#133c30;box-shadow:0 9px 24px rgba(19,60,48,.16)}.tb-division-btn.active small{color:#c5d7cf}
+
+.tb-grid{grid-template-columns:minmax(0,1.62fr) minmax(360px,.78fr);gap:18px}
+.tb-map-card,.tb-panel,.tb-featured{border-radius:32px;border:1px solid rgba(223,214,202,.9);box-shadow:0 24px 72px rgba(32,53,43,.10)}
+.tb-card-titlebar{display:flex;justify-content:space-between;align-items:center;padding:20px 20px 10px}.tb-card-titlebar span{display:block;font-family:"DM Sans";font-size:9px;letter-spacing:.16em;color:#859087;font-weight:900}.tb-card-titlebar b{display:block;font-size:21px;margin-top:2px}.tb-live-dot{font-family:"DM Sans";font-size:9px;font-weight:900;color:#0a6d4e;padding:7px 9px;border-radius:999px;background:#e5f5ed}.tb-live-dot:before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:#1b9d70;margin-right:5px;box-shadow:0 0 0 5px rgba(27,157,112,.10)}
+.tb-map-top{border-bottom:0;padding:9px 16px 12px}.tb-search{padding:14px 16px;border-radius:16px;background:#f7f3ec}.tb-cats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:11px 15px}.tb-chip{background:#f9f6f0;border-color:#e7ded1}.tb-chip.active{background:#163c30}
+.tb-map-wrap{height:min(74vh,820px);min-height:680px}.tb-map-status{right:18px;bottom:18px}.tb-legend{left:18px;bottom:18px}
+
+.tb-panel{background:linear-gradient(180deg,#fffdf8,#fbf7f0);height:min(74vh,820px);min-height:680px}.tb-panel-head{padding:26px 24px 18px;background:linear-gradient(135deg,#173f32,#0d6748);color:#fff;border-bottom:0}.tb-panel-head h2{font-size:34px;letter-spacing:-.03em}.tb-panel-head p{color:#d3e3dc}.tb-panel-head .tb-scroll-hint{color:#f4d294}.tb-progress{background:rgba(255,255,255,.16);height:8px}.tb-progress>i{background:linear-gradient(90deg,#f1bd61,#f6dba7)}
+.tb-panel-body{padding:14px 14px 24px}.tb-food{padding:10px;border-radius:20px;grid-template-columns:74px 1fr auto;background:#fffdfb;border-color:#e7ded2}.tb-food:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(34,58,46,.10)}.tb-food-visual{width:74px;height:74px;border-radius:17px}.tb-food h3{font-size:16px}.tb-food p{line-height:1.35}.tb-check,.tb-wish{border-radius:13px}.tb-bottom{padding:13px 14px;background:#fff;border-top:1px solid var(--line)}
+
+.tb-featured{padding:22px;margin-top:18px}.tb-section-title b{font-size:28px;letter-spacing:-.02em}.tb-featured-grid{grid-template-columns:repeat(5,1fr);gap:12px}.tb-feature-card{min-height:180px;border-radius:22px;padding:16px;display:flex;flex-direction:column;justify-content:flex-end;text-align:left}.tb-feature-card.has-photo:before{background:linear-gradient(180deg,rgba(9,23,18,.04),rgba(9,23,18,.85))}.tb-feature-card b{font-size:17px}.tb-feature-card small{font-size:11px}
+.tb-contribute{border-radius:24px;padding:20px 22px;background:linear-gradient(135deg,#153c30,#234b3e)}
+
+.tb-fab{background:#f0b95b;color:#143529;box-shadow:0 16px 38px rgba(180,120,35,.28);padding:15px 20px}
+.tb-modal{background:rgba(5,19,13,.72)}.tb-modal-box{border-radius:28px}.tb-detail-hero{border-radius:24px}
+.tb-report{background:linear-gradient(135deg,#f8f0df,#f1e5cc)}
+
+@media(max-width:1120px){.tb-brandbar{grid-template-columns:1fr auto}.tb-brandfacts{display:none}.tb-hero-premium{grid-template-columns:1fr .72fr;padding:42px}.tb-featured-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:900px){.tb-brandbar{position:static;grid-template-columns:1fr}.tb-brandbar .tb-actions{justify-content:flex-start;overflow:auto}.tb-hero-premium{grid-template-columns:1fr;padding:36px 28px}.tb-passport-preview{max-width:580px;width:100%;justify-self:center;transform:none}.tb-grid{grid-template-columns:1fr}.tb-panel{height:auto}.tb-featured-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.tb-shell{padding:10px}.tb-brandbar{border-radius:16px;padding:10px}.tb-brandmark small{display:none}.tb-hero-premium{padding:28px 20px;border-radius:26px}.tb-hero-premium .tb-title{font-size:44px}.tb-passport-preview{min-height:300px}.tb-passport-score strong{font-size:64px}.tb-stats{grid-template-columns:repeat(2,1fr)}.tb-mini-strip{grid-template-columns:1fr 1fr}.tb-featured-grid{grid-template-columns:1fr 1fr}.tb-card-titlebar b{font-size:18px}.tb-map-wrap{min-height:560px}}
+
+/* =========================================================
+   v1.5 — Ultimate Food Passport
+   ========================================================= */
+.tb-taste-tier{display:inline-flex;margin-top:9px;padding:7px 10px;border-radius:999px;background:rgba(18,60,48,.10);font-family:"DM Sans";font-size:10px;font-weight:900;letter-spacing:.08em;color:#275544}
+.tb-district-cover-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:12px;height:66px}
+.tb-district-cover-strip .cover{position:relative;overflow:hidden;border-radius:13px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.12)}
+.tb-district-cover-strip img{width:100%;height:100%;object-fit:cover;display:block;opacity:.9}.tb-district-cover-strip .cover span{position:absolute;left:6px;right:6px;bottom:5px;font-size:8px;font-weight:900;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.6);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tb-provenance{display:inline-flex;margin:5px 5px 0 0;font-size:9px;font-weight:900;padding:3px 6px;border-radius:999px}.tb-provenance.source{background:#dff3e9;color:#075e45}.tb-provenance.community{background:#eee8df;color:#6b635b}
+.tb-photo-loading{position:absolute;inset:0;display:grid;place-items:center;font-size:20px;background:linear-gradient(135deg,#f4ecdd,#e8f1eb);z-index:0}.tb-food-visual img{position:relative;z-index:1}
+.tb-auto-photo-badge{display:inline-flex;margin:5px 5px 0 0;font-size:9px;font-weight:900;padding:3px 6px;border-radius:999px;background:#e7eef7;color:#3f5570}
+.tb-map-card{position:relative}.tb-map-card:after{content:"FOOD ATLAS";position:absolute;right:18px;top:72px;font-family:"DM Sans";font-size:8px;letter-spacing:.18em;color:#a6aaa6;pointer-events:none}
+.tb-food.on{box-shadow:inset 4px 0 0 #0b7a57}.tb-food.wished{box-shadow:inset 4px 0 0 #d9a348}
+.tb-report{background:linear-gradient(145deg,#f7ecd6,#efe0c3)!important}.tb-report:after{content:"BANGLADESH FOOD PASSPORT";position:absolute;right:-55px;top:260px;transform:rotate(90deg);font-family:"DM Sans";font-size:10px;letter-spacing:.24em;color:rgba(18,60,48,.25)}
+.tb-report-title{font-size:58px!important}.tb-report-metric{box-shadow:0 8px 22px rgba(35,55,45,.06)}.tb-report-foods{background:linear-gradient(145deg,#123c30,#0b6245)!important}
+@media(max-width:560px){.tb-district-cover-strip{height:58px}}
