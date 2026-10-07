@@ -1,85 +1,38 @@
-# বাংলাদেশ স্বাদ মানচিত্র — GitHub Edition v1.2
+# বাংলাদেশ স্বাদ মানচিত্র — GitHub Edition v1.7
 
 Production static web app for GitHub Pages.
 
-## v1.2 highlights
+## v1.7 Quality Release
 
-- **64 clickable districts**
-- **142 curated food experiences**
-- **Tried + Want to Try** দুই ধরনের user state
-- personal **Food Trail** view
-- smart **Next Food** suggestion
-- food detail modal with photo, reference, credit and license
-- initial **10 iconic food-photo entries**
-- initial **9 source-checked entries**
-- alias-aware district/food search
-- district progress heatmap
-- 1080×1350 social share-card
-- JSON backup/import with v1/v1.1 migration
-- URL deep link: `#district=bogura`
-- mobile + desktop responsive UI
-- PWA manifest + service worker
-- fallback district selector if the remote polygon map fails
-- GitHub Action validating food schema, IDs, sources and JS syntax
+- 64 clickable districts
+- **139 public food experiences**, all with a specific reference link
+- **9 manually retained food photos**; automatic Wikimedia search is disabled
+- no representative/generic photograph fallback — missing exact photos show a colourful category icon
+- public **Backup / Import removed**; user progress still auto-saves in browser localStorage
+- food/photo correction opens a prefilled email to `probalofficial007@gmail.com`
+- existing v1.6 state is migrated and removed food IDs are safely ignored
+- colourful labelled 64-district map, mobile food explorer, editable Food Passport and reset controls retained
 
 ## Deploy
 
-Upload **the contents of this folder** to your repository root.
+Upload the **contents of this folder** to the repository root. Then enable GitHub Pages from `main / (root)`.
 
-Then:
+No backend, Firebase, npm build, API key or database server is required.
 
-**Settings → Pages → Deploy from a branch → main → /(root) → Save**
+## Data quality policy
 
-No backend, Firebase, npm build, database server or API key is required.
+The public database is intentionally smaller than v1.6. Community-only rows were removed from the public build rather than presenting them as established district facts. `source` is the reference for the district/food association; `image_source` is only the photo/license reference.
 
-## Food data
-
-All content lives in:
-
-`data/foods.json`
-
-A v1.2 food entry supports:
-
-```json
-{
-  "name": "বগুড়ার দই",
-  "en": "Bogura Doi",
-  "category": "sweet",
-  "emoji": "🥛",
-  "note": "সংক্ষিপ্ত বর্ণনা",
-  "id": "bogura--1",
-  "aliases": ["Bogurar doi"],
-  "image": "https://...",
-  "image_source": "https://commons.wikimedia.org/...",
-  "image_credit": "Photographer",
-  "image_license": "CC BY-SA 4.0",
-  "source": "https://...",
-  "source_label": "Source name",
-  "featured": true,
-  "verified": true
-}
-```
-
-### Meaning of `verified`
-
-`verified: true` means a specific public reference has been attached to the entry. It does **not** mean government certification or GI status.
+`verified: true` / `audit_status: reference_linked` means a public reference is attached. It does **not** mean GI status, government certification, or scientific validation.
 
 ### Photo policy
 
-The included initial photo layer uses Wikimedia Commons images and keeps author/license/source metadata in `foods.json`. The Food Details modal exposes those credits.
+`photo_status: verified_food_photo` means the retained image was manually allowed because it depicts the named food type. If this status is absent/`none`, the UI must show an illustrated icon — never an automatically searched or unrelated photo.
 
-For your own photo library, put files in:
+## Corrections
 
-`assets/images/foods/`
-
-and use a relative path such as:
-
-`./assets/images/foods/bogura-doi.webp`
-
-## Important
-
-The database is a regional/cultural food experience list, not an official “one district = one food” list. Foods can overlap geographically. Keep claims neutral and attach sources when promoting an entry as district-specific.
+Visitors should use the in-app email correction button. Repository editing or a GitHub account is not required.
 
 ## Version
 
-**v1.2.0 — GitHub Pages production build**
+**v1.7.0 — GitHub Pages quality-audit build**

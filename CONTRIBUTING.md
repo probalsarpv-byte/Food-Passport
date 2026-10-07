@@ -1,15 +1,7 @@
-# Contributing to Bangladesh Food Passport v1.2
+# Corrections and food suggestions
 
-Food correction/addition PRs should edit `data/foods.json`.
+Public visitors should use the **“তথ্য/ছবি সংশোধন জানান”** email button in the app. It opens a prefilled message to `probalofficial007@gmail.com`.
 
-For a district-specific claim, please add a credible `source`. For photos, include the original `image_source`, creator/credit and license.
+For a correction, include the district, food name, what is wrong, the corrected information, and a reliable reference link. For a photo, include ownership/license information or a reusable source link.
 
-Do not change an existing food ID unless it was never published: IDs are used by visitors' saved browser data.
-
-GitHub Actions validates:
-- exactly 64 districts
-- unique food IDs and district slugs
-- required food fields
-- `verified` entries have a source
-- image entries have an image source
-- JavaScript syntax
+Do not add automatic image-search results as food photos.

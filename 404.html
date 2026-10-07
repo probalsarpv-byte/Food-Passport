@@ -9,7 +9,7 @@
   <meta property="og:title" content="বাংলাদেশ স্বাদ মানচিত্র">
   <meta property="og:description" content="বাংলাদেশের কতটুকু আপনি খেয়ে দেখেছেন?">
   <meta property="og:type" content="website">
-  <title>বাংলাদেশ স্বাদ মানচিত্র — Food Passport v1.6</title>
+  <title>বাংলাদেশ স্বাদ মানচিত্র — Food Passport v1.7</title>
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="stylesheet" href="./assets/css/app.css">
 </head>
@@ -18,11 +18,8 @@
   <div class="tb-shell">
     <div class="tb-brandbar">
       <div class="tb-brandmark"><span>🇧🇩</span><div><b>বাংলাদেশ স্বাদ মানচিত্র</b><small>Interactive Regional Food Atlas</small></div></div>
-      <div class="tb-brandfacts"><span><b>64</b> জেলা</span><span><b id="tbDbCount">0</b> খাবার</span><span><b id="tbSourceCount">0</b> source checked</span></div>
+      <div class="tb-brandfacts"><span><b>64</b> জেলা</span><span><b id="tbDbCount">0</b> খাবার</span><span><b id="tbSourceCount">0</b> reference linked</span></div>
       <div class="tb-actions">
-        <button class="tb-btn" id="tbBackup">ব্যাকআপ</button>
-        <button class="tb-btn" id="tbImportBtn">ইমপোর্ট</button>
-        <input type="file" id="tbImport" accept="application/json" hidden>
         <button class="tb-btn danger" id="tbReset">রিসেট</button>
         <button class="tb-btn primary" id="tbOpenReport">আমার রিপোর্ট</button>
       </div>
@@ -30,7 +27,7 @@
 
     <header class="tb-hero tb-hero-premium">
       <div class="tb-hero-copy">
-        <div class="tb-kicker">FOOD PASSPORT · BANGLADESH <span class="tb-ver">v1.6</span></div>
+        <div class="tb-kicker">FOOD PASSPORT · BANGLADESH <span class="tb-ver">v1.7</span></div>
         <h1 class="tb-title">মানচিত্রে খুঁজুন<br><em>বাংলাদেশের স্বাদ</em></h1>
         <p class="tb-sub">জেলা ধরে আঞ্চলিক খাবার আবিষ্কার করুন। যা খেয়েছেন মার্ক করুন, যা খেতে চান Wishlist-এ রাখুন—আর নিজের বাংলাদেশের Food Passport তৈরি করুন।</p>
         <div class="tb-hero-ctas">
@@ -38,7 +35,7 @@
           <button class="tb-btn tb-btn-big" id="tbHeroTrail">আমার Food Trail</button>
         </div>
         <div class="tb-hero-trust">
-          <span>✓ 64 জেলা</span><span>✓ Source-backed expansion</span><span>✓ Browser-saved passport</span>
+          <span>✓ 64 জেলা</span><span>✓ Quality-audited references</span><span>✓ Browser-saved passport</span>
         </div>
       </div>
       <div class="tb-passport-preview">
@@ -64,7 +61,7 @@
 
     <section class="tb-mini-strip">
       <div><span>🔖</span><b id="tbWishCount">0</b><small>খেতে চাই</small></div>
-      <div><span>✅</span><b id="tbVerifiedCount">0</b><small>source-checked foods</small></div>
+      <div><span>✅</span><b id="tbVerifiedCount">0</b><small>reference-linked foods</small></div>
       <button id="tbNextWish" class="tb-mini-action">🎯 পরের খাবার সাজেস্ট করো</button>
       <button id="tbJourney" class="tb-mini-action">🧭 আমার Food Trail</button>
     </section>
@@ -124,15 +121,15 @@
     </main>
 
     <section class="tb-featured" id="tbFeaturedWrap">
-      <div class="tb-section-title"><div><b>Discover More</b><span>source-backed, iconic এবং নতুন regional food experience</span></div></div>
+      <div class="tb-section-title"><div><b>Discover More</b><span>reference-linked regional food experiences · ভুল ছবি নয়</span></div></div>
       <div class="tb-featured-grid" id="tbFeatured"></div>
     </section>
 
     <div class="tb-contribute">
-      <div><b>ডাটাবেস আরও ভালো করতে চান?</b><span>ভুল তথ্য, নতুন খাবার, স্থানীয় ছবি বা নির্ভরযোগ্য source GitHub Issue-এ প্রস্তাব করা যাবে।</span></div>
-      <a class="tb-btn" href="https://github.com/" target="_blank" rel="noopener" id="tbSuggestLink">＋ খাবার/সংশোধন প্রস্তাব</a>
+      <div><b>তথ্য বা ছবি ভুল দেখছেন?</b><span>সঠিক খাবার, স্থানীয় তথ্য, নির্ভরযোগ্য source বা নিজের/লাইসেন্সকৃত সঠিক ছবি ইমেইলে জানান।</span></div>
+      <a class="tb-btn" href="mailto:probalofficial007@gmail.com?subject=Food%20Passport%20Correction%20Proposal" id="tbSuggestLink">✉️ সংশোধন/খাবার প্রস্তাব</a>
     </div>
-    <p class="tb-note">নোট: এটি একটি সাংস্কৃতিক/আঞ্চলিক food experience list—সরকারি GI তালিকা নয়। <b>✓ Source checked</b> badge শুধু যেসব entry-তে একটি নির্দিষ্ট reference যোগ করা হয়েছে সেগুলোতে দেখায়; এটি কোনো সরকারি certification বোঝায় না। Remote Commons ছবিগুলোর credit ও license Food Details-এ দেয়া আছে।</p>
+    <p class="tb-note">Quality policy v1.7: public database-এ শুধু <b>সূত্র-সংযুক্ত</b> entry রাখা হয়েছে। যাচাইকৃত নির্দিষ্ট খাবারের ছবি না থাকলে ভুল বা অনুমানভিত্তিক photo দেখানোর বদলে রঙিন category icon দেখানো হয়। এটি সরকারি GI তালিকা বা certification নয়।</p>
   </div>
   <button class="tb-fab" id="tbFab">🏆 Food Passport</button>
 </div>
