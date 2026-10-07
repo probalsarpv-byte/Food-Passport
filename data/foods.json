@@ -1,5 +1,5 @@
 {
-  "version": "1.7.0",
+  "version": "1.7.2",
   "updated": "2026-10-07",
   "license_note": "v1.7 quality release: public entries are reference-linked; automatic/representative photo matching is disabled. Exact food photos retain source/credit/license metadata.",
   "district_count": 64,
@@ -3537,13 +3537,7 @@
       "division_en": "সিলেট"
     }
   ],
-  "release_notes": [
-    "V1.7 Quality Audit: public database reduced to reference-linked entries only.",
-    "Automatic Wikimedia photo search and representative fallback photographs removed.",
-    "If an exact food photo is not manually verified, a category icon is shown instead.",
-    "Backup/import controls removed from the public UI; browser progress still auto-saves locally.",
-    "Food/photo correction suggestions now open a prefilled email to probalofficial007@gmail.com."
-  ],
+  "release_notes": "v1.7.2 repair: v1.6 browse-first UI restored; v1.7 quality-safe food/photo policy retained.",
   "verified_count": 139,
   "photo_count": 9,
   "quality_policy": {

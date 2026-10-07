@@ -9,7 +9,7 @@
   <meta property="og:title" content="বাংলাদেশ স্বাদ মানচিত্র">
   <meta property="og:description" content="বাংলাদেশের কতটুকু আপনি খেয়ে দেখেছেন?">
   <meta property="og:type" content="website">
-  <title>বাংলাদেশ স্বাদ মানচিত্র — Food Passport v1.7.1</title>
+  <title>বাংলাদেশ স্বাদ মানচিত্র — Food Passport v1.7.2</title>
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="stylesheet" href="./assets/css/app.css">
 </head>
@@ -27,7 +27,7 @@
 
     <header class="tb-hero tb-hero-premium">
       <div class="tb-hero-copy">
-        <div class="tb-kicker">FOOD PASSPORT · BANGLADESH <span class="tb-ver">v1.7.1</span></div>
+        <div class="tb-kicker">FOOD PASSPORT · BANGLADESH <span class="tb-ver">v1.7.2</span></div>
         <h1 class="tb-title">মানচিত্রে খুঁজুন<br><em>বাংলাদেশের স্বাদ</em></h1>
         <p class="tb-sub">জেলা ধরে আঞ্চলিক খাবার আবিষ্কার করুন। যা খেয়েছেন মার্ক করুন, যা খেতে চান Wishlist-এ রাখুন—আর নিজের বাংলাদেশের Food Passport তৈরি করুন।</p>
         <div class="tb-hero-ctas">
@@ -51,7 +51,22 @@
         <div class="tb-passport-stamp">TASTE<br>BANGLADESH</div>
       </div>
     </header>
-<section class="tb-division-wrap">
+
+    <section class="tb-stats" aria-label="আপনার অগ্রগতি">
+      <div class="tb-stat"><strong id="tbDistrictCount">0</strong><span>জেলা Tasted / 64</span></div>
+      <div class="tb-stat"><strong id="tbFoodCount">0</strong><span>খাবার Tried</span></div>
+      <div class="tb-stat"><strong id="tbDivisionCount">0</strong><span>বিভাগ Covered / 8</span></div>
+      <div class="tb-stat"><strong id="tbPct">0%</strong><span>বাংলাদেশ Coverage</span></div>
+    </section>
+
+    <section class="tb-mini-strip">
+      <div><span>🔖</span><b id="tbWishCount">0</b><small>খেতে চাই</small></div>
+      <div><span>✅</span><b id="tbVerifiedCount">0</b><small>reference-linked foods</small></div>
+      <button id="tbNextWish" class="tb-mini-action">🎯 পরের খাবার সাজেস্ট করো</button>
+      <button id="tbJourney" class="tb-mini-action">🧭 আমার Food Trail</button>
+    </section>
+
+    <section class="tb-division-wrap">
       <div class="tb-section-eyebrow">EXPLORE BY DIVISION</div>
       <div class="tb-division-nav" id="tbDivisionNav"></div>
     </section>
@@ -105,22 +120,6 @@
       </aside>
     </main>
 
-
-    <section class="tb-stats" aria-label="আপনার অগ্রগতি">
-      <div class="tb-stat"><strong id="tbDistrictCount">0</strong><span>জেলা Tasted / 64</span></div>
-      <div class="tb-stat"><strong id="tbFoodCount">0</strong><span>খাবার Tried</span></div>
-      <div class="tb-stat"><strong id="tbDivisionCount">0</strong><span>বিভাগ Covered / 8</span></div>
-      <div class="tb-stat"><strong id="tbPct">0%</strong><span>বাংলাদেশ Coverage</span></div>
-    </section>
-
-    <section class="tb-mini-strip">
-      <div><span>🔖</span><b id="tbWishCount">0</b><small>খেতে চাই</small></div>
-      <div><span>✅</span><b id="tbVerifiedCount">0</b><small>reference-linked foods</small></div>
-      <button id="tbNextWish" class="tb-mini-action">🎯 পরের খাবার সাজেস্ট করো</button>
-      <button id="tbJourney" class="tb-mini-action">🧭 আমার Food Trail</button>
-    </section>
-
-    
     <section class="tb-featured" id="tbFeaturedWrap">
       <div class="tb-section-title"><div><b>Discover More</b><span>reference-linked regional food experiences · ভুল ছবি নয়</span></div></div>
       <div class="tb-featured-grid" id="tbFeatured"></div>
@@ -130,7 +129,7 @@
       <div><b>তথ্য বা ছবি ভুল দেখছেন?</b><span>সঠিক খাবার, স্থানীয় তথ্য, নির্ভরযোগ্য source বা নিজের/লাইসেন্সকৃত সঠিক ছবি ইমেইলে জানান।</span></div>
       <a class="tb-btn" href="mailto:probalofficial007@gmail.com?subject=Food%20Passport%20Correction%20Proposal" id="tbSuggestLink">✉️ সংশোধন/খাবার প্রস্তাব</a>
     </div>
-    <p class="tb-note">Quality policy v1.7.1: public database-এ শুধু <b>সূত্র-সংযুক্ত</b> entry রাখা হয়েছে। যাচাইকৃত নির্দিষ্ট খাবারের ছবি না থাকলে ভুল বা অনুমানভিত্তিক photo দেখানোর বদলে রঙিন category icon দেখানো হয়। এটি সরকারি GI তালিকা বা certification নয়।</p>
+    <p class="tb-note">Quality policy v1.7.2: public database-এ শুধু <b>সূত্র-সংযুক্ত</b> entry রাখা হয়েছে। যাচাইকৃত নির্দিষ্ট খাবারের ছবি না থাকলে ভুল বা অনুমানভিত্তিক photo দেখানোর বদলে রঙিন category icon দেখানো হয়। এটি সরকারি GI তালিকা বা certification নয়।</p>
   </div>
   <button class="tb-fab" id="tbFab">🏆 Food Passport</button>
 </div>

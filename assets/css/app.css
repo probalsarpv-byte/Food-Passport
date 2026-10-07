@@ -270,7 +270,6 @@ body{
 }
 @media(min-width:901px) and (max-width:1180px){.tb-grid.has-district{grid-template-columns:minmax(0,52fr) minmax(380px,48fr)}.tb-panel-body{grid-template-columns:1fr}.tb-food{grid-template-columns:82px 1fr}}
 
-
 /* =========================================================
    v1.7 QUALITY-SAFE PHOTO LAYER
    No automatic image search. Missing exact food photos use icons.
@@ -291,106 +290,5 @@ body{
 @media(max-width:800px){.tb-detail-hero.icon-hero{height:240px}.tb-detail-hero.icon-hero>.tb-icon-art span{font-size:84px}}
 
 
-/* =========================================================
-   v1.7.1 DESIGN HOTFIX — explorer-first layout
-   Keeps v1.7 quality/photo policy; restores a compact premium UI.
-   ========================================================= */
-.tb-brandbar{margin-bottom:12px}
-.tb-hero-premium{
-  min-height:0;
-  grid-template-columns:minmax(0,1.35fr) minmax(300px,.65fr);
-  gap:30px;
-  padding:30px 34px;
-  border-radius:28px;
-  margin-bottom:12px;
-  align-items:center;
-}
-.tb-hero-premium .tb-title{
-  font-size:clamp(42px,4.4vw,64px);
-  line-height:.98;
-  margin:7px 0 10px;
-}
-.tb-hero-premium .tb-sub{
-  font-size:clamp(14px,1.15vw,17px);
-  line-height:1.55;
-  max-width:760px;
-}
-.tb-hero-ctas{margin-top:16px}
-.tb-hero-trust{margin-top:13px;gap:12px}
-.tb-passport-preview{
-  min-height:0;
-  padding:19px 21px;
-  border-radius:22px;
-  transform:rotate(1deg);
-}
-.tb-passport-mapmark{font-size:19px;margin-top:6px}
-.tb-passport-score{margin:12px 0 13px}
-.tb-passport-score strong{font-size:54px}
-.tb-passport-mini div{padding:8px 9px}
-.tb-passport-mini b{font-size:18px}
-.tb-passport-mini span{font-size:9px}
-.tb-passport-stamp{transform:scale(.78);transform-origin:right bottom}
-.tb-division-wrap{margin-top:10px;margin-bottom:12px}
-.tb-grid{margin-top:0}
-.tb-map-card{box-shadow:0 24px 70px rgba(20,57,43,.10)}
-.tb-map-wrap{height:min(72vh,760px)}
-.tb-featured{margin-top:22px}
-.tb-stats{margin-top:18px}
-.tb-mini-strip{margin-bottom:18px}
-
-/* Missing-photo visuals should still feel designed, not like placeholders. */
-.tb-icon-art{
-  background-image:
-    radial-gradient(circle at 22% 18%,rgba(255,255,255,.58),transparent 24%),
-    linear-gradient(145deg,rgba(255,255,255,.08),rgba(0,0,0,.025));
-}
-.tb-food-visual .tb-icon-art span{font-size:34px}
-.tb-feature-card.icon-card>.tb-icon-art{opacity:.95}
-.tb-feature-card.icon-card>.tb-icon-art span{font-size:72px}
-.tb-feature-card.icon-card:after{
-  inset:36% 0 0;
-  background:linear-gradient(transparent,rgba(255,255,255,.88) 38%,rgba(255,255,255,.98));
-}
-
-@media(max-width:900px){
-  .tb-hero-premium{
-    grid-template-columns:1fr;
-    gap:16px;
-    padding:25px 23px;
-    border-radius:24px;
-  }
-  .tb-hero-premium .tb-title{font-size:clamp(39px,9vw,54px)}
-  .tb-passport-preview{
-    display:grid;
-    grid-template-columns:1fr auto;
-    column-gap:16px;
-    align-items:center;
-    width:100%;
-    padding:15px 17px;
-    transform:none;
-  }
-  .tb-passport-top{grid-column:1/-1}
-  .tb-passport-mapmark{margin-top:4px}
-  .tb-passport-score{margin:5px 0 0}
-  .tb-passport-score strong{font-size:46px}
-  .tb-passport-mini{grid-column:2;grid-row:2/5;min-width:170px}
-  .tb-passport-stamp,.tb-passport-glow{display:none}
-  .tb-map-wrap{height:68vh;min-height:540px}
-}
-@media(max-width:560px){
-  .tb-shell{padding:8px}
-  .tb-brandbar{margin-bottom:8px}
-  .tb-hero-premium{padding:20px 17px;margin-bottom:9px}
-  .tb-hero-premium .tb-title{font-size:39px}
-  .tb-hero-premium .tb-sub{font-size:13px}
-  .tb-hero-trust{display:none}
-  .tb-passport-preview{
-    display:block;
-    padding:13px 14px;
-  }
-  .tb-passport-score{display:inline-flex;gap:9px;align-items:end;margin:7px 0}
-  .tb-passport-score strong{font-size:40px}
-  .tb-passport-mini{grid-template-columns:repeat(3,1fr)}
-  .tb-division-wrap{margin-top:6px}
-  .tb-map-wrap{height:64vh;min-height:500px}
-}
+/* v1.7.2 repair: keep the proven v1.6 browse-first geometry and prevent a giant empty first screen. */
+@media(min-width:901px){.tb-hero-premium{margin-bottom:14px}.tb-grid{scroll-margin-top:18px}}

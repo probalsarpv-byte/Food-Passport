@@ -1,10 +1,10 @@
 {
-  "name": "বাংলাদেশ স্বাদ মানচিত্র v1.7.1",
+  "name": "বাংলাদেশ স্বাদ মানচিত্র v1.7.2",
   "short_name": "Food Passport",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#f7f2e8",
   "theme_color": "#0b7a57",
   "lang": "bn",
-  "description": "Explorer-first Bangladesh Food Passport with quality-audited foods and safe photo handling"
+  "description": "Reliable 64-district Bangladesh food map with v1.6 browse-first explorer and v1.7 quality-safe food/photo data."
 }

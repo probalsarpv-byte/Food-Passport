@@ -5,7 +5,7 @@ const GEO_URLS=[
  "https://cdn.jsdelivr.net/gh/HedaetShahriar/bangladesh-locations-dataset@main/data/exports/geojson/boundaries/districts.geojson",
  "https://raw.githubusercontent.com/HedaetShahriar/bangladesh-locations-dataset/main/data/exports/geojson/boundaries/districts.geojson"
 ];
-const STORE="taste_bangladesh_food_passport_v1_7_1", OLDS=["taste_bangladesh_food_passport_v1_7","taste_bangladesh_food_passport_v1_6","taste_bangladesh_food_passport_v1_5","taste_bangladesh_food_passport_v1_4","taste_bangladesh_food_passport_v1_3","taste_bangladesh_food_passport_v1_2","taste_bangladesh_food_passport_v1_1","taste_bangladesh_food_passport_v1"];
+const STORE="taste_bangladesh_food_passport_v1_7_2", OLDS=["taste_bangladesh_food_passport_v1_7_1","taste_bangladesh_food_passport_v1_7","taste_bangladesh_food_passport_v1_6","taste_bangladesh_food_passport_v1_5","taste_bangladesh_food_passport_v1_4","taste_bangladesh_food_passport_v1_3","taste_bangladesh_food_passport_v1_2","taste_bangladesh_food_passport_v1_1","taste_bangladesh_food_passport_v1"];
 let DISTRICTS=[],CATS={},bySlug={},order=[],selected=new Set(),wishlist=new Set(),geo=null;
 let state={selected:[],wishlist:[],name:"",current:null,category:"all"};
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
@@ -98,7 +98,7 @@ async function fetchGeo(){
  for(const url of GEO_URLS){
    try{
      const ctl=new AbortController();
-     const timer=setTimeout(()=>ctl.abort(),12000);
+     const timer=setTimeout(()=>ctl.abort(),5000);
      const res=await fetch(url,{cache:"no-store",signal:ctl.signal});
      clearTimeout(timer);
      if(!res.ok)throw new Error("HTTP "+res.status);
@@ -178,6 +178,7 @@ function renderGeoMap(data){
 }
 async function loadMap(){
  setMapStatus("Map: loading…","");
+ $("#tbLoading").textContent="বাংলাদেশের ৬৪ জেলার ম্যাপ তৈরি হচ্ছে…";
  $("#tbLoading").style.display="flex";
  $("#tbMap").style.display="block";
  $("#tbFallback").style.display="none";
