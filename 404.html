@@ -9,7 +9,7 @@
   <meta property="og:title" content="বাংলাদেশ স্বাদ মানচিত্র">
   <meta property="og:description" content="বাংলাদেশের কতটুকু আপনি খেয়ে দেখেছেন?">
   <meta property="og:type" content="website">
-  <title>বাংলাদেশ স্বাদ মানচিত্র — Food Passport v1.2</title>
+  <title>বাংলাদেশ স্বাদ মানচিত্র — Food Passport v1.2.1</title>
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="stylesheet" href="./assets/css/app.css">
 </head>
@@ -18,7 +18,7 @@
   <div class="tb-shell">
     <header class="tb-hero">
       <div>
-        <div class="tb-kicker">🇧🇩 বাংলাদেশ স্বাদ মানচিত্র <span class="tb-ver">v1.2</span></div>
+        <div class="tb-kicker">🇧🇩 বাংলাদেশ স্বাদ মানচিত্র <span class="tb-ver">v1.2.1</span></div>
         <h1 class="tb-title">কতটুকু বাংলাদেশ<br>খেয়ে দেখেছেন?</h1>
         <p class="tb-sub">জেলা বেছে নিন, খাওয়া আঞ্চলিক খাবারগুলো মার্ক করুন। আপনার ব্যক্তিগত Food Passport, progress map এবং share-card নিজে থেকেই তৈরি হবে।</p>
       </div>
@@ -49,13 +49,13 @@
       <section class="tb-map-card">
         <div class="tb-map-top">
           <input class="tb-search" id="tbSearch" autocomplete="off" placeholder="জেলা বা খাবার খুঁজুন — বগুড়া, রসমালাই, মেজবান…">
-          <button class="tb-btn" id="tbRandom">🎲 Surprise me</button>
+          <button class="tb-btn" id="tbRandom">🎲 Surprise me</button><button class="tb-btn tb-map-retry" id="tbRetryMap" title="মানচিত্র আবার লোড করুন">↻ Map</button>
           <div class="tb-search-results" id="tbSearchResults"></div>
         </div>
         <div class="tb-cats" id="tbCats"></div>
         <div class="tb-map-wrap">
           <svg id="tbMap" viewBox="0 0 620 780" role="img" aria-label="বাংলাদেশের ৬৪ জেলার ইন্টার‌্যাক্টিভ মানচিত্র"></svg>
-          <div class="tb-map-loading" id="tbLoading">বাংলাদেশের জেলা মানচিত্র লোড হচ্ছে…</div>
+          <div class="tb-map-loading" id="tbLoading">বাংলাদেশের ৬৪ জেলার মানচিত্র লোড হচ্ছে…</div><div class="tb-map-status" id="tbMapStatus">Map: loading…</div>
           <div class="tb-fallback" id="tbFallback"></div>
           <div class="tb-legend">
             District Completion
