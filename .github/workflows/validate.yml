@@ -15,7 +15,11 @@ jobs:
           node <<'NODE'
           const fs=require('fs');
           const x=JSON.parse(fs.readFileSync('data/foods.json','utf8'));
+<<<<<<< HEAD
           if(x.version!=='1.7.2') throw new Error('Expected data version 1.7.2');
+=======
+          if(x.version!=='1.5.0') throw new Error('Expected data version 1.5.0');
+>>>>>>> parent of 6c5fadd (v1.6)
           if(x.districts.length!==64) throw new Error('District count must be 64');
           const ids=[], slugs=new Set(), errors=[];
           for(const d of x.districts){

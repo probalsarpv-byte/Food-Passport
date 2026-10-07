@@ -9,7 +9,11 @@
   <meta property="og:title" content="বাংলাদেশ স্বাদ মানচিত্র">
   <meta property="og:description" content="বাংলাদেশের কতটুকু আপনি খেয়ে দেখেছেন?">
   <meta property="og:type" content="website">
+<<<<<<< HEAD
   <title>বাংলাদেশ স্বাদ মানচিত্র — Food Passport v1.7.2</title>
+=======
+  <title>বাংলাদেশ স্বাদ মানচিত্র — Food Passport v1.5</title>
+>>>>>>> parent of 6c5fadd (v1.6)
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="stylesheet" href="./assets/css/app.css">
 </head>
@@ -27,7 +31,11 @@
 
     <header class="tb-hero tb-hero-premium">
       <div class="tb-hero-copy">
+<<<<<<< HEAD
         <div class="tb-kicker">FOOD PASSPORT · BANGLADESH <span class="tb-ver">v1.7.2</span></div>
+=======
+        <div class="tb-kicker">FOOD PASSPORT · BANGLADESH <span class="tb-ver">v1.5</span></div>
+>>>>>>> parent of 6c5fadd (v1.6)
         <h1 class="tb-title">মানচিত্রে খুঁজুন<br><em>বাংলাদেশের স্বাদ</em></h1>
         <p class="tb-sub">জেলা ধরে আঞ্চলিক খাবার আবিষ্কার করুন। যা খেয়েছেন মার্ক করুন, যা খেতে চান Wishlist-এ রাখুন—আর নিজের বাংলাদেশের Food Passport তৈরি করুন।</p>
         <div class="tb-hero-ctas">
@@ -80,13 +88,12 @@
           <div class="tb-search-results" id="tbSearchResults"></div>
         </div>
         <div class="tb-cats" id="tbCats"></div>
-        <div class="tb-map-quickhint" id="tbMapQuickHint">📍 ম্যাপের একটি জেলা ক্লিক করুন — খাবারের তালিকা পাশে খুলবে</div>
         <div class="tb-map-wrap">
           <svg id="tbMap" viewBox="0 0 620 780" role="img" aria-label="বাংলাদেশের ৬৪ জেলার ইন্টার‌্যাক্টিভ মানচিত্র"></svg>
           <div class="tb-map-loading" id="tbLoading">বাংলাদেশের ৬৪ জেলার ম্যাপ তৈরি হচ্ছে…</div><div class="tb-map-status" id="tbMapStatus">Map: loading…</div>
           <div class="tb-fallback" id="tbFallback"></div>
           <div class="tb-legend">
-            Division color · গাঢ় হলে বেশি tasted
+            District Completion
             <div class="tb-legend-row">
               <i class="tb-swatch" style="background:#e5e1d8"></i>
               <i class="tb-swatch" style="background:#b8dfcd"></i>
@@ -98,18 +105,15 @@
         </div>
       </section>
 
-      <aside class="tb-panel" id="tbPanel" aria-live="polite">
+      <aside class="tb-panel" id="tbPanel">
+        <div class="tb-empty" id="tbEmpty">
+          <div><span class="big">🍽️</span><b>একটি জেলা নির্বাচন করুন</b><br><small>ম্যাপ, সার্চ বা Surprise me ব্যবহার করুন।</small></div>
+        </div>
         <div id="tbDistrictView" hidden>
           <div class="tb-panel-head">
-            <button class="tb-sheet-close" id="tbCloseDistrict" aria-label="জেলা খাবারের তালিকা বন্ধ করুন">✕</button>
-            <div class="tb-panel-kicker">DISTRICT FOOD EXPLORER</div>
             <h2 id="tbDistrictName"></h2>
             <p id="tbDistrictMeta"></p>
-            <div class="tb-progress"><i id="tbDistrictBar"></i></div>
-            <div class="tb-district-cover-strip" id="tbDistrictCoverStrip"></div>
-          </div>
-          <div class="tb-panel-toolbar">
-            <span>খাবার ব্রাউজ করুন</span><small id="tbPanelCount"></small>
+            <div class="tb-progress"><i id="tbDistrictBar"></i></div><div class="tb-district-cover-strip" id="tbDistrictCoverStrip"></div>
           </div>
           <div class="tb-panel-body" id="tbFoods"></div>
           <div class="tb-bottom">
@@ -138,68 +142,41 @@
 <div class="tb-toast" id="tbToast"></div>
 
 <div class="tb-modal" id="tbReportModal" role="dialog" aria-modal="true" aria-label="আপনার Food Passport রিপোর্ট">
-  <div class="tb-modal-box tb-report-modal-box">
+  <div class="tb-modal-box">
     <div class="tb-modal-top">
-      <div><small class="tb-modal-eyebrow">MY BANGLADESH FOOD PASSPORT</small><h3>আপনার স্বাদের বাংলাদেশ</h3></div>
+      <h3>আপনার Bangladesh Food Passport</h3>
       <button class="tb-btn" id="tbCloseReport">✕ বন্ধ</button>
     </div>
     <div class="tb-modal-body">
-      <div class="tb-report-controls">
-        <input class="tb-name" id="tbName" maxlength="40" placeholder="নাম (ঐচ্ছিক) — রিপোর্টে দেখাবে">
-        <div class="tb-actions left">
-          <button class="tb-btn primary" id="tbDownload">1080×1350 PNG</button>
-          <button class="tb-btn" id="tbShare">শেয়ার</button>
-          <button class="tb-btn" id="tbEditPassport">✏️ Edit Passport</button>
-        </div>
+      <input class="tb-name" id="tbName" maxlength="40" placeholder="নাম (ঐচ্ছিক) — রিপোর্টে দেখাবে">
+      <div class="tb-actions left">
+        <button class="tb-btn primary" id="tbDownload">1080×1350 PNG</button>
+        <button class="tb-btn" id="tbShare">শেয়ার</button>
       </div>
       <div class="tb-report-stage">
         <div class="tb-report" id="tbReportCard">
-          <div class="tb-report-flagbar"><span></span><b>🇧🇩 FOOD PASSPORT</b><i></i></div>
-          <div class="tb-report-kicker">বাংলাদেশ স্বাদ মানচিত্র</div>
+          <div class="tb-report-kicker">বাংলাদেশ স্বাদ মানচিত্র · Food Passport</div>
           <div class="tb-report-title">আমার স্বাদের<br>বাংলাদেশ</div>
           <div class="tb-report-name" id="tbReportName"></div>
-          <div class="tb-report-summaryline"><span id="tbRTier">Explorer · Level 1</span><span id="tbRdivision">0/8 বিভাগ</span></div>
           <div class="tb-report-main">
-            <div class="tb-report-map-wrap">
-              <div class="tb-report-map" id="tbReportMap"></div>
-              <div class="tb-report-map-caption">Visited districts become richer in colour</div>
-            </div>
+            <div class="tb-report-map" id="tbReportMap"></div>
             <div class="tb-report-side">
-              <div class="tb-report-metric metric-green"><b id="tbRdistrict">0</b><span>জেলা tasted / 64</span></div>
-              <div class="tb-report-metric metric-blue"><b id="tbRfood">0</b><span>regional foods tried</span></div>
-              <div class="tb-report-metric metric-red"><b id="tbRpct">0%</b><span>Bangladesh coverage</span></div>
+              <div class="tb-report-metric"><b id="tbRdistrict">0</b><span>জেলা tasted / 64</span></div>
+              <div class="tb-report-metric"><b id="tbRfood">0</b><span>regional foods tried</span></div>
+              <div class="tb-report-metric"><b id="tbRpct">0%</b><span>Bangladesh coverage</span></div>
               <div class="tb-report-foods"><h4>সাম্প্রতিক স্বাদ</h4><div id="tbRfoods"></div></div>
             </div>
           </div>
-          <div class="tb-report-profile" id="tbReportProfile"></div>
           <div class="tb-report-footer">
             <strong>“বাংলাদেশকে শুধু ঘুরিনি,<br>স্বাদও নিয়েছি।”</strong>
             <span class="tb-report-badge" id="tbBadge">নতুন স্বাদযাত্রা</span>
           </div>
         </div>
       </div>
-      <div class="tb-reset-zone">
-        <div><b>Passport controls</b><small>আগের selection edit বা reset করতে পারবেন</small></div>
-        <button class="tb-btn" id="tbResetTasted">শুধু খাওয়া Reset</button>
-        <button class="tb-btn" id="tbClearWishlist">Wishlist Clear</button>
-        <button class="tb-btn danger" id="tbResetAllReport">সব Reset</button>
-      </div>
     </div>
   </div>
 </div>
 
-<div class="tb-modal" id="tbEditModal" role="dialog" aria-modal="true" aria-label="Food Passport edit করুন">
-  <div class="tb-modal-box tb-edit-modal-box">
-    <div class="tb-modal-top">
-      <div><small class="tb-modal-eyebrow">EDIT PASSPORT</small><h3>খাওয়া খাবার Edit করুন</h3></div>
-      <button class="tb-btn" id="tbCloseEdit">✕ বন্ধ</button>
-    </div>
-    <div class="tb-edit-tools"><input id="tbEditSearch" class="tb-search" placeholder="খাওয়া খাবার খুঁজুন…"><span id="tbEditCount"></span></div>
-    <div class="tb-edit-list" id="tbEditList"></div>
-  </div>
-</div>
-
-<div class="tb-sheet-backdrop" id="tbSheetBackdrop"></div>
 
 <div class="tb-modal" id="tbFoodModal" role="dialog" aria-modal="true" aria-label="খাবারের বিস্তারিত">
   <div class="tb-modal-box tb-food-modal-box">

@@ -222,6 +222,7 @@ body{
 .tb-report{background:linear-gradient(145deg,#f7ecd6,#efe0c3)!important}.tb-report:after{content:"BANGLADESH FOOD PASSPORT";position:absolute;right:-55px;top:260px;transform:rotate(90deg);font-family:"DM Sans";font-size:10px;letter-spacing:.24em;color:rgba(18,60,48,.25)}
 .tb-report-title{font-size:58px!important}.tb-report-metric{box-shadow:0 8px 22px rgba(35,55,45,.06)}.tb-report-foods{background:linear-gradient(145deg,#123c30,#0b6245)!important}
 @media(max-width:560px){.tb-district-cover-strip{height:58px}}
+<<<<<<< HEAD
 
 /* =========================================================
    v1.6 FOOD EXPLORER — browse-first redesign
@@ -292,3 +293,5 @@ body{
 
 /* v1.7.2 repair: keep the proven v1.6 browse-first geometry and prevent a giant empty first screen. */
 @media(min-width:901px){.tb-hero-premium{margin-bottom:14px}.tb-grid{scroll-margin-top:18px}}
+=======
+>>>>>>> parent of 6c5fadd (v1.6)

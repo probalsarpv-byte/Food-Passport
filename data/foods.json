@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "version": "1.7.2",
+=======
+  "version": "1.5.0",
+>>>>>>> parent of 6c5fadd (v1.6)
   "updated": "2026-10-07",
   "license_note": "v1.7 quality release: public entries are reference-linked; automatic/representative photo matching is disabled. Exact food photos retain source/credit/license metadata.",
   "district_count": 64,
@@ -3537,6 +3541,7 @@
       "division_en": "সিলেট"
     }
   ],
+<<<<<<< HEAD
   "release_notes": "v1.7.2 repair: v1.6 browse-first UI restored; v1.7 quality-safe food/photo policy retained.",
   "verified_count": 139,
   "photo_count": 9,
@@ -3547,4 +3552,17 @@
     "missing_photo_fallback": "illustrated category icon",
     "correction_channel": "email"
   }
+=======
+  "release_notes": [
+    "Database expanded to 300+ food experiences",
+    "Runtime Wikimedia Commons photo resolver with local cache",
+    "District food-cover strip",
+    "Food provenance badges: source checked vs community curated",
+    "Premium Passport share card v2",
+    "Taste Score, completion tier and category stats",
+    "V1.4 premium atlas and native 64-district map retained"
+  ],
+  "verified_count": 143,
+  "photo_count": 14
+>>>>>>> parent of 6c5fadd (v1.6)
 }
