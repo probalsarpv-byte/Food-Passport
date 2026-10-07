@@ -1,12 +1,5 @@
 # Changelog
 
-## 1.7.0 — Quality Audit
-- strict reference-linked public dataset
-- automatic/generic food photos removed
-- icon fallback for unverified photos
-- backup/import removed from public UI
-- email-based corrections
-
 ## 1.3.0 — 2026-10-07
 - Replaced D3 district rendering with native SVG path renderer.
 - Fixed blank map while status incorrectly said loaded.

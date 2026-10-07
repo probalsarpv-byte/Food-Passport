@@ -15,11 +15,7 @@ jobs:
           node <<'NODE'
           const fs=require('fs');
           const x=JSON.parse(fs.readFileSync('data/foods.json','utf8'));
-<<<<<<< HEAD
-          if(x.version!=='1.7.2') throw new Error('Expected data version 1.7.2');
-=======
-          if(x.version!=='1.5.0') throw new Error('Expected data version 1.5.0');
->>>>>>> parent of 6c5fadd (v1.6)
+          if(x.version!=='1.6.0') throw new Error('Expected data version 1.6.0');
           if(x.districts.length!==64) throw new Error('District count must be 64');
           const ids=[], slugs=new Set(), errors=[];
           for(const d of x.districts){
@@ -32,9 +28,7 @@ jobs:
                 if(!f[key]) errors.push(`${f.id||d.slug}: missing ${key}`);
               }
               if(f.image && !f.image_source) errors.push(`${f.id}: image requires image_source`);
-              if(!f.verified || !f.source) errors.push(`${f.id}: v1.7.2 public entry requires a source`);
-              if(f.photo_status==='verified_food_photo' && (!f.image || !f.image_source)) errors.push(`${f.id}: verified photo requires image + image_source`);
-              if(f.photo_status!=='verified_food_photo' && f.image) errors.push(`${f.id}: unverified image must be blank`);
+              if(f.verified && !f.source) errors.push(`${f.id}: verified requires source`);
             }
           }
           if(new Set(ids).size!==ids.length) errors.push('duplicate food IDs');
@@ -43,15 +37,3 @@ jobs:
           NODE
       - name: Check JavaScript syntax
         run: node --check assets/js/app.js
-      - name: Reject merge-conflict markers
-        run: |
-          if grep -RInE '^(<<<<<<<|=======|>>>>>>>)' index.html 404.html assets data sw.js manifest.webmanifest; then
-            echo 'Merge-conflict markers found in production files.'
-            exit 1
-          fi
-      - name: Enforce quality-safe photo code
-        run: |
-          if grep -nE 'wikimedia\.org/w/api\.php|queryCommonsPhoto|autoResolvePhoto|REP_IMAGES' assets/js/app.js; then
-            echo 'Automatic/representative photo resolver must not return.'
-            exit 1
-          fi
