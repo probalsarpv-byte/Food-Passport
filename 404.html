@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
+  <meta name="theme-color" content="#0b7a57">
+  <meta name="description" content="বাংলাদেশের ৬৪ জেলার আঞ্চলিক খাবার মার্ক করে নিজের Food Passport ও শেয়ারযোগ্য মানচিত্র তৈরি করুন।">
+  <meta name="color-scheme" content="light">
+  <meta property="og:title" content="বাংলাদেশ স্বাদ মানচিত্র">
+  <meta property="og:description" content="বাংলাদেশের কতটুকু আপনি খেয়ে দেখেছেন?">
+  <meta property="og:type" content="website">
+  <title>বাংলাদেশ স্বাদ মানচিত্র — Food Passport v1.2</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./assets/css/app.css">
+</head>
+<body>
+<div id="tbApp">
+  <div class="tb-shell">
+    <header class="tb-hero">
+      <div>
+        <div class="tb-kicker">🇧🇩 বাংলাদেশ স্বাদ মানচিত্র <span class="tb-ver">v1.2</span></div>
+        <h1 class="tb-title">কতটুকু বাংলাদেশ<br>খেয়ে দেখেছেন?</h1>
+        <p class="tb-sub">জেলা বেছে নিন, খাওয়া আঞ্চলিক খাবারগুলো মার্ক করুন। আপনার ব্যক্তিগত Food Passport, progress map এবং share-card নিজে থেকেই তৈরি হবে।</p>
+      </div>
+      <div class="tb-actions">
+        <button class="tb-btn" id="tbBackup">ব্যাকআপ</button>
+        <button class="tb-btn" id="tbImportBtn">ইমপোর্ট</button>
+        <input type="file" id="tbImport" accept="application/json" hidden>
+        <button class="tb-btn danger" id="tbReset">রিসেট</button>
+        <button class="tb-btn primary" id="tbOpenReport">আমার রিপোর্ট</button>
+      </div>
+    </header>
+
+    <section class="tb-stats" aria-label="আপনার অগ্রগতি">
+      <div class="tb-stat"><strong id="tbDistrictCount">0</strong><span>জেলা Tasted / 64</span></div>
+      <div class="tb-stat"><strong id="tbFoodCount">0</strong><span>খাবার Tried</span></div>
+      <div class="tb-stat"><strong id="tbDivisionCount">0</strong><span>বিভাগ Covered / 8</span></div>
+      <div class="tb-stat"><strong id="tbPct">0%</strong><span>বাংলাদেশ Coverage</span></div>
+    </section>
+
+    <section class="tb-mini-strip">
+      <div><span>🔖</span><b id="tbWishCount">0</b><small>খেতে চাই</small></div>
+      <div><span>✅</span><b id="tbVerifiedCount">0</b><small>source-checked foods</small></div>
+      <button id="tbNextWish" class="tb-mini-action">🎯 পরের খাবার সাজেস্ট করো</button>
+      <button id="tbJourney" class="tb-mini-action">🧭 আমার Food Trail</button>
+    </section>
+
+    <main class="tb-grid">
+      <section class="tb-map-card">
+        <div class="tb-map-top">
+          <input class="tb-search" id="tbSearch" autocomplete="off" placeholder="জেলা বা খাবার খুঁজুন — বগুড়া, রসমালাই, মেজবান…">
+          <button class="tb-btn" id="tbRandom">🎲 Surprise me</button>
+          <div class="tb-search-results" id="tbSearchResults"></div>
+        </div>
+        <div class="tb-cats" id="tbCats"></div>
+        <div class="tb-map-wrap">
+          <svg id="tbMap" viewBox="0 0 620 780" role="img" aria-label="বাংলাদেশের ৬৪ জেলার ইন্টার‌্যাক্টিভ মানচিত্র"></svg>
+          <div class="tb-map-loading" id="tbLoading">বাংলাদেশের জেলা মানচিত্র লোড হচ্ছে…</div>
+          <div class="tb-fallback" id="tbFallback"></div>
+          <div class="tb-legend">
+            District Completion
+            <div class="tb-legend-row">
+              <i class="tb-swatch" style="background:#e5e1d8"></i>
+              <i class="tb-swatch" style="background:#b8dfcd"></i>
+              <i class="tb-swatch" style="background:#72bd99"></i>
+              <i class="tb-swatch" style="background:#26906a"></i>
+              <i class="tb-swatch" style="background:#075e45"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="tb-panel" id="tbPanel">
+        <div class="tb-empty" id="tbEmpty">
+          <div><span class="big">🍽️</span><b>একটি জেলা নির্বাচন করুন</b><br><small>ম্যাপ, সার্চ বা Surprise me ব্যবহার করুন।</small></div>
+        </div>
+        <div id="tbDistrictView" hidden>
+          <div class="tb-panel-head">
+            <h2 id="tbDistrictName"></h2>
+            <p id="tbDistrictMeta"></p>
+            <div class="tb-progress"><i id="tbDistrictBar"></i></div>
+          </div>
+          <div class="tb-panel-body" id="tbFoods"></div>
+          <div class="tb-bottom">
+            <button class="tb-btn" id="tbPrev">← আগের জেলা</button>
+            <button class="tb-btn" id="tbNext">পরের জেলা →</button>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <section class="tb-featured" id="tbFeaturedWrap">
+      <div class="tb-section-title"><div><b>আজকের Food Trail</b><span>ছবি/উৎস-সমৃদ্ধ কিছু iconic food দ্রুত খুলুন</span></div></div>
+      <div class="tb-featured-grid" id="tbFeatured"></div>
+    </section>
+
+    <div class="tb-contribute">
+      <div><b>ডাটাবেস আরও ভালো করতে চান?</b><span>ভুল তথ্য, নতুন খাবার, স্থানীয় ছবি বা নির্ভরযোগ্য source GitHub Issue-এ প্রস্তাব করা যাবে।</span></div>
+      <a class="tb-btn" href="https://github.com/" target="_blank" rel="noopener" id="tbSuggestLink">＋ খাবার/সংশোধন প্রস্তাব</a>
+    </div>
+    <p class="tb-note">নোট: এটি একটি সাংস্কৃতিক/আঞ্চলিক food experience list—সরকারি GI তালিকা নয়। <b>✓ Source checked</b> badge শুধু যেসব entry-তে একটি নির্দিষ্ট reference যোগ করা হয়েছে সেগুলোতে দেখায়; এটি কোনো সরকারি certification বোঝায় না। Remote Commons ছবিগুলোর credit ও license Food Details-এ দেয়া আছে।</p>
+  </div>
+  <button class="tb-fab" id="tbFab">🏆 Food Passport</button>
+</div>
+
+<div class="tb-tip" id="tbTip"></div>
+<div class="tb-toast" id="tbToast"></div>
+
+<div class="tb-modal" id="tbReportModal" role="dialog" aria-modal="true" aria-label="আপনার Food Passport রিপোর্ট">
+  <div class="tb-modal-box">
+    <div class="tb-modal-top">
+      <h3>আপনার Bangladesh Food Passport</h3>
+      <button class="tb-btn" id="tbCloseReport">✕ বন্ধ</button>
+    </div>
+    <div class="tb-modal-body">
+      <input class="tb-name" id="tbName" maxlength="40" placeholder="নাম (ঐচ্ছিক) — রিপোর্টে দেখাবে">
+      <div class="tb-actions left">
+        <button class="tb-btn primary" id="tbDownload">1080×1350 PNG</button>
+        <button class="tb-btn" id="tbShare">শেয়ার</button>
+      </div>
+      <div class="tb-report-stage">
+        <div class="tb-report" id="tbReportCard">
+          <div class="tb-report-kicker">বাংলাদেশ স্বাদ মানচিত্র · Food Passport</div>
+          <div class="tb-report-title">আমার স্বাদের<br>বাংলাদেশ</div>
+          <div class="tb-report-name" id="tbReportName"></div>
+          <div class="tb-report-main">
+            <div class="tb-report-map" id="tbReportMap"></div>
+            <div class="tb-report-side">
+              <div class="tb-report-metric"><b id="tbRdistrict">0</b><span>জেলা tasted / 64</span></div>
+              <div class="tb-report-metric"><b id="tbRfood">0</b><span>regional foods tried</span></div>
+              <div class="tb-report-metric"><b id="tbRpct">0%</b><span>Bangladesh coverage</span></div>
+              <div class="tb-report-foods"><h4>সাম্প্রতিক স্বাদ</h4><div id="tbRfoods"></div></div>
+            </div>
+          </div>
+          <div class="tb-report-footer">
+            <strong>“বাংলাদেশকে শুধু ঘুরিনি,<br>স্বাদও নিয়েছি।”</strong>
+            <span class="tb-report-badge" id="tbBadge">নতুন স্বাদযাত্রা</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="tb-modal" id="tbFoodModal" role="dialog" aria-modal="true" aria-label="খাবারের বিস্তারিত">
+  <div class="tb-modal-box tb-food-modal-box">
+    <div class="tb-modal-top">
+      <h3 id="tbFoodModalTitle">Food Details</h3>
+      <button class="tb-btn" id="tbCloseFood">✕ বন্ধ</button>
+    </div>
+    <div class="tb-food-detail" id="tbFoodDetail"></div>
+  </div>
+</div>
+
+<div class="tb-modal" id="tbJourneyModal" role="dialog" aria-modal="true" aria-label="আমার Food Trail">
+  <div class="tb-modal-box">
+    <div class="tb-modal-top">
+      <h3>আমার Food Trail</h3>
+      <button class="tb-btn" id="tbCloseJourney">✕ বন্ধ</button>
+    </div>
+    <div class="tb-journey-body" id="tbJourneyBody"></div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js" defer></script>
+<script src="./assets/js/app.js" defer></script>
+</body>
+</html>
