@@ -15,7 +15,7 @@ jobs:
           node <<'NODE'
           const fs=require('fs');
           const x=JSON.parse(fs.readFileSync('data/foods.json','utf8'));
-          if(x.version!=='1.6.0') throw new Error('Expected data version 1.6.0');
+          if(x.version!=='1.7.0') throw new Error('Expected data version 1.7.0');
           if(x.districts.length!==64) throw new Error('District count must be 64');
           const ids=[], slugs=new Set(), errors=[];
           for(const d of x.districts){
@@ -28,7 +28,9 @@ jobs:
                 if(!f[key]) errors.push(`${f.id||d.slug}: missing ${key}`);
               }
               if(f.image && !f.image_source) errors.push(`${f.id}: image requires image_source`);
-              if(f.verified && !f.source) errors.push(`${f.id}: verified requires source`);
+              if(!f.verified || !f.source) errors.push(`${f.id}: v1.7 public entry requires a source`);
+              if(f.photo_status==='verified_food_photo' && (!f.image || !f.image_source)) errors.push(`${f.id}: verified photo requires image + image_source`);
+              if(f.photo_status!=='verified_food_photo' && f.image) errors.push(`${f.id}: unverified image must be blank`);
             }
           }
           if(new Set(ids).size!==ids.length) errors.push('duplicate food IDs');

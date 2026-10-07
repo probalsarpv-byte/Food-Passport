@@ -1,9 +1,9 @@
 {
-  "version": "1.6.0",
+  "version": "1.7.0",
   "updated": "2026-10-07",
-  "license_note": "Curated regional-food experience list; not an official GI list.",
+  "license_note": "v1.7 quality release: public entries are reference-linked; automatic/representative photo matching is disabled. Exact food photos retain source/credit/license metadata.",
   "district_count": 64,
-  "food_count": 330,
+  "food_count": 139,
   "districts": [
     {
       "slug": "barguna",
@@ -11,44 +11,6 @@
       "en": "Barguna",
       "division": "বরিশাল",
       "foods": [
-        {
-          "name": "উপকূলের শুঁটকি ভর্তা",
-          "en": "Coastal Shutki Bhorta",
-          "category": "fish",
-          "emoji": "🐟",
-          "note": "উপকূলীয় অঞ্চলের শুঁটকি দিয়ে তৈরি ঝাল ভর্তা।",
-          "id": "barguna--1",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Coastal Shutki Bhorta Bangladesh"
-        },
-        {
-          "name": "ইলিশের ঝোল",
-          "en": "Hilsa Curry",
-          "category": "fish",
-          "emoji": "🐟",
-          "note": "নদী ও উপকূলের ইলিশ দিয়ে ঘরোয়া ঝোল।",
-          "id": "barguna--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Hilsa Curry Bangladesh"
-        },
         {
           "name": "রুটি পিঠা",
           "en": "Ruti Pitha",
@@ -66,7 +28,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Ruti Pitha Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "চুইয়া পিঠা",
@@ -85,7 +49,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Chuiya Pitha Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "চ্যাবা পিঠা",
@@ -104,7 +70,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Chyaba Pitha Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "মুইট্টা পিঠা",
@@ -123,7 +91,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Muitta Pitha Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "আল্লান",
@@ -142,7 +112,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Allan Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "বিসকি",
@@ -161,7 +133,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Biski Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "নারিকেলের ঝোল",
@@ -180,7 +154,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Coconut Curry Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "পাথরঘাটার ইলিশ",
@@ -199,7 +175,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Patharghata Hilsa Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "পাথরঘাটার শুঁটকি",
@@ -218,7 +196,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Patharghata Dried Fish Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "বরিশাল"
@@ -229,63 +209,6 @@
       "en": "Barishal",
       "division": "বরিশাল",
       "foods": [
-        {
-          "name": "গুঠিয়ার সন্দেশ",
-          "en": "Guthia Sandesh",
-          "category": "sweet",
-          "emoji": "🍬",
-          "note": "বরিশালের গুঠিয়া এলাকার পরিচিত ছানার মিষ্টি।",
-          "id": "barishal--1",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Guthia Sandesh Bangladesh"
-        },
-        {
-          "name": "চুষি পিঠা",
-          "en": "Chushi Pitha",
-          "category": "pitha",
-          "emoji": "🥮",
-          "note": "বরিশাল অঞ্চলে জনপ্রিয় সূক্ষ্ম চালের পিঠা।",
-          "id": "barishal--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Chushi Pitha Bangladesh"
-        },
-        {
-          "name": "পেয়ারা",
-          "en": "Guava",
-          "category": "produce",
-          "emoji": "🍐",
-          "note": "বরিশাল অঞ্চলের পেয়ারা ও ভাসমান বাজারের স্বাদ।",
-          "id": "barishal--3",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Guava Bangladesh"
-        },
         {
           "name": "আমড়া",
           "en": "Hog Plum",
@@ -303,7 +226,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Hog Plum Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "বালাম চাল",
@@ -322,45 +247,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Balam Rice Bangladesh"
-        },
-        {
-          "name": "বালাম চালের ভাত",
-          "en": "Balam Rice",
-          "category": "main",
-          "emoji": "🍚",
-          "note": "বালাম চালের সুগন্ধি ভাত।",
-          "id": "barishal--6",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Balam Rice Bangladesh"
-        },
-        {
-          "name": "আমড়ার আচার",
-          "en": "Hog Plum Pickle",
-          "category": "snack",
-          "emoji": "🫙",
-          "note": "বরিশালের আমড়া দিয়ে তৈরি আচার।",
-          "id": "barishal--7",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Hog Plum Pickle Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "বরিশাল"
@@ -388,26 +277,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Buffalo Milk Yogurt Bangladesh"
-        },
-        {
-          "name": "নারকেলের পিঠা",
-          "en": "Coconut Pitha",
-          "category": "pitha",
-          "emoji": "🥥",
-          "note": "নারকেলভিত্তিক ঐতিহ্যবাহী পিঠা।",
-          "id": "bhola--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Coconut Pitha Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "নারিকেল",
@@ -426,7 +298,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Coconut Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "ভোলার ইলিশ",
@@ -445,7 +319,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Bhola Hilsa Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "ভোলার সুপারি",
@@ -464,26 +340,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Bhola Betel Nut Bangladesh"
-        },
-        {
-          "name": "মহিষের দুধ",
-          "en": "Buffalo Milk",
-          "category": "drink",
-          "emoji": "🥛",
-          "note": "দক্ষিণাঞ্চলের মহিষের দুধের স্থানীয় খাদ্য-অভিজ্ঞতা।",
-          "id": "bhola--6",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Buffalo Milk Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "বরিশাল"
@@ -494,63 +353,6 @@
       "en": "Jhalokathi",
       "division": "বরিশাল",
       "foods": [
-        {
-          "name": "পেয়ারা",
-          "en": "Guava",
-          "category": "produce",
-          "emoji": "🍐",
-          "note": "ঝালকাঠির পেয়ারা বাগান ও ভাসমান বাজারের পরিচিত ফল।",
-          "id": "jhalokathi--1",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Guava Bangladesh"
-        },
-        {
-          "name": "নারকেলের নাড়ু",
-          "en": "Coconut Naru",
-          "category": "sweet",
-          "emoji": "🥥",
-          "note": "নারকেল ও গুড়ের দেশি মিষ্টি।",
-          "id": "jhalokathi--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Coconut Naru Bangladesh"
-        },
-        {
-          "name": "স্থানীয় আটা",
-          "en": "Local Wheat Flour",
-          "category": "produce",
-          "emoji": "🌾",
-          "note": "ঝালকাঠির পরিচিত খাদ্যপণ্যের তালিকায় আটা উল্লেখিত।",
-          "id": "jhalokathi--3",
-          "image": "",
-          "source": "https://dbcnews.tv/articles/%E0%A7%AC%E0%A7%AA-%E0%A6%9C%E0%A7%87%E0%A6%B2%E0%A6%BE%E0%A6%B0-%E0%A6%AC%E0%A6%BF%E0%A6%96%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%A4-%E0%A6%AF%E0%A6%A4-%E0%A6%96%E0%A6%BE%E0%A6%AC%E0%A6%BE%E0%A6%B0",
-          "featured": false,
-          "verified": true,
-          "aliases": [],
-          "source_label": "DBC News",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "source_checked",
-          "photo_query": "Local Wheat Flour Bangladesh"
-        },
         {
           "name": "ঝালকাঠির পেয়ারা",
           "en": "Jhalokathi Guava",
@@ -568,7 +370,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Jhalokathi Guava Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "বরিশাল"
@@ -579,44 +383,6 @@
       "en": "Patuakhali",
       "division": "বরিশাল",
       "foods": [
-        {
-          "name": "কুয়াকাটার সামুদ্রিক মাছ",
-          "en": "Kuakata Seafood",
-          "category": "fish",
-          "emoji": "🦐",
-          "note": "কুয়াকাটা উপকূলের তাজা সামুদ্রিক মাছের পদ।",
-          "id": "patuakhali--1",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Kuakata Seafood Bangladesh"
-        },
-        {
-          "name": "শুঁটকি ভর্তা",
-          "en": "Shutki Bhorta",
-          "category": "fish",
-          "emoji": "🐟",
-          "note": "শুঁটকি, মরিচ ও পেঁয়াজে তৈরি উপকূলীয় ভর্তা।",
-          "id": "patuakhali--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Shutki Bhorta Bangladesh"
-        },
         {
           "name": "মহিষের দই",
           "en": "Buffalo Milk Yogurt",
@@ -634,7 +400,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Buffalo Milk Yogurt Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "মহিপুরের জগার মিষ্টি",
@@ -653,7 +421,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Mahipur Jagar Sweet Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "পটুয়াখালীর তরমুজ",
@@ -672,26 +442,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Patuakhali Watermelon Bangladesh"
-        },
-        {
-          "name": "তরমুজের শরবত",
-          "en": "Watermelon Drink",
-          "category": "drink",
-          "emoji": "🍉",
-          "note": "পটুয়াখালীর তরমুজ দিয়ে মৌসুমি ঠান্ডা পানীয়।",
-          "id": "patuakhali--6",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Watermelon Drink Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "বরিশাল"
@@ -719,26 +472,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Guava Bangladesh"
-        },
-        {
-          "name": "নারকেলের নাড়ু",
-          "en": "Coconut Naru",
-          "category": "sweet",
-          "emoji": "🥥",
-          "note": "স্থানীয় নারকেল দিয়ে তৈরি নাড়ু।",
-          "id": "pirojpur--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Coconut Naru Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "নারিকেল",
@@ -757,7 +493,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Coconut Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "সুপারি",
@@ -776,7 +514,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Betel Nut Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "আমড়া",
@@ -795,45 +535,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Hog Plum Bangladesh"
-        },
-        {
-          "name": "স্বরূপকাঠির পেয়ারা",
-          "en": "Swarupkathi Guava",
-          "category": "produce",
-          "emoji": "🍐",
-          "note": "স্বরূপকাঠির পেয়ারা বাগান ও ভাসমান বাজারের ফল।",
-          "id": "pirojpur--6",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Swarupkathi Guava Bangladesh"
-        },
-        {
-          "name": "ডাব",
-          "en": "Tender Coconut",
-          "category": "drink",
-          "emoji": "🥥",
-          "note": "দক্ষিণাঞ্চলের ডাবের পানি ও নারিকেল খাদ্যসংস্কৃতি।",
-          "id": "pirojpur--7",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Tender Coconut Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "বরিশাল"
@@ -844,63 +548,6 @@
       "en": "Bandarban",
       "division": "চট্টগ্রাম",
       "foods": [
-        {
-          "name": "ব্যাম্বু চিকেন",
-          "en": "Bamboo Chicken",
-          "category": "indigenous",
-          "emoji": "🎋",
-          "note": "বাঁশের ভেতরে রান্না করা পাহাড়ি মুরগির পদ।",
-          "id": "bandarban--1",
-          "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tribal_bamboo_chicken_dish_from_Bandarban_Bangladesh.jpg?width=900",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "https://commons.wikimedia.org/wiki/Category:Bamboo_chicken",
-          "image_credit": "Wikimedia Commons contributor",
-          "image_license": "See source",
-          "curation": "community_curated",
-          "photo_query": "Bamboo Chicken Bangladesh"
-        },
-        {
-          "name": "মুন্ডি",
-          "en": "Mundi",
-          "category": "indigenous",
-          "emoji": "🍜",
-          "note": "মারমা জনগোষ্ঠীর পরিচিত নুডলস-ধাঁচের খাবার।",
-          "id": "bandarban--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Mundi Bangladesh"
-        },
-        {
-          "name": "স্টিকি রাইস",
-          "en": "Sticky Rice",
-          "category": "indigenous",
-          "emoji": "🍚",
-          "note": "পাহাড়ি অঞ্চলের আঠালো চালের খাবার।",
-          "id": "bandarban--3",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Sticky Rice Bangladesh"
-        },
         {
           "name": "হিল জুস",
           "en": "Hill Juice",
@@ -918,7 +565,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Hill Juice Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "পাহাড়ি আনারস",
@@ -937,7 +586,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Bandarban Hill Pineapple Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "পাহাড়ি কলা",
@@ -956,45 +607,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Bandarban Hill Banana Bangladesh"
-        },
-        {
-          "name": "বাঁশকোরল ভাজি",
-          "en": "Bamboo Shoot Fry",
-          "category": "indigenous",
-          "emoji": "🎋",
-          "note": "পাহাড়ি রান্নায় বাঁশকোরলের জনপ্রিয় ব্যবহার।",
-          "id": "bandarban--7",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Bamboo Shoot Fry Bangladesh"
-        },
-        {
-          "name": "পাহাড়ি মিক্সড সবজি",
-          "en": "Hill Mixed Vegetables",
-          "category": "indigenous",
-          "emoji": "🥬",
-          "note": "পাহাড়ি নানা সবজি ও হার্বের মিশ্র রান্না।",
-          "id": "bandarban--8",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Hill Mixed Vegetables Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "চট্টগ্রাম"
@@ -1005,44 +620,6 @@
       "en": "Brahmanbaria",
       "division": "চট্টগ্রাম",
       "foods": [
-        {
-          "name": "ছানামুখী",
-          "en": "Chhanamukhi",
-          "category": "sweet",
-          "emoji": "🍬",
-          "note": "ব্রাহ্মণবাড়িয়ার বিখ্যাত ছোট কিউব-আকৃতির ছানার মিষ্টি।",
-          "id": "brahmanbaria--1",
-          "image": "",
-          "source": "",
-          "featured": true,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Chhanamukhi Bangladesh"
-        },
-        {
-          "name": "ছানার মিষ্টি",
-          "en": "Chhana Sweets",
-          "category": "sweet",
-          "emoji": "🍮",
-          "note": "স্থানীয় ছানাভিত্তিক মিষ্টির সংগ্রহ।",
-          "id": "brahmanbaria--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Chhana Sweets Bangladesh"
-        },
         {
           "name": "তালের বড়া",
           "en": "Palm Fruit Fritter",
@@ -1060,7 +637,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Palm Fruit Fritter Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "রসমালাই",
@@ -1079,26 +658,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Rasmalai Bangladesh"
-        },
-        {
-          "name": "তালের পিঠা",
-          "en": "Palm Fruit Pitha",
-          "category": "pitha",
-          "emoji": "🥮",
-          "note": "তাল দিয়ে তৈরি আঞ্চলিক পিঠার অভিজ্ঞতা।",
-          "id": "brahmanbaria--5",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Palm Fruit Pitha Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "চট্টগ্রাম"
@@ -1129,64 +691,9 @@
           "image_credit": "MOHAMMAD SHAJAHAN Bangladesh",
           "image_license": "CC BY-SA 4.0",
           "curation": "source_checked",
-          "photo_query": "Chandpur Hilsa Bangladesh"
-        },
-        {
-          "name": "ইলিশ ভাজা",
-          "en": "Hilsa Fry",
-          "category": "fish",
-          "emoji": "🍳",
-          "note": "তাজা ইলিশের সহজ জনপ্রিয় পরিবেশন।",
-          "id": "chandpur--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Hilsa Fry Bangladesh"
-        },
-        {
-          "name": "ইলিশের ডিম ভাজা",
-          "en": "Hilsa Roe Fry",
-          "category": "fish",
-          "emoji": "🍳",
-          "note": "ইলিশের ডিম ভাজা নদীমাতৃক খাদ্য-অভিজ্ঞতা।",
-          "id": "chandpur--3",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Hilsa Roe Fry Bangladesh"
-        },
-        {
-          "name": "সরিষা ইলিশ",
-          "en": "Mustard Hilsa",
-          "category": "fish",
-          "emoji": "🐟",
-          "note": "সরিষার মসলা দিয়ে ইলিশ রান্না।",
-          "id": "chandpur--4",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Mustard Hilsa Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "verified_food_photo",
+          "photo_scope": "food_type"
         }
       ],
       "division_en": "চট্টগ্রাম"
@@ -1205,7 +712,7 @@
           "note": "চট্টগ্রামের সামাজিক ভোজের ঐতিহ্যবাহী গরুর মাংস।",
           "id": "chattogram--1",
           "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Mejban_Beef_and_Rice-Chittagong.jpg/1024px-Mejban_Beef_and_Rice-Chittagong.jpg",
-          "source": "https://commons.wikimedia.org/wiki/File:Mejban_Beef_and_Rice-Chittagong.jpg",
+          "source": "https://dbcnews.tv/articles/%E0%A7%AC%E0%A7%AA-%E0%A6%9C%E0%A7%87%E0%A6%B2%E0%A6%BE%E0%A6%B0-%E0%A6%AC%E0%A6%BF%E0%A6%96%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%A4-%E0%A6%AF%E0%A6%A4-%E0%A6%96%E0%A6%BE%E0%A6%AC%E0%A6%BE%E0%A6%B0",
           "featured": true,
           "verified": true,
           "aliases": [
@@ -1213,50 +720,14 @@
             "Mezban beef",
             "Mejbani beef"
           ],
-          "source_label": "Wikimedia Commons",
+          "source_label": "DBC News",
           "image_source": "https://commons.wikimedia.org/wiki/File:Mejban_Beef_and_Rice-Chittagong.jpg",
           "image_credit": "Sakib131999",
           "image_license": "CC BY-SA 4.0",
           "curation": "source_checked",
-          "photo_query": "Mezban Bangladesh"
-        },
-        {
-          "name": "কালাভুনা",
-          "en": "Kala Bhuna",
-          "category": "meat",
-          "emoji": "🍖",
-          "note": "গাঢ় মসলা ও ধীর আঁচে রান্না করা চট্টগ্রামের মাংসের পদ।",
-          "id": "chattogram--2",
-          "image": "",
-          "source": "",
-          "featured": true,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Kala Bhuna Bangladesh"
-        },
-        {
-          "name": "বেলা বিস্কুট",
-          "en": "Bela Biscuit",
-          "category": "snack",
-          "emoji": "🍪",
-          "note": "চট্টগ্রামের পুরোনো চায়ের সঙ্গী বিস্কুট।",
-          "id": "chattogram--3",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Bela Biscuit Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "verified_food_photo",
+          "photo_scope": "food_type"
         },
         {
           "name": "শুঁটকি",
@@ -1275,102 +746,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Dried Fish Bangladesh"
-        },
-        {
-          "name": "মেজবানি ডাল",
-          "en": "Mezban Dal",
-          "category": "main",
-          "emoji": "🥣",
-          "note": "মেজবান ভোজে গরুর মাংসের সঙ্গে পরিবেশিত বিশেষ ডাল।",
-          "id": "chattogram--5",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Mezban Dal Bangladesh"
-        },
-        {
-          "name": "নলার ঝোল",
-          "en": "Nolar Jhol",
-          "category": "meat",
-          "emoji": "🍖",
-          "note": "চট্টগ্রামের মেজবান খাবারের সঙ্গে যুক্ত হাড়ের মজ্জাভিত্তিক ঝোল।",
-          "id": "chattogram--6",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Nolar Jhol Bangladesh"
-        },
-        {
-          "name": "দুরুশ কুরা",
-          "en": "Durush Kura",
-          "category": "meat",
-          "emoji": "🍗",
-          "note": "চট্টগ্রাম অঞ্চলের মুরগিভিত্তিক ঐতিহ্যবাহী রান্না।",
-          "id": "chattogram--7",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Durush Kura Bangladesh"
-        },
-        {
-          "name": "শুঁটকি ভর্তা",
-          "en": "Shutki Bhorta",
-          "category": "fish",
-          "emoji": "🐟",
-          "note": "চট্টগ্রামের শুঁটকিভিত্তিক ঝাল ভর্তা।",
-          "id": "chattogram--8",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Shutki Bhorta Bangladesh"
-        },
-        {
-          "name": "আখনি",
-          "en": "Chattogram Akhni",
-          "category": "main",
-          "emoji": "🍛",
-          "note": "চট্টগ্রাম অঞ্চলের চাল-মাংসের সুগন্ধি খাবার।",
-          "id": "chattogram--9",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Chattogram Akhni Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "চট্টগ্রাম"
@@ -1402,64 +780,9 @@
           "image_credit": "Darakshanehaluddin",
           "image_license": "CC0 1.0",
           "curation": "source_checked",
-          "photo_query": "Cumilla Rasmalai Bangladesh"
-        },
-        {
-          "name": "রসগোল্লা",
-          "en": "Rasgulla",
-          "category": "sweet",
-          "emoji": "🍬",
-          "note": "কুমিল্লার মিষ্টির দোকানগুলোর পরিচিত ছানার মিষ্টি।",
-          "id": "cumilla--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Rasgulla Bangladesh"
-        },
-        {
-          "name": "ক্ষীরমোহন",
-          "en": "Kheer Mohon",
-          "category": "sweet",
-          "emoji": "🍬",
-          "note": "কুমিল্লার মিষ্টির দোকানগুলোতে পাওয়া দুধ-ছানার মিষ্টি।",
-          "id": "cumilla--3",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Kheer Mohon Bangladesh"
-        },
-        {
-          "name": "মিষ্টি দই",
-          "en": "Sweet Yogurt",
-          "category": "sweet",
-          "emoji": "🥛",
-          "note": "কুমিল্লার মিষ্টির দোকান সংস্কৃতির পরিচিত দই।",
-          "id": "cumilla--4",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Sweet Yogurt Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "verified_food_photo",
+          "photo_scope": "food_type"
         }
       ],
       "division_en": "চট্টগ্রাম"
@@ -1470,63 +793,6 @@
       "en": "Cox's Bazar",
       "division": "চট্টগ্রাম",
       "foods": [
-        {
-          "name": "সামুদ্রিক মাছ গ্রিল",
-          "en": "Grilled Seafood",
-          "category": "fish",
-          "emoji": "🐠",
-          "note": "কক্সবাজারে জনপ্রিয় তাজা সামুদ্রিক মাছ।",
-          "id": "coxs-bazar--1",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Grilled Seafood Bangladesh"
-        },
-        {
-          "name": "শুঁটকি",
-          "en": "Dried Fish",
-          "category": "fish",
-          "emoji": "🐟",
-          "note": "উপকূলীয় শুকনো মাছের ঐতিহ্য।",
-          "id": "coxs-bazar--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Dried Fish Bangladesh"
-        },
-        {
-          "name": "লইট্টা ফ্রাই",
-          "en": "Bombay Duck Fry",
-          "category": "fish",
-          "emoji": "🍤",
-          "note": "লইট্টা মাছের ভাজা/মশলাদার পদ।",
-          "id": "coxs-bazar--3",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Bombay Duck Fry Bangladesh"
-        },
         {
           "name": "মিষ্টিপান",
           "en": "Sweet Betel Leaf",
@@ -1544,7 +810,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Sweet Betel Leaf Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "বার্মিজ আচার",
@@ -1563,64 +831,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Burmese Pickle Bangladesh"
-        },
-        {
-          "name": "কোরাল মাছ গ্রিল",
-          "en": "Grilled Coral Fish",
-          "category": "fish",
-          "emoji": "🐠",
-          "note": "কক্সবাজারে জনপ্রিয় সামুদ্রিক কোরাল মাছের গ্রিল।",
-          "id": "coxs-bazar--6",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Grilled Coral Fish Bangladesh"
-        },
-        {
-          "name": "রূপচাঁদা ফ্রাই",
-          "en": "Pomfret Fry",
-          "category": "fish",
-          "emoji": "🐟",
-          "note": "কক্সবাজারে জনপ্রিয় রূপচাঁদা মাছ ভাজা।",
-          "id": "coxs-bazar--7",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Pomfret Fry Bangladesh"
-        },
-        {
-          "name": "চিংড়ি গ্রিল",
-          "en": "Grilled Prawn",
-          "category": "fish",
-          "emoji": "🦐",
-          "note": "কক্সবাজারের সি-ফুড স্টলে জনপ্রিয় চিংড়ি গ্রিল।",
-          "id": "coxs-bazar--8",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Grilled Prawn Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "চট্টগ্রাম"
@@ -1648,26 +861,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Khandal Sweets Bangladesh"
-        },
-        {
-          "name": "ছানার মিষ্টি",
-          "en": "Chhana Sweets",
-          "category": "sweet",
-          "emoji": "🍮",
-          "note": "স্থানীয় ছানাভিত্তিক মিষ্টান্ন।",
-          "id": "feni--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Chhana Sweets Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "মহিষের দুধের ঘি",
@@ -1686,7 +882,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Buffalo Milk Ghee Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "চট্টগ্রাম"
@@ -1697,63 +895,6 @@
       "en": "Khagrachhari",
       "division": "চট্টগ্রাম",
       "foods": [
-        {
-          "name": "ব্যাম্বু চিকেন",
-          "en": "Bamboo Chicken",
-          "category": "indigenous",
-          "emoji": "🎋",
-          "note": "বাঁশে রান্না করা পাহাড়ি মুরগি।",
-          "id": "khagrachhari--1",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Bamboo Chicken Bangladesh"
-        },
-        {
-          "name": "পাজন",
-          "en": "Pajon",
-          "category": "indigenous",
-          "emoji": "🥬",
-          "note": "বিভিন্ন সবজি ও উপকরণে তৈরি পাহাড়ি মিশ্র পদ।",
-          "id": "khagrachhari--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Pajon Bangladesh"
-        },
-        {
-          "name": "পাহাড়ি স্টিকি রাইস",
-          "en": "Hill Sticky Rice",
-          "category": "indigenous",
-          "emoji": "🍚",
-          "note": "আঠালো চালের ঐতিহ্যবাহী পাহাড়ি খাবার।",
-          "id": "khagrachhari--3",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Hill Sticky Rice Bangladesh"
-        },
         {
           "name": "পাহাড়ি হলুদ",
           "en": "Hill Turmeric",
@@ -1771,45 +912,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Hill Turmeric Bangladesh"
-        },
-        {
-          "name": "হেবাং",
-          "en": "Hebang",
-          "category": "indigenous",
-          "emoji": "🍃",
-          "note": "ত্রিপুরা-পাহাড়ি খাদ্যসংস্কৃতির ভাপে রান্না পদ।",
-          "id": "khagrachhari--5",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Hebang Bangladesh"
-        },
-        {
-          "name": "বাঁশকোরল তরকারি",
-          "en": "Bamboo Shoot Curry",
-          "category": "indigenous",
-          "emoji": "🎋",
-          "note": "বাঁশকোরল দিয়ে পাহাড়ি তরকারি।",
-          "id": "khagrachhari--6",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Bamboo Shoot Curry Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "চট্টগ্রাম"
@@ -1820,44 +925,6 @@
       "en": "Lakshmipur",
       "division": "চট্টগ্রাম",
       "foods": [
-        {
-          "name": "নারকেলের পিঠা",
-          "en": "Coconut Pitha",
-          "category": "pitha",
-          "emoji": "🥥",
-          "note": "দক্ষিণ-পূর্বাঞ্চলের নারকেলভিত্তিক পিঠা।",
-          "id": "lakshmipur--1",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Coconut Pitha Bangladesh"
-        },
-        {
-          "name": "নারকেলের নাড়ু",
-          "en": "Coconut Naru",
-          "category": "sweet",
-          "emoji": "🥥",
-          "note": "নারকেল ও গুড়ের দেশি মিষ্টি।",
-          "id": "lakshmipur--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Coconut Naru Bangladesh"
-        },
         {
           "name": "সুপারি",
           "en": "Betel Nut",
@@ -1875,7 +942,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Betel Nut Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "নারিকেল",
@@ -1894,26 +963,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Coconut Bangladesh"
-        },
-        {
-          "name": "সয়াবিন",
-          "en": "Soybean",
-          "category": "produce",
-          "emoji": "🫘",
-          "note": "লক্ষ্মীপুরে বহুল চাষ হওয়া খাদ্যশস্য।",
-          "id": "lakshmipur--5",
-          "image": "",
-          "source": "https://unseenbangladesh.com/guide/famous",
-          "featured": false,
-          "verified": true,
-          "aliases": [],
-          "source_label": "Unseen Bangladesh",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "source_checked",
-          "photo_query": "Soybean Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "চট্টগ্রাম"
@@ -1941,26 +993,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Kholaja Pitha Bangladesh"
-        },
-        {
-          "name": "নারকেল-ভিত্তিক হাঁসের তরকারি",
-          "en": "Coconut Duck Curry",
-          "category": "meat",
-          "emoji": "🦆",
-          "note": "নারকেল ও মসলায় রান্না করা আঞ্চলিক হাঁসের পদ।",
-          "id": "noakhali--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Coconut Duck Curry Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "নারকেল নাড়ু",
@@ -1979,7 +1014,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Coconut Naru Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "ম্যারা পিঠা",
@@ -1998,7 +1035,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Mera Pitha Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "মহিষের দই",
@@ -2017,7 +1056,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Noakhali Buffalo Yogurt Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "নোয়াখালীর সুপারি",
@@ -2036,7 +1077,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Noakhali Betel Nut Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "নোয়াখালীর নারিকেল",
@@ -2055,45 +1098,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Noakhali Coconut Bangladesh"
-        },
-        {
-          "name": "হাঁসের মাংস নারিকেল দিয়ে",
-          "en": "Coconut Duck Curry",
-          "category": "meat",
-          "emoji": "🦆",
-          "note": "নারিকেল ও মসলায় রান্না নোয়াখালীর ঘরোয়া হাঁসের পদ।",
-          "id": "noakhali--8",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Coconut Duck Curry Bangladesh"
-        },
-        {
-          "name": "নারিকেলের পায়েস",
-          "en": "Coconut Payesh",
-          "category": "sweet",
-          "emoji": "🥥",
-          "note": "নারিকেল-দুধভিত্তিক আঞ্চলিক মিষ্টান্ন।",
-          "id": "noakhali--9",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Coconut Payesh Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "চট্টগ্রাম"
@@ -2104,63 +1111,6 @@
       "en": "Rangamati",
       "division": "চট্টগ্রাম",
       "foods": [
-        {
-          "name": "ব্যাম্বু চিকেন",
-          "en": "Bamboo Chicken",
-          "category": "indigenous",
-          "emoji": "🎋",
-          "note": "বাঁশের খোলে রান্না করা পাহাড়ি মুরগি।",
-          "id": "rangamati--1",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Bamboo Chicken Bangladesh"
-        },
-        {
-          "name": "পাজন",
-          "en": "Pajon",
-          "category": "indigenous",
-          "emoji": "🥬",
-          "note": "পাহাড়ি উৎসব ও ঘরোয়া রান্নায় জনপ্রিয় মিশ্র সবজি।",
-          "id": "rangamati--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Pajon Bangladesh"
-        },
-        {
-          "name": "কলাপাতায় মাছ",
-          "en": "Banana Leaf Fish",
-          "category": "fish",
-          "emoji": "🐟",
-          "note": "পাতায় মুড়ে রান্না করা পাহাড়ি মাছের পদ।",
-          "id": "rangamati--3",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Banana Leaf Fish Bangladesh"
-        },
         {
           "name": "আনারস",
           "en": "Pineapple",
@@ -2178,7 +1128,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Pineapple Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "কাঁঠাল",
@@ -2197,7 +1149,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Jackfruit Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "পাহাড়ি কলা",
@@ -2216,7 +1170,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Hill Banana Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "কাপ্তাই লেকের মাছ",
@@ -2235,45 +1191,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Kaptai Lake Fish Bangladesh"
-        },
-        {
-          "name": "বাঁশকোরল ভাজি",
-          "en": "Bamboo Shoot Fry",
-          "category": "indigenous",
-          "emoji": "🎋",
-          "note": "রাঙামাটির পাহাড়ি রান্নায় বাঁশকোরলের পদ।",
-          "id": "rangamati--8",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Bamboo Shoot Fry Bangladesh"
-        },
-        {
-          "name": "হেবাং",
-          "en": "Hebang",
-          "category": "indigenous",
-          "emoji": "🍃",
-          "note": "পাতায় মুড়ে/ভাপে রান্না করা পাহাড়ি খাবারের ধরন।",
-          "id": "rangamati--9",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Hebang Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "চট্টগ্রাম"
@@ -2301,68 +1221,9 @@
           "image_credit": "Ershadua",
           "image_license": "Public domain",
           "curation": "source_checked",
-          "photo_query": "Bakarkhani Bangladesh"
-        },
-        {
-          "name": "কাচ্চি বিরিয়ানি",
-          "en": "Kacchi Biryani",
-          "category": "main",
-          "emoji": "🍛",
-          "note": "ঢাকার জনপ্রিয় মাটন-চালভিত্তিক উৎসবের খাবার।",
-          "id": "dhaka--2",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Kacchi_Biryani.jpg/1024px-Kacchi_Biryani.jpg",
-          "source": "https://commons.wikimedia.org/wiki/File:Kacchi_Biryani.jpg",
-          "featured": true,
-          "verified": true,
-          "aliases": [
-            "কাচ্চি",
-            "Old Dhaka Kacchi",
-            "Kacchi"
-          ],
-          "source_label": "Wikimedia Commons",
-          "image_source": "https://commons.wikimedia.org/wiki/File:Kacchi_Biryani.jpg",
-          "image_credit": "ANKAN",
-          "image_license": "CC BY-SA 4.0",
-          "curation": "source_checked",
-          "photo_query": "Kacchi Biryani Bangladesh"
-        },
-        {
-          "name": "মোরগ পোলাও",
-          "en": "Morog Polao",
-          "category": "main",
-          "emoji": "🍗",
-          "note": "সুগন্ধি চাল ও মুরগির পুরান ঢাকার জনপ্রিয় পদ।",
-          "id": "dhaka--3",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Morog Polao Bangladesh"
-        },
-        {
-          "name": "হাজির বিরিয়ানি",
-          "en": "Haji Biryani",
-          "category": "main",
-          "emoji": "🍲",
-          "note": "পুরান ঢাকার বিখ্যাত বিরিয়ানি ধারার একটি নাম।",
-          "id": "dhaka--4",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Haji Biryani Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "verified_food_photo",
+          "photo_scope": "food_type"
         },
         {
           "name": "পুরান ঢাকার বিরিয়ানি",
@@ -2381,140 +1242,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Old Dhaka Biryani Bangladesh"
-        },
-        {
-          "name": "তেহারি",
-          "en": "Tehari",
-          "category": "main",
-          "emoji": "🍛",
-          "note": "ঢাকার জনপ্রিয় গরুর মাংস ও সুগন্ধি চালের একপাত্র খাবার।",
-          "id": "dhaka--6",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Tehari Bangladesh"
-        },
-        {
-          "name": "বোরহানি",
-          "en": "Borhani",
-          "category": "drink",
-          "emoji": "🥤",
-          "note": "বিরিয়ানি-কাচ্চির সঙ্গে পরিবেশিত মসলাদার দইয়ের পানীয়।",
-          "id": "dhaka--7",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Borhani Bangladesh"
-        },
-        {
-          "name": "হালিম",
-          "en": "Halim",
-          "category": "main",
-          "emoji": "🥣",
-          "note": "ডাল, গম ও মাংসের ঘন ধীর-রান্না খাবার।",
-          "id": "dhaka--8",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Halim Bangladesh"
-        },
-        {
-          "name": "শিক কাবাব",
-          "en": "Seekh Kebab",
-          "category": "meat",
-          "emoji": "🍢",
-          "note": "পুরান ঢাকার কাবাব সংস্কৃতির জনপ্রিয় পদ।",
-          "id": "dhaka--9",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Seekh Kebab Bangladesh"
-        },
-        {
-          "name": "জালি কাবাব",
-          "en": "Jali Kebab",
-          "category": "meat",
-          "emoji": "🥩",
-          "note": "ঢাকার পুরনো খাবারের দোকানগুলোতে পরিচিত কাবাব।",
-          "id": "dhaka--10",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Jali Kebab Bangladesh"
-        },
-        {
-          "name": "ফুচকা",
-          "en": "Fuchka",
-          "category": "snack",
-          "emoji": "🥙",
-          "note": "ঢাকার জনপ্রিয় রাস্তার খাবার।",
-          "id": "dhaka--11",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Fuchka Bangladesh"
-        },
-        {
-          "name": "চটপটি",
-          "en": "Dhaka Chotpoti",
-          "category": "snack",
-          "emoji": "🥣",
-          "note": "ছোলা, আলু ও টক-মসলায় তৈরি জনপ্রিয় স্ট্রিট ফুড।",
-          "id": "dhaka--12",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Dhaka Chotpoti Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "ঢাকা"
@@ -2542,26 +1272,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Date Palm Jaggery Bangladesh"
-        },
-        {
-          "name": "গুড়ের চিতই পিঠা",
-          "en": "Jaggery Chitoi Pitha",
-          "category": "pitha",
-          "emoji": "🥮",
-          "note": "খেজুরের গুড়ের সঙ্গে পরিবেশিত শীতের পিঠা।",
-          "id": "faridpur--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Jaggery Chitoi Pitha Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "ফরিদপুরের পেঁয়াজ",
@@ -2580,7 +1293,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Faridpur Onion Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "ঢাকা"
@@ -2608,26 +1323,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Jackfruit Bangladesh"
-        },
-        {
-          "name": "ভাওয়ালের দেশি পিঠা",
-          "en": "Bhawal Pitha",
-          "category": "pitha",
-          "emoji": "🥮",
-          "note": "ভাওয়াল অঞ্চলের গ্রামীণ পিঠার স্বাদ।",
-          "id": "gazipur--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Bhawal Pitha Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "পেয়ারা",
@@ -2646,7 +1344,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Guava Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "ঢাকা"
@@ -2657,44 +1357,6 @@
       "en": "Gopalganj",
       "division": "ঢাকা",
       "foods": [
-        {
-          "name": "গুড়ের পিঠা",
-          "en": "Jaggery Pitha",
-          "category": "pitha",
-          "emoji": "🥮",
-          "note": "খেজুরের গুড় ও চালের গুঁড়ায় তৈরি শীতের পিঠা।",
-          "id": "gopalganj--1",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Jaggery Pitha Bangladesh"
-        },
-        {
-          "name": "দেশি মাছের ঝোল",
-          "en": "Local Fish Curry",
-          "category": "fish",
-          "emoji": "🐟",
-          "note": "নদী-বিলের দেশি মাছের ঘরোয়া রান্না।",
-          "id": "gopalganj--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Local Fish Curry Bangladesh"
-        },
         {
           "name": "রসগোল্লা",
           "en": "Rasgulla",
@@ -2712,7 +1374,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Rasgulla Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "ছানার জিলাপি",
@@ -2731,7 +1395,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Chhana Jalebi Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "বিলের মাছ",
@@ -2750,7 +1416,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Beel Fish Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "ঢাকা"
@@ -2761,44 +1429,6 @@
       "en": "Kishoreganj",
       "division": "ঢাকা",
       "foods": [
-        {
-          "name": "অষ্টগ্রামের পনির",
-          "en": "Astagram Cheese",
-          "category": "snack",
-          "emoji": "🧀",
-          "note": "হাওরাঞ্চলের অষ্টগ্রামের ঐতিহ্যবাহী পনির।",
-          "id": "kishoreganj--1",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Astagram Cheese Bangladesh"
-        },
-        {
-          "name": "হাওরের হাঁসের মাংস",
-          "en": "Haor Duck Curry",
-          "category": "meat",
-          "emoji": "🦆",
-          "note": "হাওরাঞ্চলে জনপ্রিয় মসলাদার হাঁসের রান্না।",
-          "id": "kishoreganj--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Haor Duck Curry Bangladesh"
-        },
         {
           "name": "বালিশ মিষ্টি",
           "en": "Balish Mishti",
@@ -2816,7 +1446,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Balish Mishti Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "নকশি পিঠা",
@@ -2835,7 +1467,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Nakshi Pitha Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "হাওরের মাছ",
@@ -2854,7 +1488,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Kishoreganj Haor Fish Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "ঢাকা"
@@ -2882,26 +1518,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Date Palm Jaggery Bangladesh"
-        },
-        {
-          "name": "গুড়ের পিঠা",
-          "en": "Jaggery Pitha",
-          "category": "pitha",
-          "emoji": "🥮",
-          "note": "স্থানীয় গুড় দিয়ে তৈরি গ্রামীণ পিঠা।",
-          "id": "madaripur--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Jaggery Pitha Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "রসগোল্লা",
@@ -2920,7 +1539,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Rasgulla Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "ঢাকা"
@@ -2948,26 +1569,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Hazari Gur Bangladesh"
-        },
-        {
-          "name": "পাটিসাপটা",
-          "en": "Patishapta",
-          "category": "pitha",
-          "emoji": "🥞",
-          "note": "গুড়-নারকেল/ক্ষীরের পুর দেওয়া শীতের পিঠা।",
-          "id": "manikganj--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Patishapta Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "সরিষা ফুলের মধু",
@@ -2986,7 +1590,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Mustard Flower Honey Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "ঢাকা"
@@ -3014,26 +1620,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Bhagyakul Sweets Bangladesh"
-        },
-        {
-          "name": "মাওয়া ঘাটের ইলিশ",
-          "en": "Mawa Hilsa",
-          "category": "fish",
-          "emoji": "🐟",
-          "note": "পদ্মাপাড়ের ইলিশভিত্তিক খাবারের অভিজ্ঞতা।",
-          "id": "munshiganj--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Mawa Hilsa Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "পাতক্ষীর",
@@ -3052,7 +1641,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Patkhir Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "মুন্সীগঞ্জের আলু",
@@ -3071,7 +1662,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Munshiganj Potato Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "ঢাকা"
@@ -3082,44 +1675,6 @@
       "en": "Narayanganj",
       "division": "ঢাকা",
       "foods": [
-        {
-          "name": "সোনারগাঁয়ের দেশি মিষ্টি",
-          "en": "Sonargaon Sweets",
-          "category": "sweet",
-          "emoji": "🍬",
-          "note": "সোনারগাঁ অঞ্চলের ছানা ও দুধভিত্তিক মিষ্টান্ন।",
-          "id": "narayanganj--1",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Sonargaon Sweets Bangladesh"
-        },
-        {
-          "name": "চিতই পিঠা",
-          "en": "Chitoi Pitha",
-          "category": "pitha",
-          "emoji": "🥮",
-          "note": "শীতের জনপ্রিয় চালের পিঠা।",
-          "id": "narayanganj--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Chitoi Pitha Bangladesh"
-        },
         {
           "name": "রসমালাই",
           "en": "Rasmalai",
@@ -3137,7 +1692,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Rasmalai Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "ঢাকা"
@@ -3148,25 +1705,6 @@
       "en": "Narsingdi",
       "division": "ঢাকা",
       "foods": [
-        {
-          "name": "লটকন",
-          "en": "Burmese Grape / Lotkon",
-          "category": "produce",
-          "emoji": "🍇",
-          "note": "নরসিংদীর বহুল পরিচিত মৌসুমি ফল।",
-          "id": "narsingdi--1",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Burmese Grape / Lotkon Bangladesh"
-        },
         {
           "name": "সাগর কলা",
           "en": "Sagar Banana",
@@ -3184,7 +1722,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Sagar Banana Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "ঢাকা"
@@ -3195,44 +1735,6 @@
       "en": "Rajbari",
       "division": "ঢাকা",
       "foods": [
-        {
-          "name": "খেজুরের গুড়",
-          "en": "Date Palm Jaggery",
-          "category": "sweet",
-          "emoji": "🍯",
-          "note": "শীতের খেজুর রস থেকে তৈরি গুড়।",
-          "id": "rajbari--1",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Date Palm Jaggery Bangladesh"
-        },
-        {
-          "name": "পদ্মার মাছ",
-          "en": "Padma River Fish",
-          "category": "fish",
-          "emoji": "🐟",
-          "note": "পদ্মা অববাহিকার দেশি মাছের রান্না।",
-          "id": "rajbari--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Padma River Fish Bangladesh"
-        },
         {
           "name": "চমচম",
           "en": "Chomchom",
@@ -3250,7 +1752,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Chomchom Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "পদ্মার ইলিশ",
@@ -3269,7 +1773,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Padma Hilsa Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "ঢাকা"
@@ -3280,44 +1786,6 @@
       "en": "Shariatpur",
       "division": "ঢাকা",
       "foods": [
-        {
-          "name": "পদ্মার ইলিশ",
-          "en": "Padma Hilsa",
-          "category": "fish",
-          "emoji": "🐟",
-          "note": "পদ্মাপাড়ের ইলিশভিত্তিক খাবার।",
-          "id": "shariatpur--1",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Padma Hilsa Bangladesh"
-        },
-        {
-          "name": "ভাপা পিঠা",
-          "en": "Bhapa Pitha",
-          "category": "pitha",
-          "emoji": "🥮",
-          "note": "চালের গুঁড়া, নারকেল ও গুড়ের শীতের পিঠা।",
-          "id": "shariatpur--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Bhapa Pitha Bangladesh"
-        },
         {
           "name": "বিবিখানা পিঠা",
           "en": "Bibikhana Pitha",
@@ -3335,7 +1803,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Bibikhana Pitha Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "পদ্মা-মেঘনার ইলিশ",
@@ -3354,7 +1824,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Padma-Meghna Hilsa Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "ঢাকা"
@@ -3373,7 +1845,7 @@
           "note": "টাঙ্গাইলের পোড়াবাড়ির ঐতিহ্যবাহী চমচম।",
           "id": "tangail--1",
           "image": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Chomchom.jpg",
-          "source": "https://commons.wikimedia.org/wiki/File:Chomchom.jpg",
+          "source": "https://dbcnews.tv/articles/%E0%A7%AC%E0%A7%AA-%E0%A6%9C%E0%A7%87%E0%A6%B2%E0%A6%BE%E0%A6%B0-%E0%A6%AC%E0%A6%BF%E0%A6%96%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%A4-%E0%A6%AF%E0%A6%A4-%E0%A6%96%E0%A6%BE%E0%A6%AC%E0%A6%BE%E0%A6%B0",
           "featured": true,
           "verified": true,
           "aliases": [
@@ -3381,31 +1853,14 @@
             "Porabari chamcham",
             "Tangail chomchom"
           ],
-          "source_label": "Wikimedia Commons",
+          "source_label": "DBC News",
           "image_source": "https://commons.wikimedia.org/wiki/File:Chomchom.jpg",
           "image_credit": "NafSadh",
           "image_license": "Public domain",
           "curation": "source_checked",
-          "photo_query": "Porabari Chomchom Bangladesh"
-        },
-        {
-          "name": "দুধের চমচম",
-          "en": "Milk Chomchom",
-          "category": "sweet",
-          "emoji": "🥛",
-          "note": "ঘন দুধের আবরণে পরিবেশিত চমচমের ধরন।",
-          "id": "tangail--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Milk Chomchom Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "verified_food_photo",
+          "photo_scope": "food_type"
         },
         {
           "name": "মধুপুরের আনারস",
@@ -3424,7 +1879,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Madhupur Pineapple Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "ঢাকা"
@@ -3435,44 +1892,6 @@
       "en": "Bagerhat",
       "division": "খুলনা",
       "foods": [
-        {
-          "name": "চিংড়ির মালাইকারি",
-          "en": "Prawn Malai Curry",
-          "category": "fish",
-          "emoji": "🦐",
-          "note": "দক্ষিণ-পশ্চিমের চিংড়ি ও নারকেল দুধের রান্না।",
-          "id": "bagerhat--1",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Prawn Malai Curry Bangladesh"
-        },
-        {
-          "name": "চুইঝাল মাংস",
-          "en": "Chui Jhal Meat",
-          "category": "meat",
-          "emoji": "🌶️",
-          "note": "চুইলতার ঝাঁঝে রান্না করা মাংস।",
-          "id": "bagerhat--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Chui Jhal Meat Bangladesh"
-        },
         {
           "name": "সুপারি",
           "en": "Betel Nut",
@@ -3490,26 +1909,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Betel Nut Bangladesh"
-        },
-        {
-          "name": "সুন্দরবনের মধু",
-          "en": "Sundarbans Honey",
-          "category": "sweet",
-          "emoji": "🍯",
-          "note": "বাগেরহাট-সুন্দরবন অঞ্চলের মৌচাষ ও বনজ মধু।",
-          "id": "bagerhat--4",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Sundarbans Honey Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "খুলনা"
@@ -3520,44 +1922,6 @@
       "en": "Chuadanga",
       "division": "খুলনা",
       "foods": [
-        {
-          "name": "খেজুরের গুড়",
-          "en": "Date Palm Jaggery",
-          "category": "sweet",
-          "emoji": "🍯",
-          "note": "দক্ষিণ-পশ্চিমাঞ্চলের শীতের গুড়।",
-          "id": "chuadanga--1",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Date Palm Jaggery Bangladesh"
-        },
-        {
-          "name": "গুড়ের পাটিসাপটা",
-          "en": "Jaggery Patishapta",
-          "category": "pitha",
-          "emoji": "🥞",
-          "note": "খেজুরের গুড়ের পুরে তৈরি পিঠা।",
-          "id": "chuadanga--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Jaggery Patishapta Bangladesh"
-        },
         {
           "name": "ভুট্টা",
           "en": "Corn",
@@ -3575,7 +1939,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Corn Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "পান",
@@ -3594,7 +1960,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Betel Leaf Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "খুলনা"
@@ -3622,26 +1990,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Jashore Date Jaggery Bangladesh"
-        },
-        {
-          "name": "চুইঝাল মাংস",
-          "en": "Chui Jhal Meat",
-          "category": "meat",
-          "emoji": "🌶️",
-          "note": "দক্ষিণ-পশ্চিমাঞ্চলের ঝাঁঝালো চুইঝাল রান্না।",
-          "id": "jashore--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Chui Jhal Meat Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "খই",
@@ -3660,7 +2011,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Popped Rice Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "জামতলার মিষ্টি",
@@ -3679,45 +2032,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Jamtala Sweet Bangladesh"
-        },
-        {
-          "name": "খেজুরের পাটালি গুড়",
-          "en": "Date Palm Patali Gur",
-          "category": "sweet",
-          "emoji": "🍯",
-          "note": "খেজুরের রস ঘন করে তৈরি পাটালি গুড়।",
-          "id": "jashore--5",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Date Palm Patali Gur Bangladesh"
-        },
-        {
-          "name": "ঝোলা গুড়",
-          "en": "Liquid Date Jaggery",
-          "category": "sweet",
-          "emoji": "🍯",
-          "note": "খেজুরের রস থেকে তৈরি তরল গুড়।",
-          "id": "jashore--6",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Liquid Date Jaggery Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "খুলনা"
@@ -3728,44 +2045,6 @@
       "en": "Jhenaidah",
       "division": "খুলনা",
       "foods": [
-        {
-          "name": "খেজুরের গুড়",
-          "en": "Date Palm Jaggery",
-          "category": "sweet",
-          "emoji": "🍯",
-          "note": "শীতের খেজুর গুড়ের স্বাদ।",
-          "id": "jhenaidah--1",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Date Palm Jaggery Bangladesh"
-        },
-        {
-          "name": "চিতই পিঠা",
-          "en": "Chitoi Pitha",
-          "category": "pitha",
-          "emoji": "🥮",
-          "note": "ভর্তা বা গুড়ের সঙ্গে খাওয়া চালের পিঠা।",
-          "id": "jhenaidah--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Chitoi Pitha Bangladesh"
-        },
         {
           "name": "হরি ধানের চাল",
           "en": "Hari Rice",
@@ -3783,7 +2062,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Hari Rice Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "ম্যানেজার ধানের চাল",
@@ -3802,7 +2083,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Manager Rice Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "খুলনা"
@@ -3813,63 +2096,6 @@
       "en": "Khulna",
       "division": "খুলনা",
       "foods": [
-        {
-          "name": "চুইঝাল গরুর মাংস",
-          "en": "Chui Jhal Beef",
-          "category": "meat",
-          "emoji": "🌶️",
-          "note": "চুইলতার ঝাঁঝে ধীর আঁচে রান্না গরুর মাংস।",
-          "id": "khulna--1",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Chui Jhal Beef Bangladesh"
-        },
-        {
-          "name": "চিংড়ির মালাইকারি",
-          "en": "Prawn Malai Curry",
-          "category": "fish",
-          "emoji": "🦐",
-          "note": "চিংড়ি ও নারকেল দুধের দক্ষিণ-পশ্চিমের জনপ্রিয় পদ।",
-          "id": "khulna--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Prawn Malai Curry Bangladesh"
-        },
-        {
-          "name": "নারকেল-চিংড়ি",
-          "en": "Coconut Prawn",
-          "category": "fish",
-          "emoji": "🥥",
-          "note": "নারকেল ও চিংড়ির আঞ্চলিক ঘরোয়া রান্না।",
-          "id": "khulna--3",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Coconut Prawn Bangladesh"
-        },
         {
           "name": "খুলনার সন্দেশ",
           "en": "Khulna Sandesh",
@@ -3887,7 +2113,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Khulna Sandesh Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "গলদা চিংড়ি",
@@ -3906,45 +2134,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Freshwater Prawn Bangladesh"
-        },
-        {
-          "name": "চুইঝাল খাসির মাংস",
-          "en": "Chui Jhal Mutton",
-          "category": "meat",
-          "emoji": "🌶️",
-          "note": "চুইলতা দিয়ে রান্না করা খাসির মাংস।",
-          "id": "khulna--6",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Chui Jhal Mutton Bangladesh"
-        },
-        {
-          "name": "চুইঝাল হাঁস",
-          "en": "Chui Jhal Duck",
-          "category": "meat",
-          "emoji": "🦆",
-          "note": "চুইঝালের ঝাঁঝে রান্না হাঁসের মাংস।",
-          "id": "khulna--7",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Chui Jhal Duck Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "খুলনা"
@@ -3972,26 +2164,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Sesame Khaja Bangladesh"
-        },
-        {
-          "name": "খেজুরের গুড়",
-          "en": "Date Palm Jaggery",
-          "category": "sweet",
-          "emoji": "🍯",
-          "note": "শীতকালের খেজুরের গুড়।",
-          "id": "kushtia--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Date Palm Jaggery Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "কুলফি আইসক্রিম",
@@ -4010,26 +2185,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Kulfi Ice Cream Bangladesh"
-        },
-        {
-          "name": "গুড়ের পিঠা",
-          "en": "Jaggery Pitha",
-          "category": "pitha",
-          "emoji": "🥮",
-          "note": "কুষ্টিয়ার গ্রামীণ শীতের পিঠা।",
-          "id": "kushtia--4",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Jaggery Pitha Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "খুলনা"
@@ -4040,44 +2198,6 @@
       "en": "Magura",
       "division": "খুলনা",
       "foods": [
-        {
-          "name": "ছানার মিষ্টি",
-          "en": "Chhana Sweets",
-          "category": "sweet",
-          "emoji": "🍮",
-          "note": "স্থানীয় দুধ-ছানাভিত্তিক মিষ্টান্ন।",
-          "id": "magura--1",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Chhana Sweets Bangladesh"
-        },
-        {
-          "name": "খেজুরের গুড়",
-          "en": "Date Palm Jaggery",
-          "category": "sweet",
-          "emoji": "🍯",
-          "note": "শীতের ঐতিহ্যবাহী খেজুরের গুড়।",
-          "id": "magura--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Date Palm Jaggery Bangladesh"
-        },
         {
           "name": "রসমালাই",
           "en": "Rasmalai",
@@ -4095,7 +2215,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Rasmalai Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "খুলনা"
@@ -4123,7 +2245,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Sabitri Sweet Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "রসকদম্ব",
@@ -4142,7 +2266,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Raskadamba Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "মেহেরপুরের আম",
@@ -4161,26 +2287,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Meherpur Mango Bangladesh"
-        },
-        {
-          "name": "আমসত্ত্ব",
-          "en": "Meherpur Mango Leather",
-          "category": "sweet",
-          "emoji": "🥭",
-          "note": "মেহেরপুরের আম দিয়ে তৈরি আমসত্ত্ব।",
-          "id": "meherpur--4",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Meherpur Mango Leather Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "খুলনা"
@@ -4191,44 +2300,6 @@
       "en": "Narail",
       "division": "খুলনা",
       "foods": [
-        {
-          "name": "খেজুরের গুড়",
-          "en": "Date Palm Jaggery",
-          "category": "sweet",
-          "emoji": "🍯",
-          "note": "দক্ষিণ-পশ্চিমের শীতের স্বাদ।",
-          "id": "narail--1",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Date Palm Jaggery Bangladesh"
-        },
-        {
-          "name": "দেশি মাছের ঝোল",
-          "en": "Local Fish Curry",
-          "category": "fish",
-          "emoji": "🐟",
-          "note": "নদী ও বিলের দেশি মাছের ঘরোয়া পদ।",
-          "id": "narail--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Local Fish Curry Bangladesh"
-        },
         {
           "name": "পেড়ো সন্দেশ",
           "en": "Pero Sandesh",
@@ -4246,7 +2317,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Pero Sandesh Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "খেজুরের রস",
@@ -4265,7 +2338,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Date Palm Sap Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "খুলনা"
@@ -4293,45 +2368,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Satkhira Sandesh Bangladesh"
-        },
-        {
-          "name": "কাঁকড়া ভুনা",
-          "en": "Crab Bhuna",
-          "category": "fish",
-          "emoji": "🦀",
-          "note": "সুন্দরবন-উপকূলীয় কাঁকড়ার মশলাদার পদ।",
-          "id": "satkhira--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Crab Bhuna Bangladesh"
-        },
-        {
-          "name": "চিংড়ির পদ",
-          "en": "Prawn Dishes",
-          "category": "fish",
-          "emoji": "🦐",
-          "note": "উপকূলীয় চিংড়িভিত্তিক রান্না।",
-          "id": "satkhira--3",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Prawn Dishes Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "হিমসাগর আম",
@@ -4350,7 +2389,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Himsagar Mango Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "সুন্দরবনের মধু",
@@ -4369,45 +2410,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Sundarbans Honey Bangladesh"
-        },
-        {
-          "name": "সুন্দরবনের কাঁকড়া ঝোল",
-          "en": "Sundarbans Crab Curry",
-          "category": "fish",
-          "emoji": "🦀",
-          "note": "উপকূলীয় কাঁকড়ার ঝোল।",
-          "id": "satkhira--6",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Sundarbans Crab Curry Bangladesh"
-        },
-        {
-          "name": "হিমসাগর আমের আচার",
-          "en": "Himsagar Mango Pickle",
-          "category": "snack",
-          "emoji": "🫙",
-          "note": "হিমসাগর আম দিয়ে তৈরি আচার।",
-          "id": "satkhira--7",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Himsagar Mango Pickle Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "খুলনা"
@@ -4418,44 +2423,6 @@
       "en": "Jamalpur",
       "division": "ময়মনসিংহ",
       "foods": [
-        {
-          "name": "ব্রহ্মপুত্রের মাছ",
-          "en": "Brahmaputra Fish",
-          "category": "fish",
-          "emoji": "🐟",
-          "note": "ব্রহ্মপুত্র অববাহিকার দেশি মাছের রান্না।",
-          "id": "jamalpur--1",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Brahmaputra Fish Bangladesh"
-        },
-        {
-          "name": "শীতের পিঠা",
-          "en": "Winter Pitha",
-          "category": "pitha",
-          "emoji": "🥮",
-          "note": "চাল, গুড় ও নারকেলের গ্রামীণ পিঠা।",
-          "id": "jamalpur--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Winter Pitha Bangladesh"
-        },
         {
           "name": "ছানার পোলাও",
           "en": "Chhana Polao",
@@ -4473,7 +2440,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Chhana Polao Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "ছানার পায়েস",
@@ -4492,26 +2461,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Chhana Payesh Bangladesh"
-        },
-        {
-          "name": "গুড়ের পিঠা",
-          "en": "Jaggery Pitha",
-          "category": "pitha",
-          "emoji": "🥮",
-          "note": "জামালপুরের শীতের গুড়-চালের পিঠা।",
-          "id": "jamalpur--5",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Jaggery Pitha Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "ময়মনসিংহ"
@@ -4530,76 +2482,21 @@
           "note": "মুক্তাগাছার ঐতিহ্যবাহী দুধ-চিনির মিষ্টি।",
           "id": "mymensingh--1",
           "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Monda_of_Muktagacha.jpg?width=900",
-          "source": "https://commons.wikimedia.org/wiki/File:Monda_of_Muktagacha.jpg",
+          "source": "https://dbcnews.tv/articles/%E0%A7%AC%E0%A7%AA-%E0%A6%9C%E0%A7%87%E0%A6%B2%E0%A6%BE%E0%A6%B0-%E0%A6%AC%E0%A6%BF%E0%A6%96%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%A4-%E0%A6%AF%E0%A6%A4-%E0%A6%96%E0%A6%BE%E0%A6%AC%E0%A6%BE%E0%A6%B0",
           "featured": true,
           "verified": true,
           "aliases": [
             "মুক্তাগাছার মন্ডা",
             "Muktagachhar monda"
           ],
-          "source_label": "Wikimedia Commons",
+          "source_label": "DBC News",
           "image_source": "https://commons.wikimedia.org/wiki/File:Monda_of_Muktagacha.jpg",
           "image_credit": "Anup Sadi",
           "image_license": "CC BY-SA 4.0",
           "curation": "source_checked",
-          "photo_query": "Muktagacha Monda Bangladesh"
-        },
-        {
-          "name": "হাঁসের মাংস",
-          "en": "Duck Curry",
-          "category": "meat",
-          "emoji": "🦆",
-          "note": "ময়মনসিংহ অঞ্চলে জনপ্রিয় দেশি হাঁসের রান্না।",
-          "id": "mymensingh--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Duck Curry Bangladesh"
-        },
-        {
-          "name": "মুক্তাগাছার মণ্ডার ক্ষীর",
-          "en": "Monda Kheer",
-          "category": "sweet",
-          "emoji": "🍮",
-          "note": "মণ্ডা-ভিত্তিক ঘন দুধের মিষ্টান্নের অভিজ্ঞতা।",
-          "id": "mymensingh--3",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Monda Kheer Bangladesh"
-        },
-        {
-          "name": "শীতের ভাপা পিঠা",
-          "en": "Winter Bhapa Pitha",
-          "category": "pitha",
-          "emoji": "🥮",
-          "note": "ময়মনসিংহের গ্রামীণ শীতের পিঠা।",
-          "id": "mymensingh--4",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Winter Bhapa Pitha Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "verified_food_photo",
+          "photo_scope": "food_type"
         }
       ],
       "division_en": "ময়মনসিংহ"
@@ -4627,64 +2524,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Balish Mishti Bangladesh"
-        },
-        {
-          "name": "হাওরের মাছ",
-          "en": "Haor Fish",
-          "category": "fish",
-          "emoji": "🐟",
-          "note": "হাওরের তাজা দেশি মাছের রান্না।",
-          "id": "netrokona--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Haor Fish Bangladesh"
-        },
-        {
-          "name": "হাওরের হাঁস",
-          "en": "Haor Duck",
-          "category": "meat",
-          "emoji": "🦆",
-          "note": "নেত্রকোনার হাওরাঞ্চলের হাঁসের রান্না।",
-          "id": "netrokona--3",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Haor Duck Bangladesh"
-        },
-        {
-          "name": "হাওরের মাছ ভুনা",
-          "en": "Haor Fish Bhuna",
-          "category": "fish",
-          "emoji": "🐟",
-          "note": "হাওরের দেশি মাছের ভুনা।",
-          "id": "netrokona--4",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Haor Fish Bhuna Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "ময়মনসিংহ"
@@ -4712,64 +2554,30 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Chhanar Payesh Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
-          "name": "তুলশীমালা চালের ভাত",
-          "en": "Tulshimala Rice",
-          "category": "main",
-          "emoji": "🍚",
-          "note": "সুগন্ধি তুলশীমালা চালের ভাতের অভিজ্ঞতা।",
-          "id": "sherpur--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Tulshimala Rice Bangladesh"
-        },
-        {
-          "name": "চপ",
-          "en": "Local Chop",
+          "name": "ছানার চপ",
+          "en": "Chhana Chop",
           "category": "snack",
-          "emoji": "🥔",
-          "note": "শেরপুরের স্থানীয় খাবারের তালিকায় চপ উল্লেখিত।",
+          "emoji": "🧀",
+          "note": "শেরপুরের পরিচিত ছানাভিত্তিক চপ; আঞ্চলিক খাবারের তালিকায় উল্লেখ আছে।",
           "id": "sherpur--3",
           "image": "",
-          "source": "https://dbcnews.tv/articles/%E0%A7%AC%E0%A7%AA-%E0%A6%9C%E0%A7%87%E0%A6%B2%E0%A6%BE%E0%A6%B0-%E0%A6%AC%E0%A6%BF%E0%A6%96%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%A4-%E0%A6%AF%E0%A6%A4-%E0%A6%96%E0%A6%BE%E0%A6%AC%E0%A6%BE%E0%A6%B0",
+          "source": "https://matinews.com/health-and-lifestyle/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A7%87%E0%A6%B0-%E0%A7%AC%E0%A7%AA-%E0%A6%9C%E0%A7%87%E0%A6%B2%E0%A6%BE%E0%A6%B0-%E0%A6%AC%E0%A6%BF%E0%A6%96%E0%A7%8D/",
           "featured": false,
           "verified": true,
           "aliases": [],
-          "source_label": "DBC News",
+          "source_label": "Mati News",
           "image_source": "",
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Local Chop Bangladesh"
-        },
-        {
-          "name": "তুলশীমালা চালের পোলাও",
-          "en": "Tulshimala Polao",
-          "category": "main",
-          "emoji": "🍚",
-          "note": "সুগন্ধি তুলশীমালা চাল দিয়ে পোলাও।",
-          "id": "sherpur--4",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Tulshimala Polao Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "ময়মনসিংহ"
@@ -4788,7 +2596,7 @@
           "note": "বগুড়ার ঘন মিষ্টি দই বাংলাদেশের সবচেয়ে পরিচিত আঞ্চলিক খাবারগুলোর একটি।",
           "id": "bogura--1",
           "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/%E0%A6%AC%E0%A6%97%E0%A7%81%E0%A6%A1%E0%A6%BC%E0%A6%BE%E0%A6%B0_%E0%A6%A6%E0%A6%87.jpg?width=900",
-          "source": "https://commons.wikimedia.org/wiki/File:%E0%A6%AC%E0%A6%97%E0%A7%81%E0%A6%A1%E0%A6%BC%E0%A6%BE%E0%A6%B0_%E0%A6%A6%E0%A6%87.jpg",
+          "source": "https://dbcnews.tv/articles/%E0%A7%AC%E0%A7%AA-%E0%A6%9C%E0%A7%87%E0%A6%B2%E0%A6%BE%E0%A6%B0-%E0%A6%AC%E0%A6%BF%E0%A6%96%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%A4-%E0%A6%AF%E0%A6%A4-%E0%A6%96%E0%A6%BE%E0%A6%AC%E0%A6%BE%E0%A6%B0",
           "featured": true,
           "verified": true,
           "aliases": [
@@ -4796,50 +2604,14 @@
             "Bogurar doi",
             "Bogra doi"
           ],
-          "source_label": "Wikimedia Commons",
+          "source_label": "DBC News",
           "image_source": "https://commons.wikimedia.org/wiki/File:%E0%A6%AC%E0%A6%97%E0%A7%81%E0%A6%A1%E0%A6%BC%E0%A6%BE%E0%A6%B0_%E0%A6%A6%E0%A6%87.jpg",
           "image_credit": "Masum-al-Hasan Rocky (ROCKY)",
           "image_license": "CC BY-SA 4.0",
           "curation": "source_checked",
-          "photo_query": "Bogura Doi Bangladesh"
-        },
-        {
-          "name": "সরা দই",
-          "en": "Sara Doi",
-          "category": "sweet",
-          "emoji": "🍶",
-          "note": "মাটির পাত্রে জমাট ঘন দই।",
-          "id": "bogura--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Sara Doi Bangladesh"
-        },
-        {
-          "name": "ক্ষীর",
-          "en": "Kheer",
-          "category": "sweet",
-          "emoji": "🍮",
-          "note": "ঘন দুধে তৈরি ঐতিহ্যবাহী মিষ্টান্ন।",
-          "id": "bogura--3",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Kheer Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "verified_food_photo",
+          "photo_scope": "food_type"
         },
         {
           "name": "মহাস্থানের কটকটি",
@@ -4858,45 +2630,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Mahasthan Kotkoti Bangladesh"
-        },
-        {
-          "name": "সাদা দই",
-          "en": "Plain Bogura Yogurt",
-          "category": "sweet",
-          "emoji": "🥛",
-          "note": "বগুড়ার দই সংস্কৃতির কম-মিষ্টি/সাদা ধরন।",
-          "id": "bogura--5",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Plain Bogura Yogurt Bangladesh"
-        },
-        {
-          "name": "ক্ষীর দই",
-          "en": "Kheer Yogurt",
-          "category": "sweet",
-          "emoji": "🥛",
-          "note": "ঘন দুধ ও দইয়ের সমৃদ্ধ মিষ্টি ধরন।",
-          "id": "bogura--6",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Kheer Yogurt Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "রাজশাহী"
@@ -4907,44 +2643,6 @@
       "en": "Joypurhat",
       "division": "রাজশাহী",
       "foods": [
-        {
-          "name": "দুধের মিষ্টি",
-          "en": "Milk Sweets",
-          "category": "sweet",
-          "emoji": "🥛",
-          "note": "উত্তরাঞ্চলের দুধ-ছানাভিত্তিক মিষ্টি।",
-          "id": "joypurhat--1",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Milk Sweets Bangladesh"
-        },
-        {
-          "name": "চালের পিঠা",
-          "en": "Rice Pitha",
-          "category": "pitha",
-          "emoji": "🥮",
-          "note": "চালের গুঁড়ার গ্রামীণ পিঠার স্বাদ।",
-          "id": "joypurhat--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Rice Pitha Bangladesh"
-        },
         {
           "name": "চটপটি",
           "en": "Chotpoti",
@@ -4962,64 +2660,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Chotpoti Bangladesh"
-        },
-        {
-          "name": "আলু",
-          "en": "Potato",
-          "category": "produce",
-          "emoji": "🥔",
-          "note": "জয়পুরহাটের পরিচিত কৃষিপণ্য।",
-          "id": "joypurhat--4",
-          "image": "",
-          "source": "https://unseenbangladesh.com/guide/famous",
-          "featured": false,
-          "verified": true,
-          "aliases": [],
-          "source_label": "Unseen Bangladesh",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "source_checked",
-          "photo_query": "Potato Bangladesh"
-        },
-        {
-          "name": "চিনি",
-          "en": "Sugar",
-          "category": "sweet",
-          "emoji": "🧂",
-          "note": "জয়পুরহাটের পরিচিত উৎপাদিত খাদ্যপণ্য হিসেবে উল্লেখিত।",
-          "id": "joypurhat--5",
-          "image": "",
-          "source": "https://unseenbangladesh.com/guide/famous",
-          "featured": false,
-          "verified": true,
-          "aliases": [],
-          "source_label": "Unseen Bangladesh",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "source_checked",
-          "photo_query": "Sugar Bangladesh"
-        },
-        {
-          "name": "লতিরাজ কচু",
-          "en": "Lotiraj Taro",
-          "category": "produce",
-          "emoji": "🥬",
-          "note": "জয়পুরহাটে পরিচিত কচুর জাত ও রান্নার উপকরণ।",
-          "id": "joypurhat--6",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Lotiraj Taro Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "রাজশাহী"
@@ -5030,63 +2673,6 @@
       "en": "Naogaon",
       "division": "রাজশাহী",
       "foods": [
-        {
-          "name": "প্যারা সন্দেশ",
-          "en": "Pera Sandesh",
-          "category": "sweet",
-          "emoji": "🍬",
-          "note": "নওগাঁর পরিচিত দুধ-ক্ষীরভিত্তিক মিষ্টি।",
-          "id": "naogaon--1",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Pera Sandesh Bangladesh"
-        },
-        {
-          "name": "কালো সন্দেশ",
-          "en": "Kala Sandesh",
-          "category": "sweet",
-          "emoji": "🟤",
-          "note": "নওগাঁ অঞ্চলে পাওয়া গাঢ় রঙের সন্দেশের অভিজ্ঞতা।",
-          "id": "naogaon--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Kala Sandesh Bangladesh"
-        },
-        {
-          "name": "আম",
-          "en": "Mango",
-          "category": "produce",
-          "emoji": "🥭",
-          "note": "নওগাঁ বাংলাদেশের বড় আম উৎপাদনকারী অঞ্চলগুলোর একটি।",
-          "id": "naogaon--3",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Mango Bangladesh"
-        },
         {
           "name": "নওগাঁর চাল",
           "en": "Naogaon Rice",
@@ -5104,26 +2690,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Naogaon Rice Bangladesh"
-        },
-        {
-          "name": "আমসত্ত্ব",
-          "en": "Naogaon Mango Leather",
-          "category": "sweet",
-          "emoji": "🥭",
-          "note": "নওগাঁর আম দিয়ে তৈরি শুকনো মিষ্টি।",
-          "id": "naogaon--5",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Naogaon Mango Leather Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "রাজশাহী"
@@ -5142,57 +2711,21 @@
           "note": "ছানা ও চিনির নরম ঐতিহ্যবাহী মিষ্টি।",
           "id": "natore--1",
           "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Natore_er_KachaGolla1_(One_Kind_of_Sweet).JPG?width=900",
-          "source": "https://commons.wikimedia.org/wiki/File:Natore_er_KachaGolla1_(One_Kind_of_Sweet).JPG",
+          "source": "https://dbcnews.tv/articles/%E0%A7%AC%E0%A7%AA-%E0%A6%9C%E0%A7%87%E0%A6%B2%E0%A6%BE%E0%A6%B0-%E0%A6%AC%E0%A6%BF%E0%A6%96%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%A4-%E0%A6%AF%E0%A6%A4-%E0%A6%96%E0%A6%BE%E0%A6%AC%E0%A6%BE%E0%A6%B0",
           "featured": true,
           "verified": true,
           "aliases": [
             "কাঁচা গোল্লা",
             "Natore Kacha Golla"
           ],
-          "source_label": "Wikimedia Commons",
+          "source_label": "DBC News",
           "image_source": "https://commons.wikimedia.org/wiki/File:Natore_er_KachaGolla1_(One_Kind_of_Sweet).JPG",
           "image_credit": "Shahnoor Habib Munmun",
           "image_license": "Public domain",
           "curation": "source_checked",
-          "photo_query": "Natore Kachagolla Bangladesh"
-        },
-        {
-          "name": "ছানার মিষ্টি",
-          "en": "Chhana Sweets",
-          "category": "sweet",
-          "emoji": "🍮",
-          "note": "নাটোরের মিষ্টির ঐতিহ্যের অংশ।",
-          "id": "natore--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Chhana Sweets Bangladesh"
-        },
-        {
-          "name": "গুড়ের পিঠা",
-          "en": "Jaggery Pitha",
-          "category": "pitha",
-          "emoji": "🥮",
-          "note": "নাটোরের গ্রামীণ শীতের পিঠার স্বাদ।",
-          "id": "natore--3",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Jaggery Pitha Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "verified_food_photo",
+          "photo_scope": "food_type"
         }
       ],
       "division_en": "রাজশাহী"
@@ -5203,44 +2736,6 @@
       "en": "Chapainawabganj",
       "division": "রাজশাহী",
       "foods": [
-        {
-          "name": "চাঁপাইয়ের আম",
-          "en": "Chapainawabganj Mango",
-          "category": "produce",
-          "emoji": "🥭",
-          "note": "আমের জন্য দেশজুড়ে পরিচিত জেলা।",
-          "id": "chapainawabganj--1",
-          "image": "",
-          "source": "",
-          "featured": true,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Chapainawabganj Mango Bangladesh"
-        },
-        {
-          "name": "কালাই রুটি",
-          "en": "Kalai Roti",
-          "category": "main",
-          "emoji": "🫓",
-          "note": "কালাই ডাল ও আটা দিয়ে তৈরি রাজশাহী-চাঁপাই অঞ্চলের রুটি।",
-          "id": "chapainawabganj--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Kalai Roti Bangladesh"
-        },
         {
           "name": "শিবগঞ্জের চমচম",
           "en": "Shibganj Chomchom",
@@ -5258,7 +2753,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Shibganj Chomchom Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "ফজলি আম",
@@ -5277,7 +2774,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Fazli Mango Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "ল্যাংড়া আম",
@@ -5296,7 +2795,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Langra Mango Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "গোপালভোগ আম",
@@ -5315,45 +2816,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Gopalbhog Mango Bangladesh"
-        },
-        {
-          "name": "আমসত্ত্ব",
-          "en": "Mango Leather",
-          "category": "sweet",
-          "emoji": "🥭",
-          "note": "চাঁপাইনবাবগঞ্জের আমভিত্তিক সংরক্ষিত মিষ্টি।",
-          "id": "chapainawabganj--7",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Mango Leather Bangladesh"
-        },
-        {
-          "name": "আমের আচার",
-          "en": "Mango Pickle",
-          "category": "snack",
-          "emoji": "🫙",
-          "note": "স্থানীয় আমের আচার।",
-          "id": "chapainawabganj--8",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Mango Pickle Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "রাজশাহী"
@@ -5364,44 +2829,6 @@
       "en": "Pabna",
       "division": "রাজশাহী",
       "foods": [
-        {
-          "name": "পাবনার ঘি",
-          "en": "Pabna Ghee",
-          "category": "sweet",
-          "emoji": "🧈",
-          "note": "দুধসমৃদ্ধ পাবনা অঞ্চলের পরিচিত ঘি।",
-          "id": "pabna--1",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Pabna Ghee Bangladesh"
-        },
-        {
-          "name": "দুধের প্যাড়া",
-          "en": "Milk Pera",
-          "category": "sweet",
-          "emoji": "🍬",
-          "note": "দুধ ঘন করে তৈরি মিষ্টি।",
-          "id": "pabna--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Milk Pera Bangladesh"
-        },
         {
           "name": "প্যারা সন্দেশ",
           "en": "Pera Sandesh",
@@ -5419,26 +2846,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Pera Sandesh Bangladesh"
-        },
-        {
-          "name": "দুধের সর",
-          "en": "Milk Cream",
-          "category": "sweet",
-          "emoji": "🥛",
-          "note": "পাবনার দুগ্ধসংস্কৃতির ঘন দুধের সর।",
-          "id": "pabna--4",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Milk Cream Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "রাজশাহী"
@@ -5457,76 +2867,21 @@
           "note": "রাজশাহী অঞ্চলের নানা জাতের আম।",
           "id": "rajshahi--1",
           "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Mango_of_Rajshahi.jpg?width=900",
-          "source": "https://commons.wikimedia.org/wiki/File:Mango_of_Rajshahi.jpg",
+          "source": "https://dbcnews.tv/articles/%E0%A7%AC%E0%A7%AA-%E0%A6%9C%E0%A7%87%E0%A6%B2%E0%A6%BE%E0%A6%B0-%E0%A6%AC%E0%A6%BF%E0%A6%96%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%A4-%E0%A6%AF%E0%A6%A4-%E0%A6%96%E0%A6%BE%E0%A6%AC%E0%A6%BE%E0%A6%B0",
           "featured": false,
           "verified": true,
           "aliases": [
             "রাজশাহীর আম",
             "Rajshahi mangoes"
           ],
-          "source_label": "Wikimedia Commons",
+          "source_label": "DBC News",
           "image_source": "https://commons.wikimedia.org/wiki/File:Mango_of_Rajshahi.jpg",
           "image_credit": "Mostafizur Rahman Sawon",
           "image_license": "CC BY-SA",
           "curation": "source_checked",
-          "photo_query": "Rajshahi Mango Bangladesh"
-        },
-        {
-          "name": "কালাই রুটি",
-          "en": "Kalai Roti",
-          "category": "main",
-          "emoji": "🫓",
-          "note": "কালাই ডালের আটা দিয়ে তৈরি মোটা রুটি।",
-          "id": "rajshahi--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Kalai Roti Bangladesh"
-        },
-        {
-          "name": "আমসত্ত্ব",
-          "en": "Mango Leather",
-          "category": "sweet",
-          "emoji": "🥭",
-          "note": "আমের শাঁস শুকিয়ে তৈরি উত্তর-পশ্চিমাঞ্চলের জনপ্রিয় সংরক্ষিত খাবার।",
-          "id": "rajshahi--3",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Mango Leather Bangladesh"
-        },
-        {
-          "name": "আমের আচার",
-          "en": "Mango Pickle",
-          "category": "snack",
-          "emoji": "🫙",
-          "note": "রাজশাহীর আম দিয়ে তৈরি আচার।",
-          "id": "rajshahi--4",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Mango Pickle Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "verified_food_photo",
+          "photo_scope": "food_type"
         }
       ],
       "division_en": "রাজশাহী"
@@ -5537,44 +2892,6 @@
       "en": "Sirajganj",
       "division": "রাজশাহী",
       "foods": [
-        {
-          "name": "দই",
-          "en": "Yogurt",
-          "category": "sweet",
-          "emoji": "🥛",
-          "note": "দুধসমৃদ্ধ সিরাজগঞ্জ অঞ্চলের দই।",
-          "id": "sirajganj--1",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Yogurt Bangladesh"
-        },
-        {
-          "name": "ঘোল",
-          "en": "Buttermilk",
-          "category": "drink",
-          "emoji": "🥤",
-          "note": "গরমে জনপ্রিয় দইভিত্তিক পানীয়।",
-          "id": "sirajganj--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Buttermilk Bangladesh"
-        },
         {
           "name": "পানিতোয়া",
           "en": "Panitoa",
@@ -5592,7 +2909,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Panitoa Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "বাঘাবাড়ির দুধ",
@@ -5611,26 +2930,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Baghabari Milk Bangladesh"
-        },
-        {
-          "name": "দুধের সর",
-          "en": "Milk Cream",
-          "category": "sweet",
-          "emoji": "🥛",
-          "note": "দুধসমৃদ্ধ সিরাজগঞ্জ অঞ্চলের ঘন দুধের সর।",
-          "id": "sirajganj--5",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Milk Cream Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "রাজশাহী"
@@ -5658,7 +2960,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Kataribhog Rice Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "দিনাজপুরের লিচু",
@@ -5677,7 +2981,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Dinajpur Litchi Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "চিড়া",
@@ -5696,26 +3002,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Flattened Rice Bangladesh"
-        },
-        {
-          "name": "চিঁড়া-দই",
-          "en": "Chira Doi",
-          "category": "snack",
-          "emoji": "🥣",
-          "note": "দিনাজপুরের চাল ও দুধভিত্তিক সহজ খাবারের অভিজ্ঞতা।",
-          "id": "dinajpur--4",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Chira Doi Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "রংপুর"
@@ -5743,26 +3032,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Rasmanjuri Bangladesh"
-        },
-        {
-          "name": "ক্ষীরের মিষ্টি",
-          "en": "Kheer Sweets",
-          "category": "sweet",
-          "emoji": "🍮",
-          "note": "ঘন দুধভিত্তিক উত্তরাঞ্চলের মিষ্টান্ন।",
-          "id": "gaibandha--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Kheer Sweets Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "রংপুর"
@@ -5773,44 +3045,6 @@
       "en": "Kurigram",
       "division": "রংপুর",
       "foods": [
-        {
-          "name": "সিদল ভর্তা",
-          "en": "Shidol Bhorta",
-          "category": "fish",
-          "emoji": "🐟",
-          "note": "উত্তরবঙ্গের ফারমেন্টেড/শুকনা মাছভিত্তিক ঐতিহ্যবাহী স্বাদ।",
-          "id": "kurigram--1",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Shidol Bhorta Bangladesh"
-        },
-        {
-          "name": "নদীর মাছ",
-          "en": "River Fish",
-          "category": "fish",
-          "emoji": "🐟",
-          "note": "তিস্তা-ব্রহ্মপুত্র অববাহিকার দেশি মাছ।",
-          "id": "kurigram--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "River Fish Bangladesh"
-        },
         {
           "name": "চমচম",
           "en": "Chomchom",
@@ -5828,7 +3062,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Chomchom Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "চরের ভুট্টা",
@@ -5847,7 +3083,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Char Corn Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "চরের বাদাম",
@@ -5866,26 +3104,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Char Peanut Bangladesh"
-        },
-        {
-          "name": "ক্ষীরমোহন",
-          "en": "Kheer Mohon",
-          "category": "sweet",
-          "emoji": "🍬",
-          "note": "কুড়িগ্রামের মিষ্টির দোকান সংস্কৃতির পরিচিত মিষ্টি।",
-          "id": "kurigram--6",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Kheer Mohon Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "রংপুর"
@@ -5897,80 +3118,27 @@
       "division": "রংপুর",
       "foods": [
         {
-          "name": "সিদল ভর্তা",
-          "en": "Shidol Bhorta",
+          "name": "তিস্তার মাছ",
+          "en": "Teesta River Fish",
           "category": "fish",
           "emoji": "🐟",
-          "note": "উত্তরবঙ্গের ঐতিহ্যবাহী ঝাঁঝালো ভর্তা।",
-          "id": "lalmonirhat--1",
+          "note": "লালমনিরহাট ভ্রমণ গাইডে তিস্তার মাছ স্থানীয়ভাবে খাওয়ার পরামর্শ হিসেবে উল্লেখিত।",
+          "id": "lalmonirhat--teesta-fish-v17",
           "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
+          "source": "https://unseenbangladesh.com/guide/lalmonirhat/",
+          "featured": true,
+          "verified": true,
+          "aliases": [
+            "Tista fish"
+          ],
+          "source_label": "Unseen Bangladesh",
           "image_source": "",
           "image_credit": "",
           "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Shidol Bhorta Bangladesh"
-        },
-        {
-          "name": "ভাপা পিঠা",
-          "en": "Bhapa Pitha",
-          "category": "pitha",
-          "emoji": "🥮",
-          "note": "শীতের চাল-গুড়-নারকেলের পিঠা।",
-          "id": "lalmonirhat--2",
-          "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Bhapa_Pitha.jpg?width=900",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "https://commons.wikimedia.org/wiki/File:Bhapa_Pitha.jpg",
-          "image_credit": "ANKAN",
-          "image_license": "CC BY-SA 4.0",
-          "curation": "community_curated",
-          "photo_query": "Bhapa Pitha Bangladesh"
-        },
-        {
-          "name": "আখের রস",
-          "en": "Sugarcane Juice",
-          "category": "drink",
-          "emoji": "🥤",
-          "note": "লালমনিরহাটে আখভিত্তিক মৌসুমি পানীয়।",
-          "id": "lalmonirhat--3",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Sugarcane Juice Bangladesh"
-        },
-        {
-          "name": "বাদাম",
-          "en": "Peanut",
-          "category": "produce",
-          "emoji": "🥜",
-          "note": "লালমনিরহাটের স্থানীয় কৃষিপণ্য।",
-          "id": "lalmonirhat--4",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Peanut Bangladesh"
+          "curation": "source_checked",
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "রংপুর"
@@ -5981,44 +3149,6 @@
       "en": "Nilphamari",
       "division": "রংপুর",
       "foods": [
-        {
-          "name": "সিদল",
-          "en": "Shidol",
-          "category": "fish",
-          "emoji": "🐟",
-          "note": "উত্তরবঙ্গের সংরক্ষিত মাছভিত্তিক ঐতিহ্যবাহী খাবার।",
-          "id": "nilphamari--1",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Shidol Bangladesh"
-        },
-        {
-          "name": "দুধের মিষ্টি",
-          "en": "Milk Sweets",
-          "category": "sweet",
-          "emoji": "🥛",
-          "note": "স্থানীয় দুধভিত্তিক মিষ্টান্ন।",
-          "id": "nilphamari--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Milk Sweets Bangladesh"
-        },
         {
           "name": "ডোমারের সন্দেশ",
           "en": "Domar Sandesh",
@@ -6036,7 +3166,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Domar Sandesh Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "নীলফামারীর আলু",
@@ -6055,7 +3187,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Nilphamari Potato Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "রংপুর"
@@ -6066,44 +3200,6 @@
       "en": "Panchagarh",
       "division": "রংপুর",
       "foods": [
-        {
-          "name": "পঞ্চগড়ের চা",
-          "en": "Panchagarh Tea",
-          "category": "drink",
-          "emoji": "🍵",
-          "note": "সমতলের চা-বাগানের জন্য পঞ্চগড় পরিচিত।",
-          "id": "panchagarh--1",
-          "image": "",
-          "source": "",
-          "featured": true,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Panchagarh Tea Bangladesh"
-        },
-        {
-          "name": "শীতের পিঠা",
-          "en": "Winter Pitha",
-          "category": "pitha",
-          "emoji": "🥮",
-          "note": "উত্তরাঞ্চলের চাল ও গুড়ের পিঠা।",
-          "id": "panchagarh--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Winter Pitha Bangladesh"
-        },
         {
           "name": "ডিম ভুনা",
           "en": "Egg Bhuna",
@@ -6121,45 +3217,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Egg Bhuna Bangladesh"
-        },
-        {
-          "name": "কালো চা",
-          "en": "Panchagarh Black Tea",
-          "category": "drink",
-          "emoji": "🍵",
-          "note": "সমতলের চা-বাগানের কালো চা।",
-          "id": "panchagarh--4",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Panchagarh Black Tea Bangladesh"
-        },
-        {
-          "name": "গ্রিন টি",
-          "en": "Panchagarh Green Tea",
-          "category": "drink",
-          "emoji": "🍵",
-          "note": "পঞ্চগড়ের সমতলের চা থেকে তৈরি সবুজ চা।",
-          "id": "panchagarh--5",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Panchagarh Green Tea Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "রংপুর"
@@ -6170,44 +3230,6 @@
       "en": "Rangpur",
       "division": "রংপুর",
       "foods": [
-        {
-          "name": "হাড়িভাঙা আম",
-          "en": "Haribhanga Mango",
-          "category": "produce",
-          "emoji": "🥭",
-          "note": "রংপুরের বহুল পরিচিত হাড়িভাঙা আম।",
-          "id": "rangpur--1",
-          "image": "",
-          "source": "",
-          "featured": true,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Haribhanga Mango Bangladesh"
-        },
-        {
-          "name": "সিদল ভর্তা",
-          "en": "Shidol Bhorta",
-          "category": "fish",
-          "emoji": "🐟",
-          "note": "উত্তরবঙ্গের ঐতিহ্যবাহী ভর্তা।",
-          "id": "rangpur--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Shidol Bhorta Bangladesh"
-        },
         {
           "name": "ইক্ষু",
           "en": "Sugarcane",
@@ -6225,64 +3247,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Sugarcane Bangladesh"
-        },
-        {
-          "name": "পেলকা",
-          "en": "Pelka",
-          "category": "main",
-          "emoji": "🥬",
-          "note": "রংপুর অঞ্চলের শাক-সবজি ও ক্ষারধর্মী উপকরণের ঐতিহ্যবাহী রান্না।",
-          "id": "rangpur--4",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Pelka Bangladesh"
-        },
-        {
-          "name": "নিরঞ্জনের মিষ্টি",
-          "en": "Niranjan Sweet",
-          "category": "sweet",
-          "emoji": "🍬",
-          "note": "রংপুর শহরের স্থানীয় মিষ্টি-অভিজ্ঞতার পরিচিত নাম।",
-          "id": "rangpur--5",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Niranjan Sweet Bangladesh"
-        },
-        {
-          "name": "রংপুরের সিঙ্গারা",
-          "en": "Rangpur Singara",
-          "category": "snack",
-          "emoji": "🥟",
-          "note": "রংপুরে জনপ্রিয় আলুভরা ভাজা নাশতা।",
-          "id": "rangpur--6",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Rangpur Singara Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "রংপুর"
@@ -6298,57 +3265,23 @@
           "en": "Suryapuri Mango",
           "category": "produce",
           "emoji": "🥭",
-          "note": "উত্তরাঞ্চলের জনপ্রিয় আমের জাত।",
+          "note": "ঠাকুরগাঁওয়ের বালিয়াডাঙ্গী অঞ্চলের পরিচিত সূর্যপুরী আম।",
           "id": "thakurgaon--1",
           "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
+          "source": "https://dbcnews.tv/articles/%E0%A7%AC%E0%A7%AA-%E0%A6%9C%E0%A7%87%E0%A6%B2%E0%A6%BE%E0%A6%B0-%E0%A6%AC%E0%A6%BF%E0%A6%96%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%A4-%E0%A6%AF%E0%A6%A4-%E0%A6%96%E0%A6%BE%E0%A6%AC%E0%A6%BE%E0%A6%B0",
+          "featured": true,
+          "verified": true,
+          "aliases": [
+            "Surjapuri mango"
+          ],
+          "source_label": "DBC News",
           "image_source": "",
           "image_credit": "",
           "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Suryapuri Mango Bangladesh"
-        },
-        {
-          "name": "ভাপা পিঠা",
-          "en": "Bhapa Pitha",
-          "category": "pitha",
-          "emoji": "🥮",
-          "note": "শীতের চাল-নারকেল-গুড়ের পিঠা।",
-          "id": "thakurgaon--2",
-          "image": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Bhapa_Pitha.jpg?width=900",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "https://commons.wikimedia.org/wiki/File:Bhapa_Pitha.jpg",
-          "image_credit": "ANKAN",
-          "image_license": "CC BY-SA 4.0",
-          "curation": "community_curated",
-          "photo_query": "Bhapa Pitha Bangladesh"
-        },
-        {
-          "name": "সূর্যপুরী আমের আচার",
-          "en": "Suryapuri Mango Pickle",
-          "category": "snack",
-          "emoji": "🫙",
-          "note": "সূর্যপুরী আম দিয়ে তৈরি মৌসুমি আচার।",
-          "id": "thakurgaon--3",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Suryapuri Mango Pickle Bangladesh"
+          "curation": "source_checked",
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "রংপুর"
@@ -6359,44 +3292,6 @@
       "en": "Habiganj",
       "division": "সিলেট",
       "foods": [
-        {
-          "name": "সাতকরা দিয়ে গরুর মাংস",
-          "en": "Beef with Satkara",
-          "category": "meat",
-          "emoji": "🍋",
-          "note": "সাতকরার সুগন্ধে রান্না করা সিলেটি মাংসের পদ।",
-          "id": "habiganj--1",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Beef with Satkara Bangladesh"
-        },
-        {
-          "name": "হাওরের মাছ",
-          "en": "Haor Fish",
-          "category": "fish",
-          "emoji": "🐟",
-          "note": "হাওরাঞ্চলের দেশি মাছের রান্না।",
-          "id": "habiganj--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Haor Fish Bangladesh"
-        },
         {
           "name": "হবিগঞ্জের চা",
           "en": "Habiganj Tea",
@@ -6414,7 +3309,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Habiganj Tea Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "সিলেট"
@@ -6432,8 +3329,8 @@
           "emoji": "🍵",
           "note": "শ্রীমঙ্গলের পর্যটন-আইকনিক স্তরযুক্ত চা।",
           "id": "moulvibazar--1",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/A_cup_of_black_tea_from_Srimangal_Bangladesh.jpg/1023px-A_cup_of_black_tea_from_Srimangal_Bangladesh.jpg",
-          "source": "https://commons.wikimedia.org/wiki/File:A_cup_of_black_tea_from_Srimangal_Bangladesh.jpg",
+          "image": "",
+          "source": "https://www.thedailystar.net/sreemangal-sevens-42112",
           "featured": true,
           "verified": true,
           "aliases": [
@@ -6441,50 +3338,14 @@
             "Srimangal tea",
             "Sreemangal tea"
           ],
-          "source_label": "Wikimedia Commons",
-          "image_source": "https://commons.wikimedia.org/wiki/File:A_cup_of_black_tea_from_Srimangal_Bangladesh.jpg",
-          "image_credit": "Sm faysal",
-          "image_license": "CC BY-SA 4.0",
+          "source_label": "The Daily Star",
+          "image_source": "",
+          "image_credit": "",
+          "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Seven Layer Tea Bangladesh"
-        },
-        {
-          "name": "সাতকরা মাংস",
-          "en": "Satkara Meat",
-          "category": "meat",
-          "emoji": "🍋",
-          "note": "সাতকরা ফল দিয়ে রান্না করা সিলেটি মাংস।",
-          "id": "moulvibazar--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Satkara Meat Bangladesh"
-        },
-        {
-          "name": "চুঙ্গা পিঠা",
-          "en": "Chunga Pitha",
-          "category": "pitha",
-          "emoji": "🎋",
-          "note": "বাঁশের নলে চাল রান্না করে তৈরি সিলেটি খাবার।",
-          "id": "moulvibazar--3",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Chunga Pitha Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "ম্যানেজার স্টোরের রসগোল্লা",
@@ -6503,7 +3364,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Manager Store Rasgulla Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "খাসিয়া পান",
@@ -6522,7 +3385,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Khasia Betel Leaf Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "আনারস",
@@ -6541,26 +3406,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Pineapple Bangladesh"
-        },
-        {
-          "name": "মৌলভীবাজারের আনারস",
-          "en": "Moulvibazar Pineapple",
-          "category": "produce",
-          "emoji": "🍍",
-          "note": "মৌলভীবাজারের পরিচিত আনারস।",
-          "id": "moulvibazar--7",
-          "image": "",
-          "source": "https://unseenbangladesh.com/guide/famous",
-          "featured": false,
-          "verified": true,
-          "aliases": [],
-          "source_label": "Unseen Bangladesh",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "source_checked",
-          "photo_query": "Moulvibazar Pineapple Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "সিলেট"
@@ -6571,44 +3419,6 @@
       "en": "Sunamganj",
       "division": "সিলেট",
       "foods": [
-        {
-          "name": "হাওরের মাছ",
-          "en": "Haor Fish",
-          "category": "fish",
-          "emoji": "🐟",
-          "note": "সুনামগঞ্জের হাওরের তাজা দেশি মাছ।",
-          "id": "sunamganj--1",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Haor Fish Bangladesh"
-        },
-        {
-          "name": "হাঁসের মাংস",
-          "en": "Duck Curry",
-          "category": "meat",
-          "emoji": "🦆",
-          "note": "হাওরাঞ্চলে জনপ্রিয় হাঁসের ঝোল/ভুনা।",
-          "id": "sunamganj--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Duck Curry Bangladesh"
-        },
         {
           "name": "দেশবন্ধুর মিষ্টি",
           "en": "Deshbandhu Sweet",
@@ -6626,7 +3436,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Deshbandhu Sweet Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "হাওরের শুঁটকি",
@@ -6645,7 +3457,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Haor Dried Fish Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "সিলেট"
@@ -6656,63 +3470,6 @@
       "en": "Sylhet",
       "division": "সিলেট",
       "foods": [
-        {
-          "name": "সাতকরা গরুর মাংস",
-          "en": "Beef with Satkara",
-          "category": "meat",
-          "emoji": "🍋",
-          "note": "সিলেটের স্বতন্ত্র টক-সুগন্ধি সাতকরা দিয়ে মাংস।",
-          "id": "sylhet--1",
-          "image": "",
-          "source": "",
-          "featured": true,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Beef with Satkara Bangladesh"
-        },
-        {
-          "name": "আখনি",
-          "en": "Akhni",
-          "category": "main",
-          "emoji": "🍛",
-          "note": "সিলেটি মসলা ও চাল-মাংসে তৈরি জনপ্রিয় একপাত্র খাবার।",
-          "id": "sylhet--2",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Akhni Bangladesh"
-        },
-        {
-          "name": "চুঙ্গা পিঠা",
-          "en": "Chunga Pitha",
-          "category": "pitha",
-          "emoji": "🎋",
-          "note": "বাঁশের নলে চাল রান্না করে তৈরি ঐতিহ্যবাহী খাবার।",
-          "id": "sylhet--3",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Chunga Pitha Bangladesh"
-        },
         {
           "name": "সিলেটি চা",
           "en": "Sylheti Tea",
@@ -6730,7 +3487,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Sylheti Tea Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "কমলালেবু",
@@ -6749,7 +3508,9 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Orange Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         },
         {
           "name": "সাতকড়ার আচার",
@@ -6768,136 +3529,28 @@
           "image_credit": "",
           "image_license": "",
           "curation": "source_checked",
-          "photo_query": "Satkara Pickle Bangladesh"
-        },
-        {
-          "name": "নুনর বড়া",
-          "en": "Nunor Bora",
-          "category": "snack",
-          "emoji": "🫓",
-          "note": "সিলেটের নোনতা চালের নাশতা।",
-          "id": "sylhet--7",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Nunor Bora Bangladesh"
-        },
-        {
-          "name": "হান্দেশ",
-          "en": "Handesh",
-          "category": "pitha",
-          "emoji": "🥮",
-          "note": "সিলেটি গুড়-চালের ভাজা পিঠা।",
-          "id": "sylhet--8",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Handesh Bangladesh"
-        },
-        {
-          "name": "চিকেন সাতকরা",
-          "en": "Chicken Satkara",
-          "category": "meat",
-          "emoji": "🍗",
-          "note": "সাতকরার টক-সুগন্ধে রান্না করা মুরগি।",
-          "id": "sylhet--9",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Chicken Satkara Bangladesh"
-        },
-        {
-          "name": "হাঁসের সাতকরা",
-          "en": "Duck with Satkara",
-          "category": "meat",
-          "emoji": "🦆",
-          "note": "সাতকরা দিয়ে রান্না করা হাঁসের মাংস।",
-          "id": "sylhet--10",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Duck with Satkara Bangladesh"
-        },
-        {
-          "name": "সিলেটি ফিশ কারি",
-          "en": "Sylheti Fish Curry",
-          "category": "fish",
-          "emoji": "🐟",
-          "note": "সিলেট অঞ্চলের টক-মসলাদার মাছের রান্না।",
-          "id": "sylhet--11",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Sylheti Fish Curry Bangladesh"
-        },
-        {
-          "name": "চুঙ্গা চাল",
-          "en": "Chunga Rice",
-          "category": "main",
-          "emoji": "🎋",
-          "note": "বাঁশের নলে রান্না করা পাহাড়-সিলেট অঞ্চলের চালের খাবার।",
-          "id": "sylhet--12",
-          "image": "",
-          "source": "",
-          "featured": false,
-          "verified": false,
-          "aliases": [],
-          "source_label": "",
-          "image_source": "",
-          "image_credit": "",
-          "image_license": "",
-          "curation": "community_curated",
-          "photo_query": "Chunga Rice Bangladesh"
+          "audit_status": "reference_linked",
+          "photo_status": "none",
+          "photo_scope": "none"
         }
       ],
       "division_en": "সিলেট"
     }
   ],
   "release_notes": [
-    "Food browsing-first layout: district explorer gets more usable space",
-    "No large empty district placeholder before a district is selected",
-    "Division-colored Bangladesh map with Bengali district labels",
-    "Progress-driven map color intensity and completed-district highlight",
-    "Mobile district explorer opens as a large bottom sheet",
-    "Food cards receive category color accents",
-    "Premium colorful Food Passport report redesign",
-    "Edit Passport, Reset Tasted, Clear Wishlist and Reset All controls"
+    "V1.7 Quality Audit: public database reduced to reference-linked entries only.",
+    "Automatic Wikimedia photo search and representative fallback photographs removed.",
+    "If an exact food photo is not manually verified, a category icon is shown instead.",
+    "Backup/import controls removed from the public UI; browser progress still auto-saves locally.",
+    "Food/photo correction suggestions now open a prefilled email to probalofficial007@gmail.com."
   ],
-  "verified_count": 143,
-  "photo_count": 14
+  "verified_count": 139,
+  "photo_count": 9,
+  "quality_policy": {
+    "automatic_photo_search": false,
+    "representative_photos": false,
+    "unverified_public_entries": false,
+    "missing_photo_fallback": "illustrated category icon",
+    "correction_channel": "email"
+  }
 }
