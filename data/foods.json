@@ -1,5 +1,5 @@
 {
-  "version": "1.5.0",
+  "version": "1.6.0",
   "updated": "2026-10-07",
   "license_note": "Curated regional-food experience list; not an official GI list.",
   "district_count": 64,
@@ -6889,13 +6889,14 @@
     }
   ],
   "release_notes": [
-    "Database expanded to 300+ food experiences",
-    "Runtime Wikimedia Commons photo resolver with local cache",
-    "District food-cover strip",
-    "Food provenance badges: source checked vs community curated",
-    "Premium Passport share card v2",
-    "Taste Score, completion tier and category stats",
-    "V1.4 premium atlas and native 64-district map retained"
+    "Food browsing-first layout: district explorer gets more usable space",
+    "No large empty district placeholder before a district is selected",
+    "Division-colored Bangladesh map with Bengali district labels",
+    "Progress-driven map color intensity and completed-district highlight",
+    "Mobile district explorer opens as a large bottom sheet",
+    "Food cards receive category color accents",
+    "Premium colorful Food Passport report redesign",
+    "Edit Passport, Reset Tasted, Clear Wishlist and Reset All controls"
   ],
   "verified_count": 143,
   "photo_count": 14
