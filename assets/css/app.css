@@ -289,6 +289,7 @@ body{
 .tb-correction-link{display:inline-flex;margin-top:10px;padding:9px 12px;border-radius:12px;background:#eef7f3;color:#08654a;text-decoration:none;font-size:12px;font-weight:900;border:1px solid #d4e8df}.tb-correction-link:hover{background:#e3f3ec}
 .tb-contribute .tb-btn{background:#fff;color:#153c30;border-color:rgba(255,255,255,.6)}
 @media(max-width:800px){.tb-detail-hero.icon-hero{height:240px}.tb-detail-hero.icon-hero>.tb-icon-art span{font-size:84px}}
+<<<<<<< HEAD
 
 
 /* =========================================================
@@ -394,3 +395,5 @@ body{
   .tb-division-wrap{margin-top:6px}
   .tb-map-wrap{height:64vh;min-height:500px}
 }
+=======
+>>>>>>> b519e1fcbb9cba995db1caf56bbb37e26ae3ebaa
