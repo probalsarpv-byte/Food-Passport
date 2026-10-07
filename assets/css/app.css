@@ -36,3 +36,89 @@
 .tb-map-status{position:absolute;right:14px;bottom:14px;z-index:5;background:rgba(255,255,255,.94);border:1px solid var(--line);padding:7px 10px;border-radius:999px;font-size:11px;font-weight:900;color:var(--green2);box-shadow:0 5px 20px rgba(20,40,30,.08)}
 .tb-map-status.error{color:#a42338}.tb-map-status.ok{color:#087052}.tb-map-retry{min-width:74px}
 .tb-fallback:before{content:"ইন্টার‌্যাক্টিভ ম্যাপ লোড হয়নি — নিচের ৬৪ জেলা থেকে নির্বাচন করুন";grid-column:1/-1;color:var(--muted);font-size:13px;font-weight:800;padding:4px 2px 8px}
+
+/* =========================
+   v1.3 production fixes
+   ========================= */
+
+/* The old panel clipped the 3rd+ food because the visible district view
+   was not a constrained flex column. Keep header/footer fixed and make
+   ONLY the food list scroll on desktop. */
+#tbDistrictView[hidden]{display:none!important}
+#tbDistrictView:not([hidden]){
+  display:flex!important;
+  flex-direction:column;
+  height:100%;
+  min-height:0;
+  flex:1 1 auto;
+}
+.tb-panel-head,.tb-bottom{flex:0 0 auto}
+.tb-panel-body{
+  flex:1 1 auto!important;
+  min-height:0!important;
+  overflow-y:scroll!important;
+  overflow-x:hidden!important;
+  overscroll-behavior:contain;
+  scrollbar-gutter:stable;
+  padding-bottom:24px;
+}
+.tb-panel-body::-webkit-scrollbar{width:10px}
+.tb-panel-body::-webkit-scrollbar-track{background:#f3eee5;border-radius:99px}
+.tb-panel-body::-webkit-scrollbar-thumb{background:#a9c8bb;border:2px solid #f3eee5;border-radius:99px}
+.tb-scroll-hint{font-size:11px;color:var(--green2);font-weight:900;margin-top:7px}
+
+/* Make the actual Bangladesh silhouette clearly visible. */
+.tb-map-wrap{
+  background:
+    radial-gradient(circle at 50% 42%,rgba(11,122,87,.055),transparent 36%),
+    linear-gradient(180deg,#fffdf8,#f6f1e7);
+}
+#tbMap{display:block;background:transparent!important}
+.tb-district{
+  fill:#e5e1d8;
+  stroke:#fff;
+  stroke-width:1.3;
+  vector-effect:non-scaling-stroke;
+  cursor:pointer;
+}
+.tb-district:hover,.tb-district:focus{
+  stroke:#14382c;
+  stroke-width:2.2;
+  filter:drop-shadow(0 2px 5px rgba(0,0,0,.22));
+}
+.tb-district.selected{
+  stroke:#10291f!important;
+  stroke-width:3!important;
+  filter:drop-shadow(0 4px 7px rgba(0,0,0,.22));
+}
+.tb-map-frame-label{
+  position:absolute;top:16px;left:18px;z-index:3;
+  font-size:11px;font-weight:900;color:#64736b;
+  background:rgba(255,255,255,.84);padding:6px 9px;border-radius:999px;
+}
+
+/* Every food card now has a photographic visual:
+   exact photo when available, otherwise a clearly-marked representative photo. */
+.tb-food-visual{position:relative;background:#ece7dc}
+.tb-food-visual img{width:100%;height:100%;object-fit:cover;display:block}
+.tb-photo-kind{
+  display:inline-flex;margin:5px 5px 0 0;font-size:10px;font-weight:900;
+  padding:3px 7px;border-radius:999px;background:#f1ece3;color:#665d51
+}
+.tb-photo-kind.exact{background:#e8f6f0;color:#08654a}
+.tb-food-detail .tb-representative-note{
+  margin-top:8px;padding:9px 11px;border-radius:12px;background:#fff6df;
+  color:#765715;font-size:12px;font-weight:700
+}
+
+/* Desktop: the panel has a fixed viewport-height and its list scrolls.
+   Mobile: let the whole page scroll naturally. */
+@media(max-width:980px){
+  .tb-panel{height:auto!important;min-height:0!important;overflow:visible!important}
+  #tbDistrictView:not([hidden]){height:auto!important}
+  .tb-panel-body{
+    overflow:visible!important;
+    max-height:none!important;
+    padding-bottom:14px
+  }
+}
