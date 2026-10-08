@@ -5,7 +5,7 @@ const GEO_URLS=[
  "https://cdn.jsdelivr.net/gh/HedaetShahriar/bangladesh-locations-dataset@main/data/exports/geojson/boundaries/districts.geojson",
  "https://raw.githubusercontent.com/HedaetShahriar/bangladesh-locations-dataset/main/data/exports/geojson/boundaries/districts.geojson"
 ];
-const STORE="taste_bangladesh_food_passport_v1_6_1_stable", OLDS=["taste_bangladesh_food_passport_v1_7_2","taste_bangladesh_food_passport_v1_7_1","taste_bangladesh_food_passport_v1_7","taste_bangladesh_food_passport_v1_6","taste_bangladesh_food_passport_v1_5","taste_bangladesh_food_passport_v1_4","taste_bangladesh_food_passport_v1_3","taste_bangladesh_food_passport_v1_2","taste_bangladesh_food_passport_v1_1","taste_bangladesh_food_passport_v1"];
+const STORE="taste_bangladesh_food_passport_v1_6_2", OLDS=["taste_bangladesh_food_passport_v1_6_1_stable","taste_bangladesh_food_passport_v1_7_2","taste_bangladesh_food_passport_v1_7_1","taste_bangladesh_food_passport_v1_7","taste_bangladesh_food_passport_v1_6","taste_bangladesh_food_passport_v1_5","taste_bangladesh_food_passport_v1_4","taste_bangladesh_food_passport_v1_3","taste_bangladesh_food_passport_v1_2","taste_bangladesh_food_passport_v1_1","taste_bangladesh_food_passport_v1"];
 let DISTRICTS=[],CATS={},bySlug={},order=[],selected=new Set(),wishlist=new Set(),geo=null;
 let state={selected:[],wishlist:[],name:"",current:null,category:"all"};
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
@@ -209,6 +209,10 @@ function visualInfo(food){
 function iconArt(food,compact=false){
  return '<div class="tb-icon-art tb-cat-'+food.category+(compact?' compact':'')+'"><span>'+food.emoji+'</span><small>'+catLabel(food.category)+'</small></div>';
 }
+function provenanceBadge(food){
+ if(food.verified&&food.source)return '<span class="tb-provenance source">✓ সূত্র সংযুক্ত</span>';
+ return '<span class="tb-provenance community">◎ Curated regional</span>';
+}
 function visual(food){
  const v=visualInfo(food);
  return v.exact?'<img src="'+v.url+'" alt="'+food.name+'" loading="lazy" referrerpolicy="no-referrer" onerror="this.replaceWith(document.createTextNode(\''+food.emoji+'\'))">':iconArt(food,true);
@@ -232,7 +236,7 @@ function renderDistrict(slug){
  list.forEach(food=>{
    const on=selected.has(food.id),wish=wishlist.has(food.id),v=visualInfo(food),el=document.createElement("article");
    el.className="tb-food"+(on?" on":"")+(wish?" wished":"");el.dataset.cat=food.category;
-   const prov='<span class="tb-provenance source">✓ সূত্র সংযুক্ত</span>';
+   const prov=provenanceBadge(food);
    el.innerHTML='<div class="tb-food-visual"><span class="tb-photo-loading">'+food.emoji+'</span>'+visual(food)+'</div><div><h3>'+food.name+'</h3><p>'+(food.note||food.en)+'</p><span class="tb-tag">'+catLabel(food.category)+'</span>'+prov+'<span class="tb-photo-kind '+(v.exact?'exact':'icon')+'">'+v.label+'</span></div><div class="tb-food-actions"><button class="tb-check" title="খেয়েছি" aria-label="'+food.name+' খেয়েছি">'+(on?"✓":"＋")+'</button><button class="tb-wish" title="খেতে চাই" aria-label="'+food.name+' খেতে চাই">'+(wish?"★":"☆")+'</button></div>';
    el.querySelector(".tb-check").onclick=e=>{e.stopPropagation();toggleFood(food.id)};
    el.querySelector(".tb-wish").onclick=e=>{e.stopPropagation();toggleWish(food.id)};
@@ -277,10 +281,11 @@ function openFood(d,f){
  $("#tbFoodModalTitle").textContent=d.name+" · "+f.name;
  const hero=v.exact?'<img src="'+v.url+'" alt="'+f.name+'" referrerpolicy="no-referrer">':iconArt(f,false);
  const source=f.source?'<a class="tb-detail-link" href="'+f.source+'" target="_blank" rel="noopener">↗ সূত্র দেখুন'+(f.source_label?" · "+f.source_label:"")+'</a>':'';
- const prov='<span class="tb-provenance source">✓ সূত্র সংযুক্ত</span>';
+ const evidenceNote=(!f.verified||!f.source)?'<div class="tb-curation-note">এই খাবারটি আঞ্চলিক curated তালিকা থেকে যোগ করা হয়েছে। নির্দিষ্ট প্রকাশিত reference পাওয়া গেলে সেটি পরে যুক্ত করা হবে।</div>':'';
+ const prov=provenanceBadge(f);
  let credit=v.exact&&f.image_source?'<div class="tb-credit">ছবি: '+(f.image_credit||"Wikimedia Commons")+(f.image_license?" · "+f.image_license:"")+' · <a href="'+f.image_source+'" target="_blank" rel="noopener">মূল ফাইল/লাইসেন্স</a></div>':'<div class="tb-representative-note quality-safe">এই খাবারের যাচাইকৃত নির্দিষ্ট photo এখনো যোগ করা হয়নি। ভুল ছবি দেখানোর বদলে category icon ব্যবহার করা হয়েছে।</div>';
  const correct='<a class="tb-correction-link" href="'+correctionMailto(d,f)+'">✉️ তথ্য/ছবি সংশোধন জানান</a>';
- detail.innerHTML='<div class="tb-detail-hero '+(v.exact?'has-photo':'icon-hero')+'">'+hero+'</div><div class="tb-detail-copy"><h2>'+f.name+'</h2><div class="en">'+f.en+' · '+d.name+', '+d.division+'</div><p>'+f.note+'</p><div class="tb-detail-meta"><span class="tb-tag">'+catLabel(f.category)+'</span>'+prov+'<span class="tb-photo-kind '+(v.exact?'exact':'icon')+'">'+v.label+'</span></div>'+source+'<div class="tb-detail-actions"><button class="tb-btn primary" data-do="tried">'+(selected.has(f.id)?"✓ খেয়েছি — Undo":"✓ আমি এটা খেয়েছি")+'</button><button class="tb-btn" data-do="wish">'+(wishlist.has(f.id)?"★ Wishlist থেকে বাদ":"☆ খেতে চাই")+'</button></div>'+credit+correct+'</div>';
+ detail.innerHTML='<div class="tb-detail-hero '+(v.exact?'has-photo':'icon-hero')+'">'+hero+'</div><div class="tb-detail-copy"><h2>'+f.name+'</h2><div class="en">'+f.en+' · '+d.name+', '+d.division+'</div><p>'+f.note+'</p><div class="tb-detail-meta"><span class="tb-tag">'+catLabel(f.category)+'</span>'+prov+'<span class="tb-photo-kind '+(v.exact?'exact':'icon')+'">'+v.label+'</span></div>'+source+evidenceNote+'<div class="tb-detail-actions"><button class="tb-btn primary" data-do="tried">'+(selected.has(f.id)?"✓ খেয়েছি — Undo":"✓ আমি এটা খেয়েছি")+'</button><button class="tb-btn" data-do="wish">'+(wishlist.has(f.id)?"★ Wishlist থেকে বাদ":"☆ খেতে চাই")+'</button></div>'+credit+correct+'</div>';
  detail.querySelector('[data-do="tried"]').onclick=()=>{toggleFood(f.id);openFood(d,f)};
  detail.querySelector('[data-do="wish"]').onclick=()=>{toggleWish(f.id);openFood(d,f)};
  modal.classList.add("open");
