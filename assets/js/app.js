@@ -5,7 +5,7 @@ const GEO_URLS=[
  "https://cdn.jsdelivr.net/gh/HedaetShahriar/bangladesh-locations-dataset@main/data/exports/geojson/boundaries/districts.geojson",
  "https://raw.githubusercontent.com/HedaetShahriar/bangladesh-locations-dataset/main/data/exports/geojson/boundaries/districts.geojson"
 ];
-const STORE="taste_bangladesh_food_passport_v1_6_2", OLDS=["taste_bangladesh_food_passport_v1_6_1_stable","taste_bangladesh_food_passport_v1_7_2","taste_bangladesh_food_passport_v1_7_1","taste_bangladesh_food_passport_v1_7","taste_bangladesh_food_passport_v1_6","taste_bangladesh_food_passport_v1_5","taste_bangladesh_food_passport_v1_4","taste_bangladesh_food_passport_v1_3","taste_bangladesh_food_passport_v1_2","taste_bangladesh_food_passport_v1_1","taste_bangladesh_food_passport_v1"];
+const STORE="taste_bangladesh_food_passport_v1_6_3", OLDS=["taste_bangladesh_food_passport_v1_6_2","taste_bangladesh_food_passport_v1_6_1_stable","taste_bangladesh_food_passport_v1_7_2","taste_bangladesh_food_passport_v1_7_1","taste_bangladesh_food_passport_v1_7","taste_bangladesh_food_passport_v1_6","taste_bangladesh_food_passport_v1_5","taste_bangladesh_food_passport_v1_4","taste_bangladesh_food_passport_v1_3","taste_bangladesh_food_passport_v1_2","taste_bangladesh_food_passport_v1_1","taste_bangladesh_food_passport_v1"];
 let DISTRICTS=[],CATS={},bySlug={},order=[],selected=new Set(),wishlist=new Set(),geo=null;
 let state={selected:[],wishlist:[],name:"",current:null,category:"all"};
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
@@ -253,7 +253,7 @@ function renderDistrictCovers(d){
    box.appendChild(c);
  });
 }
-function toggleFood(id){if(selected.has(id)){selected.delete(id)}else{selected.add(id);wishlist.delete(id)}save();renderStats();renderFeatured();toast(selected.has(id)?"খেয়েছি হিসেবে যোগ হয়েছে ✓":"খাওয়া তালিকা থেকে বাদ হয়েছে")}
+function toggleFood(id){const adding=!selected.has(id);if(!adding){selected.delete(id)}else{selected.add(id);wishlist.delete(id)}save();renderStats();renderFeatured();if(adding){const f=DISTRICTS.flatMap(d=>d.foods).find(x=>x.id===id);tasteBurst(f?f.emoji:"✨")}toast(selected.has(id)?"খেয়েছি হিসেবে যোগ হয়েছে ✓":"খাওয়া তালিকা থেকে বাদ হয়েছে")}
 function toggleWish(id){if(selected.has(id)){toast("এটা ইতিমধ্যে খেয়েছেন ✓");return}wishlist.has(id)?wishlist.delete(id):wishlist.add(id);save();renderStats();renderFeatured();toast(wishlist.has(id)?"খেতে চাই তালিকায় যোগ হয়েছে ★":"Wishlist থেকে বাদ হয়েছে")}
 function go(step){if(!state.current)return;let i=order.indexOf(state.current);selectDistrict(order[(i+step+order.length)%order.length])}
 
@@ -327,6 +327,58 @@ function openReport(){renderReport();$("#tbReportModal").classList.add("open")}f
 async function cardCanvas(){renderReport();if(typeof html2canvas==="undefined")throw new Error("export");return await html2canvas($("#tbReportCard"),{scale:1.35,backgroundColor:null,useCORS:true,logging:false})}
 async function download(){try{const c=await cardCanvas(),a=document.createElement("a");a.download="bangladesh-food-passport-1080x1350.png";a.href=c.toDataURL("image/png");a.click();toast("PNG তৈরি হয়েছে")}catch(e){toast("PNG তৈরি করা যায়নি")}}
 async function share(){try{const c=await cardCanvas();const blob=await new Promise(r=>c.toBlob(r,"image/png"));const file=new File([blob],"bangladesh-food-passport.png",{type:"image/png"});if(navigator.canShare&&navigator.canShare({files:[file]})){await navigator.share({title:"আমার Bangladesh Food Passport",text:"বাংলাদেশের কতটুকু আমি খেয়ে দেখেছি",files:[file]})}else download()}catch(e){if(e.name!=="AbortError")toast("শেয়ার সম্ভব হয়নি—PNG ডাউনলোড করুন")}}
+
+function initPremiumMotion(){
+ const reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+ const hero=document.querySelector(".tb-hero-premium");
+ if(hero&&!hero.querySelector(".tb-hero-fx")){
+   const fx=document.createElement("div");fx.className="tb-hero-fx";fx.setAttribute("aria-hidden","true");
+   fx.innerHTML='<span class="tb-hero-orb"></span><span class="tb-hero-orb"></span><span class="tb-hero-orb"></span><span class="tb-hero-orb"></span><span class="tb-hero-orb"></span><span class="tb-food-float f1">🥭</span><span class="tb-food-float f2">🐟</span><span class="tb-food-float f3">🥮</span><span class="tb-food-float f4">🍚</span>';
+   hero.prepend(fx);
+ }
+ if(reduce)return;
+
+ document.body.classList.add("tb-motion-ready");
+ const revealEls=[...document.querySelectorAll(".tb-stats,.tb-mini-strip,.tb-division-wrap,.tb-grid,.tb-featured,.tb-contribute")];
+ revealEls.forEach(el=>el.classList.add("tb-reveal"));
+ if("IntersectionObserver" in window){
+   const io=new IntersectionObserver(entries=>{
+     entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("tb-reveal-in");io.unobserve(e.target)}})
+   },{threshold:.08,rootMargin:"0px 0px -30px 0px"});
+   revealEls.forEach(el=>io.observe(el));
+ }else revealEls.forEach(el=>el.classList.add("tb-reveal-in"));
+
+ const passport=document.querySelector(".tb-passport-preview");
+ const fine=window.matchMedia&&window.matchMedia("(hover:hover) and (pointer:fine)").matches;
+ if(passport&&fine){
+   passport.addEventListener("pointermove",e=>{
+     const r=passport.getBoundingClientRect();
+     const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+     passport.style.setProperty("--tb-ry",(x*9).toFixed(2)+"deg");
+     passport.style.setProperty("--tb-rx",(-y*7).toFixed(2)+"deg");
+     passport.style.setProperty("--tb-tx",(x*5).toFixed(1)+"px");
+     passport.style.setProperty("--tb-ty",(y*4).toFixed(1)+"px");
+   });
+   passport.addEventListener("pointerleave",()=>{
+     passport.style.setProperty("--tb-ry","0deg");
+     passport.style.setProperty("--tb-rx","0deg");
+     passport.style.setProperty("--tb-tx","0px");
+     passport.style.setProperty("--tb-ty","0px");
+   });
+ }
+}
+function tasteBurst(emoji){
+ if(window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+ const b=document.createElement("div");b.className="tb-taste-burst";
+ const glyphs=[emoji||"✨","✨","✓","⭐","•"];
+ const pts=[[-52,-55,-18],[-28,-78,12],[18,-82,-8],[50,-48,18],[-62,-12,-22],[62,-8,20],[-38,34,-12],[38,34,13]];
+ pts.forEach((p,i)=>{
+   const s=document.createElement("i");s.textContent=glyphs[i%glyphs.length];
+   s.style.setProperty("--x",p[0]+"px");s.style.setProperty("--y",p[1]+"px");s.style.setProperty("--r",p[2]+"deg");s.style.setProperty("--delay",(i*22)+"ms");b.appendChild(s);
+ });
+ document.body.appendChild(b);setTimeout(()=>b.remove(),1000);
+}
+
 function wire(){
  $("#tbSearch").addEventListener("input",renderSearch);document.addEventListener("click",e=>{if(!e.target.closest(".tb-map-top"))$("#tbSearchResults").classList.remove("open")});
  $("#tbRandom").onclick=()=>selectDistrict(order[Math.floor(Math.random()*order.length)]);$("#tbRetryMap").onclick=()=>loadMap();$("#tbStartExplore").onclick=()=>$("#tbAtlas").scrollIntoView({behavior:"smooth",block:"start"});$("#tbHeroTrail").onclick=openJourney;$("#tbPrev").onclick=()=>go(-1);$("#tbNext").onclick=()=>go(1);
@@ -342,7 +394,7 @@ function wire(){
 async function boot(){
  try{
   const [fd,cd]=await Promise.all([fetch("./data/foods.json").then(r=>r.json()),fetch("./data/categories.json").then(r=>r.json())]);
-  DISTRICTS=fd.districts;CATS=cd;bySlug=Object.fromEntries(DISTRICTS.map(d=>[d.slug,d]));order=DISTRICTS.map(d=>d.slug);loadState();sanitizeState();renderCats();renderFallback();renderStats();renderFeatured();wire();await loadMap();
+  DISTRICTS=fd.districts;CATS=cd;bySlug=Object.fromEntries(DISTRICTS.map(d=>[d.slug,d]));order=DISTRICTS.map(d=>d.slug);loadState();sanitizeState();renderCats();renderFallback();renderStats();renderFeatured();wire();initPremiumMotion();await loadMap();
   const hash=new URLSearchParams(location.hash.replace(/^#/,""));const h=hash.get("district");if(h&&bySlug[h])selectDistrict(h,{scroll:false});else if(state.current&&bySlug[state.current])selectDistrict(state.current,{scroll:false});
   if("serviceWorker" in navigator&&location.protocol!=="file:")navigator.serviceWorker.register("./sw.js").catch(()=>{})
  }catch(e){$("#tbLoading").textContent="Data load হয়নি। GitHub Pages/HTTP server দিয়ে চালু করুন; file:// দিয়ে নয়।";console.error(e)}

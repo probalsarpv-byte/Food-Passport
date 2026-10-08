@@ -1,10 +1,10 @@
 {
-  "name": "বাংলাদেশ স্বাদ মানচিত্র v1.6.2 Stable Expanded",
+  "name": "বাংলাদেশ স্বাদ মানচিত্র v1.6.3 Premium",
   "short_name": "Food Passport",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#f7f2e8",
   "theme_color": "#0b7a57",
   "lang": "bn",
-  "description": "Stable V1.6 interface with expanded district food coverage, source-linked entries, curated regional foods, and exact-photo-only policy"
+  "description": "Stable V1.6 layout with premium motion, CSS 3D depth, animated graphics, 247 regional food experiences, and exact-photo-only policy"
 }

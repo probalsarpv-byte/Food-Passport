@@ -291,3 +291,321 @@ body{
 
 /* v1.6.2: evidence transparency + larger icon artwork only */
 .tb-curation-note{margin-top:12px;padding:10px 12px;border:1px dashed #d9c9ab;background:#fff8e9;border-radius:12px;color:#71624b;font-size:12px;line-height:1.55}
+
+/* =========================================================
+   v1.6.3 PREMIUM MOTION LAYER
+   Visual-only enhancement: V1.6 layout geometry stays locked.
+   ========================================================= */
+
+:root{
+  --tb-premium-gold:#f2bd61;
+  --tb-premium-emerald:#0b7a57;
+  --tb-premium-deep:#0a3328;
+  --tb-premium-glow:rgba(33,170,119,.24);
+  --tb-premium-warm:rgba(243,185,86,.22);
+}
+
+/* Ambient page depth */
+#tbApp{
+  position:relative;
+  overflow-x:hidden;
+  background:
+    radial-gradient(circle at 8% 5%,rgba(255,224,160,.38),transparent 27%),
+    radial-gradient(circle at 92% 22%,rgba(93,190,150,.16),transparent 30%),
+    linear-gradient(180deg,#fbf6ec 0%,#f7f2e8 40%,#f3eee4 100%);
+}
+#tbApp:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+  opacity:.20;
+  background-image:
+    radial-gradient(circle at 20% 20%,rgba(22,86,65,.08) 0 1px,transparent 1.4px),
+    radial-gradient(circle at 80% 30%,rgba(166,112,40,.07) 0 1px,transparent 1.3px);
+  background-size:26px 26px,31px 31px;
+  mix-blend-mode:multiply;
+}
+.tb-shell{position:relative;z-index:1}
+
+/* Hero: premium live graphics without changing dimensions */
+.tb-hero-premium{
+  isolation:isolate;
+  transform-style:preserve-3d;
+  border:1px solid rgba(255,255,255,.09);
+  box-shadow:
+    0 34px 90px rgba(9,47,36,.26),
+    inset 0 1px 0 rgba(255,255,255,.08);
+}
+.tb-hero-premium:after{
+  content:"";
+  position:absolute;
+  inset:-28%;
+  z-index:0;
+  pointer-events:none;
+  background:
+    conic-gradient(from 110deg at 62% 42%,
+      transparent 0 16%,
+      rgba(246,198,111,.11) 20%,
+      transparent 27% 55%,
+      rgba(73,198,148,.12) 62%,
+      transparent 70%);
+  animation:tbAuroraSpin 22s linear infinite;
+  filter:blur(12px);
+}
+@keyframes tbAuroraSpin{to{transform:rotate(360deg)}}
+
+.tb-hero-fx{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.tb-hero-orb{
+  position:absolute;
+  width:10px;height:10px;border-radius:50%;
+  background:radial-gradient(circle,#f8dfa9 0 35%,rgba(248,223,169,.15) 52%,transparent 72%);
+  box-shadow:0 0 28px rgba(246,198,111,.38);
+  opacity:.7;
+  animation:tbFloatOrb var(--dur,9s) ease-in-out infinite alternate;
+}
+.tb-hero-orb:nth-child(1){left:7%;top:18%;--dur:8s}
+.tb-hero-orb:nth-child(2){left:44%;top:13%;--dur:11s;transform:scale(.72)}
+.tb-hero-orb:nth-child(3){left:82%;top:28%;--dur:10s;transform:scale(1.3)}
+.tb-hero-orb:nth-child(4){left:14%;top:76%;--dur:12s;transform:scale(.9)}
+.tb-hero-orb:nth-child(5){left:56%;top:83%;--dur:9.5s;transform:scale(.65)}
+@keyframes tbFloatOrb{
+  0%{translate:0 0;opacity:.3}
+  55%{opacity:.9}
+  100%{translate:18px -24px;opacity:.45}
+}
+
+.tb-food-float{
+  position:absolute;
+  font-size:clamp(22px,2.2vw,34px);
+  opacity:.10;
+  filter:drop-shadow(0 8px 12px rgba(0,0,0,.18));
+  animation:tbFoodFloat var(--dur,8s) ease-in-out infinite alternate;
+}
+.tb-food-float.f1{left:5%;top:56%;--dur:7.5s}
+.tb-food-float.f2{left:47%;top:8%;--dur:9.5s}
+.tb-food-float.f3{right:4%;top:11%;--dur:8.5s}
+.tb-food-float.f4{right:8%;bottom:8%;--dur:10s}
+@keyframes tbFoodFloat{
+  to{transform:translate3d(10px,-16px,0) rotate(8deg);opacity:.18}
+}
+
+/* 3D Passport: pointer motion is driven by JS vars */
+.tb-passport-preview{
+  --tb-rx:0deg;
+  --tb-ry:0deg;
+  --tb-tx:0px;
+  --tb-ty:0px;
+  transform:
+    perspective(1100px)
+    translate3d(var(--tb-tx),var(--tb-ty),0)
+    rotateX(var(--tb-rx))
+    rotateY(var(--tb-ry))
+    rotateZ(2.2deg);
+  transform-style:preserve-3d;
+  transition:transform .18s ease-out,box-shadow .25s ease;
+  will-change:transform;
+}
+.tb-passport-preview:hover{
+  box-shadow:
+    0 38px 82px rgba(0,0,0,.28),
+    0 0 0 1px rgba(255,255,255,.65) inset,
+    0 0 54px rgba(242,189,97,.10);
+}
+.tb-passport-preview:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  pointer-events:none;
+  background:linear-gradient(112deg,transparent 23%,rgba(255,255,255,.40) 38%,rgba(255,255,255,.08) 44%,transparent 58%);
+  transform:translateX(-130%);
+  animation:tbPassportShine 7s ease-in-out infinite;
+}
+@keyframes tbPassportShine{
+  0%,62%{transform:translateX(-130%)}
+  78%,100%{transform:translateX(130%)}
+}
+.tb-passport-top,.tb-passport-mapmark,.tb-passport-score,.tb-taste-tier,.tb-passport-mini{
+  transform:translateZ(20px);
+}
+.tb-passport-stamp{transform:translateZ(28px) rotate(-12deg);animation:tbStampPulse 3.4s ease-in-out infinite}
+@keyframes tbStampPulse{50%{scale:1.045;opacity:.78}}
+
+/* Buttons: premium sheen + tactile press */
+.tb-btn{position:relative;overflow:hidden;isolation:isolate}
+.tb-btn:after{
+  content:"";
+  position:absolute;
+  inset:-100% -35%;
+  background:linear-gradient(115deg,transparent 38%,rgba(255,255,255,.42) 48%,transparent 58%);
+  transform:translateX(-115%) rotate(8deg);
+  transition:transform .55s ease;
+  pointer-events:none;
+  z-index:-1;
+}
+.tb-btn:hover:after{transform:translateX(115%) rotate(8deg)}
+.tb-btn:active{transform:translateY(1px) scale(.985)}
+
+/* Map: premium dimensional districts, but native SVG remains unchanged */
+.tb-map-wrap{
+  perspective:1200px;
+  background:
+    radial-gradient(circle at 50% 35%,rgba(255,255,255,.92),rgba(248,244,235,.92) 52%,rgba(237,232,221,.94) 100%);
+}
+#tbMap{filter:drop-shadow(0 18px 28px rgba(31,66,50,.10))}
+.tb-district{
+  transform-box:fill-box;
+  transform-origin:center;
+  transition:fill .25s,filter .18s,opacity .2s,transform .18s,stroke .18s;
+}
+.tb-district:hover,.tb-district:focus{
+  transform:scale(1.025);
+  filter:drop-shadow(0 8px 9px rgba(9,74,51,.30));
+}
+.tb-district.selected{
+  transform:scale(1.032);
+  filter:drop-shadow(0 10px 12px rgba(9,74,51,.34));
+  animation:tbSelectedDistrict 2.2s ease-in-out infinite;
+}
+@keyframes tbSelectedDistrict{
+  50%{filter:drop-shadow(0 12px 16px rgba(10,122,87,.42))}
+}
+.tb-map-label{transition:opacity .2s,filter .2s,transform .2s;transform-origin:center}
+.tb-map-label.selected{filter:drop-shadow(0 2px 5px rgba(255,255,255,.9));transform:scale(1.08)}
+.tb-live-dot{animation:tbLiveBadge 2.4s ease-in-out infinite}
+@keyframes tbLiveBadge{50%{box-shadow:0 0 0 7px rgba(27,157,112,.08)}}
+.tb-live-dot:before{animation:tbLiveDot 1.4s ease-in-out infinite}
+@keyframes tbLiveDot{50%{box-shadow:0 0 0 9px rgba(27,157,112,.04);opacity:.7}}
+
+/* Food cards: lift, light-sweep, premium icons */
+.tb-food{
+  position:relative;
+  overflow:hidden;
+  transform:translateZ(0);
+}
+.tb-food:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:0;
+  background:linear-gradient(110deg,transparent 0 35%,rgba(255,255,255,.60) 48%,transparent 61%);
+  transform:translateX(-90%);
+  transition:opacity .2s,transform .55s ease;
+}
+.tb-food:hover:before{opacity:1;transform:translateX(90%)}
+.tb-food:hover .tb-icon-art>span{transform:translateY(-2px) scale(1.08) rotate(-2deg)}
+.tb-icon-art>span{transition:transform .24s cubic-bezier(.2,.8,.2,1),filter .24s}
+.tb-food.on .tb-icon-art>span{filter:drop-shadow(0 7px 13px rgba(16,122,86,.24))}
+.tb-food.wished{box-shadow:inset 0 0 0 1px rgba(226,184,101,.14)}
+
+/* Featured cards get true CSS 3D depth */
+.tb-feature-card{
+  transform-style:preserve-3d;
+  transition:transform .24s cubic-bezier(.2,.8,.2,1),box-shadow .24s,border-color .24s;
+}
+.tb-feature-card:hover{
+  transform:perspective(900px) translateY(-5px) rotateX(2deg);
+  box-shadow:0 24px 44px rgba(27,54,42,.16);
+}
+.tb-feature-card b,.tb-feature-card small{transform:translateZ(18px)}
+
+/* Detail modal: cinematic reveal */
+.tb-modal.open .tb-food-modal-box{animation:tbModalIn .28s cubic-bezier(.2,.8,.2,1)}
+.tb-modal.open .tb-detail-hero{animation:tbHeroReveal .42s cubic-bezier(.2,.8,.2,1)}
+@keyframes tbModalIn{from{opacity:0;transform:translateY(14px) scale(.985)}to{opacity:1;transform:none}}
+@keyframes tbHeroReveal{from{opacity:.25;transform:scale(.975)}to{opacity:1;transform:scale(1)}}
+.tb-detail-hero.icon-hero>.tb-icon-art span{
+  filter:drop-shadow(0 18px 26px rgba(33,64,49,.20));
+  animation:tbIconBreathe 4.2s ease-in-out infinite;
+}
+@keyframes tbIconBreathe{50%{transform:translateY(-6px) scale(1.035)}}
+
+/* Premium report visuals; export-safe */
+.tb-report{
+  isolation:isolate;
+  box-shadow:0 30px 90px rgba(40,56,45,.18);
+  background:
+    radial-gradient(circle at 90% 8%,rgba(11,122,87,.12),transparent 24%),
+    radial-gradient(circle at 9% 87%,rgba(240,185,91,.15),transparent 27%),
+    linear-gradient(135deg,#fbf3e2,#f2e4ca);
+}
+.tb-report:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+  opacity:.22;
+  background-image:
+    linear-gradient(30deg,rgba(9,93,65,.07) 12%,transparent 12.5%,transparent 87%,rgba(9,93,65,.07) 87.5%),
+    linear-gradient(150deg,rgba(173,113,38,.06) 12%,transparent 12.5%,transparent 87%,rgba(173,113,38,.06) 87.5%);
+  background-size:42px 72px;
+}
+.tb-report>*{position:relative;z-index:1}
+.tb-report-map{
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.75),0 15px 38px rgba(40,63,51,.10);
+}
+.tb-report-metric{
+  box-shadow:0 12px 26px rgba(33,52,43,.07);
+}
+.tb-report-badge{
+  box-shadow:0 8px 20px rgba(11,122,87,.12);
+}
+
+/* Scroll reveals; activated only by JS */
+.tb-motion-ready .tb-reveal{
+  opacity:0;
+  transform:translateY(18px);
+  transition:opacity .65s ease,transform .65s cubic-bezier(.2,.8,.2,1);
+}
+.tb-motion-ready .tb-reveal.tb-reveal-in{opacity:1;transform:none}
+
+/* Food-taste micro celebration */
+.tb-taste-burst{
+  position:fixed;
+  left:50%;top:50%;
+  z-index:250;
+  width:1px;height:1px;
+  pointer-events:none;
+}
+.tb-taste-burst i{
+  position:absolute;
+  left:0;top:0;
+  font-style:normal;
+  font-size:18px;
+  opacity:0;
+  animation:tbBurst .78s ease-out forwards;
+  animation-delay:var(--delay,0ms);
+}
+@keyframes tbBurst{
+  0%{opacity:0;transform:translate(-50%,-50%) scale(.3)}
+  18%{opacity:1}
+  100%{opacity:0;transform:translate(calc(-50% + var(--x)),calc(-50% + var(--y))) scale(1.05) rotate(var(--r))}
+}
+
+/* Mobile performance / comfort */
+@media(max-width:900px){
+  .tb-hero-premium:after{animation-duration:30s}
+  .tb-food-float{display:none}
+  .tb-passport-preview{transform:none!important}
+  .tb-district:hover,.tb-district:focus{transform:none}
+}
+@media(prefers-reduced-motion:reduce){
+  .tb-hero-premium:after,
+  .tb-hero-orb,
+  .tb-food-float,
+  .tb-passport-preview:before,
+  .tb-passport-stamp,
+  .tb-district.selected,
+  .tb-live-dot,
+  .tb-live-dot:before,
+  .tb-detail-hero.icon-hero>.tb-icon-art span{
+    animation:none!important;
+  }
+  .tb-motion-ready .tb-reveal{opacity:1!important;transform:none!important}
+  .tb-passport-preview{transform:none!important;transition:none!important}
+  .tb-feature-card:hover{transform:none}
+}

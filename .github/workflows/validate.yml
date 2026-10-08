@@ -21,7 +21,7 @@ jobs:
           node <<'NODE'
           const fs=require('fs');
           const x=JSON.parse(fs.readFileSync('data/foods.json','utf8'));
-          if(x.version!=='1.6.2') throw new Error('Expected data version 1.6.2');
+          if(x.version!=='1.6.3') throw new Error('Expected data version 1.6.3');
           if(x.districts.length!==64) throw new Error('District count must be 64');
           const ids=[], slugs=new Set(), errors=[];
           for(const d of x.districts){
@@ -58,3 +58,8 @@ jobs:
           NODE
       - name: Check JavaScript syntax
         run: node --check assets/js/app.js
+      - name: Check premium motion hooks
+        run: |
+          grep -q 'function initPremiumMotion' assets/js/app.js
+          grep -q 'v1.6.3 PREMIUM MOTION LAYER' assets/css/app.css
+          grep -q 'taste-bangladesh-v1.6.3-premium' sw.js
